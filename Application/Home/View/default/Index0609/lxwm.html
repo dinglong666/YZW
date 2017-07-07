@@ -1,0 +1,247 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$jiben['guanjianzi']}" />
+<meta name="description" content="{$jiben['miaoshu']}"/>
+<title>{$jiben['title']}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css"/>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/datouwang.css"/>
+<!--banner开始-->
+<style>
+.flexslider {	margin: 0px auto 20px;	position: relative;	width: 100%;	height: 370px;	overflow: hidden;	zoom: 1;}
+.flexslider .slides li {	width: 100%;	height: 100%;}
+.flex-direction-nav a {	width: 70px;height: 70px;line-height: 99em;	overflow: hidden;margin: -35px 0 0;	display: block;	background: url(__PUBLIC__/Home/images/ad_ctr.png) no-repeat;position: absolute;
+	top: 50%;z-index: 10;cursor: pointer;opacity: 0;filter: alpha(opacity=0);-webkit-transition: all .3s ease;border-radius: 35px;}
+.flex-direction-nav .flex-next {	background-position: 0 -70px;	right: 0;}
+.flex-direction-nav .flex-prev {	left: 0;}
+.flexslider:hover .flex-next {	opacity: 0.8;	filter: alpha(opacity=25);}
+.flexslider:hover .flex-prev {	opacity: 0.8;	filter: alpha(opacity=25);}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {	opacity: 1;	filter: alpha(opacity=50);}
+.flex-control-nav {	width: 100%;	position: absolute;	bottom: 10px;	text-align: center;}
+.flex-control-nav li {	margin: 0 2px;	display: inline-block;	zoom: 1;*display: inline;}
+.flexslider .slides a img {	width: 100%;height:370px;	display: block;}
+</style>
+<!--banner结束-->
+
+
+</head>
+
+<body>
+<!--导航-->
+<include file="Include/header" />
+<div class="nav">
+  <ul>
+    <a href="{:U('Index/index')}"><li>网站首页</li></a>
+    <a href="{:U('Index/gywm')}"><li>关于我们</li></a>
+    <a href="{:U('Index/cyxx')}"><li>车源信息</li></a>
+    <a href="{:U('Index/wymc')}"><li>我要卖车</li></a>
+    <a href="{:U('Index/xwzx')}"><li>新闻中心</li></a>
+    <a href="{:U('Index/zxly')}"><li>在线留言</li></a>
+    <a href="{:U('Index/lxwm')}"><li class="boxone">联系我们</li></a>
+  </ul>
+</div>
+<!--main-->
+<div class="main">
+  <div class="fl">
+  <foreach name="CartArray" item="value" key='key'>
+  <if condition="$value['two_name']=='车型'">
+    <div class="fl{$key+1}">
+      <div class="fl{$key+1}_T"><p>全部{$value.two_name}</p></div>
+      <div class="fl{$key+1}_B">
+        <ul>
+        <foreach name="value.type_name" item="val">
+          <li><a href="{:U('Index/cyxx?id='.$val['id'])}">{$val.two_name_son}</a></li>
+        </foreach>
+        </ul>
+      </div>
+    </div>
+    <else />
+    <div class="fl{$key+1}">
+      <div class="fl{$key+1}_T"><p>全部{$value.two_name}</p></div>
+      <div class="fl{$key+1}_B">
+        <ul>
+        <foreach name="value.type_name" item="val">
+          <li><a href="{:U('Index/cyxx?idt='.$val['id'])}">{$val.two_name_son}</a></li>
+        </foreach>
+        </ul>
+      </div>
+    </div>
+  </if>
+  </foreach>
+  </div>
+<!--banner-->
+  <div class="banner">  
+   <div id="banner_tabs" class="flexslider">
+	<ul class="slides">
+    <foreach name="selectBanner" item="value">
+      <if condition="$value['one_img'] neq ''">
+      <li><a title="" target="_blank" href="#"><img width="910" height="370" alt="" style="background: url(__ROOT__/Uploads/{$value.one_img}) no-repeat center;" src="__PUBLIC__/Home/images/alpha.png"></a></li>
+      </if>
+    </foreach>
+	</ul>
+	<ul class="flex-direction-nav">
+		<li><a class="flex-prev" href="javascript:;">Previous</a></li>
+		<li><a class="flex-next" href="javascript:;">Next</a></li>
+	</ul>
+</div>
+   <script src="__PUBLIC__/Home/js/jquery-1.10.2.min.js"></script>
+<script src="__PUBLIC__/Home/js/slider.js"></script>
+<script type="text/javascript">
+$(function() {
+	var bannerSlider = new Slider($('#banner_tabs'), {
+		time: 5000,
+		delay: 400,
+		event: 'hover',
+		auto: true,
+		mode: 'fade',
+		controller: $('#bannerCtrl'),
+		activeControllerCls: 'active'
+	});
+	$('#banner_tabs .flex-prev').click(function() {
+		bannerSlider.prev()
+	});
+	$('#banner_tabs .flex-next').click(function() {
+		bannerSlider.next()
+	});
+})
+</script>
+  </div>
+</div>
+<!--联系我们-->
+<div class="lxwm">
+  <div class="lxwm_A"><p>联系我们</p></div>
+  <div class="lxwm_B">
+<!--     <p>联系电话： 185******40</br>
+        邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱：7909*****@126.com</br>
+        公司地址：哈尔滨市道里区城乡路237号</br>
+        版权所有：哈尔滨博能二手车有限公司</br>
+        备&nbsp;案&nbsp;号：京ICP备********号 ICP证*****号</br>
+        技术支持：哈尔滨鼎龙科技有限公司</p> -->
+        {$lianxi['content']}
+   </div>
+  <div class="lxwm_C">
+    <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<meta name="keywords" content="百度地图,百度地图API，百度地图自定义工具，百度地图所见即所得工具" />
+<meta name="description" content="百度地图API自定义地图，帮助用户在可视化操作下生成百度地图" />
+<title>百度地图API自定义地图</title>
+<!--引用百度地图API-->
+<style type="text/css">
+    html,body{margin:0;padding:0;}
+    .iw_poi_title {color:#CC5522;font-size:14px;font-weight:bold;overflow:hidden;padding-right:13px;white-space:nowrap}
+    .iw_poi_content {font:12px arial,sans-serif;overflow:visible;padding-top:4px;white-space:-moz-pre-wrap;word-wrap:break-word}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+  <!--百度地图容器-->
+  <div style="width:910px;height:550px;border:#ccc solid 1px; float:right; margin-top:-40px;" id="dituContent"></div>
+</body>
+<script type="text/javascript">
+    //创建和初始化地图函数：
+    function initMap(){
+        createMap();//创建地图
+        setMapEvent();//设置地图事件
+        addMapControl();//向地图添加控件
+        addMarker();//向地图中添加marker
+    }
+    
+    //创建地图函数：
+    function createMap(){
+        var map = new BMap.Map("dituContent");//在百度地图容器中创建一个地图
+        var point = new BMap.Point(126.590018,45.734625);//定义一个中心点坐标
+        map.centerAndZoom(point,18);//设定地图的中心点和坐标并将地图显示在地图容器中
+        window.map = map;//将map变量存储在全局
+    }
+    
+    //地图事件设置函数：
+    function setMapEvent(){
+        map.enableDragging();//启用地图拖拽事件，默认启用(可不写)
+        map.enableScrollWheelZoom();//启用地图滚轮放大缩小
+        map.enableDoubleClickZoom();//启用鼠标双击放大，默认启用(可不写)
+        map.enableKeyboard();//启用键盘上下左右键移动地图
+    }
+    
+    //地图控件添加函数：
+    function addMapControl(){
+        //向地图中添加缩放控件
+	var ctrl_nav = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	map.addControl(ctrl_nav);
+        //向地图中添加缩略图控件
+	var ctrl_ove = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:1});
+	map.addControl(ctrl_ove);
+        //向地图中添加比例尺控件
+	var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	map.addControl(ctrl_sca);
+    }
+    
+    //标注点数组
+    var markerArr = [{title:"哈尔滨博能二手车有限公司",content:"联系人：<br/>手机：<br/>地址人：哈尔滨市道里区城乡路237号",point:"126.589744|45.734587",isOpen:0,icon:{w:23,h:25,l:23,t:21,x:9,lb:12}}
+		 ];
+    //创建marker
+    function addMarker(){
+        for(var i=0;i<markerArr.length;i++){
+            var json = markerArr[i];
+            var p0 = json.point.split("|")[0];
+            var p1 = json.point.split("|")[1];
+            var point = new BMap.Point(p0,p1);
+			var iconImg = createIcon(json.icon);
+            var marker = new BMap.Marker(point,{icon:iconImg});
+			var iw = createInfoWindow(i);
+			var label = new BMap.Label(json.title,{"offset":new BMap.Size(json.icon.lb-json.icon.x+10,-20)});
+			marker.setLabel(label);
+            map.addOverlay(marker);
+            label.setStyle({
+                        borderColor:"#808080",
+                        color:"#333",
+                        cursor:"pointer"
+            });
+			
+			(function(){
+				var index = i;
+				var _iw = createInfoWindow(i);
+				var _marker = marker;
+				_marker.addEventListener("click",function(){
+				    this.openInfoWindow(_iw);
+			    });
+			    _iw.addEventListener("open",function(){
+				    _marker.getLabel().hide();
+			    })
+			    _iw.addEventListener("close",function(){
+				    _marker.getLabel().show();
+			    })
+				label.addEventListener("click",function(){
+				    _marker.openInfoWindow(_iw);
+			    })
+				if(!!json.isOpen){
+					label.hide();
+					_marker.openInfoWindow(_iw);
+				}
+			})()
+        }
+    }
+    //创建InfoWindow
+    function createInfoWindow(i){
+        var json = markerArr[i];
+        var iw = new BMap.InfoWindow("<b class='iw_poi_title' title='" + json.title + "'>" + json.title + "</b><div class='iw_poi_content'>"+json.content+"</div>");
+        return iw;
+    }
+    //创建一个Icon
+    function createIcon(json){
+        var icon = new BMap.Icon("http://app.baidu.com/map/__PUBLIC__/Home/images/us_mk_icon.png", new BMap.Size(json.w,json.h),{imageOffset: new BMap.Size(-json.l,-json.t),infoWindowOffset:new BMap.Size(json.lb+5,1),offset:new BMap.Size(json.x,json.h)})
+        return icon;
+    }
+    
+    initMap();//创建和初始化地图
+</script>
+</html>
+  </div>
+</div>
+<include file="Include/foot" />
+</body>
+</html>

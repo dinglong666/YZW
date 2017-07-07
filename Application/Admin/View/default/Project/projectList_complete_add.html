@@ -1,0 +1,333 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<include file="Include/head" />
+
+
+<style type="text/css">
+    div{
+        width:100%;
+    }
+</style>
+<!--上传图片预览-->
+ <script>
+
+window.onload=function()
+
+{
+
+    document.getElementById('file').onchange = function(evt) {
+
+    // 浏览器不支持FileReader，则不处理
+
+    if (!window.FileReader) return;
+
+    var files = evt.target.files;
+
+    for (var i = 0, f; f = files[i]; i++) {
+
+        if (!f.type.match('image.*')) {
+
+            continue;
+
+        }
+
+        var reader = new FileReader();
+
+        reader.onload = (function(theFile) {
+
+            return function(e) {
+
+                // img 元素
+
+                document.getElementById('previewImage').src = e.target.result;
+
+            };
+
+        })(f);
+
+        reader.readAsDataURL(f);
+
+        }
+
+    }
+
+
+}
+
+</script>
+<!--上传图片预览-->
+</head>
+
+<body>
+    <!-- start: Header -->
+
+
+    <!-- end: Header -->
+    
+    <div class="container-fluid content">
+    
+        <div class="row">
+                
+            <!-- start: Main Menu -->
+<include file="Include/left" />
+
+            <!-- end: Main Menu -->
+                        
+        <!-- start: Content -->
+        <div class="main ">
+        
+            
+            <div class="row">
+            
+                  
+                        <div class="panel-heading">
+                            <a href="{:U('Project/projectList_complete')}"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
+                        </div>
+                        <div class="panel-body" style="width:50%;margin-left:20%">
+                        <form action="{:U('Project/projectList_complete_add')}" method="post" class="form-horizontal ">
+                            <div style='margin-left:40px;' class="form-horizontal ">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段一：  </label>
+                                    <div class="col-md-3" >
+                                        <input style='width:200px;'  type="text" name="one" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段二：  </label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  type="text" name="two" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段三：  </label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  type="text" name="three" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段四：  </label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  type="text" name="four" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
+                                </div>                                
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段五：  </label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  type="text" name="five" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">阶段六：  </label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  type="text" name="six" class="form-control" >
+                                    </div>
+                                </div>
+                                <br>
+                                   <button style="width:50%;margin-left:10%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>
+                            </div>
+                        </form>
+    
+                        </div>
+
+    
+
+                
+        
+            </div><!--/.row-->
+
+        </div>
+        <!-- end: Content -->
+        
+    
+    
+
+    <!-- start: JavaScript-->
+    <!--[if !IE]>-->
+
+            <script src="__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js"></script>
+
+    <!--<![endif]-->
+
+    <!--[if IE]>
+    
+        <script src="__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js"></script>
+    
+    <![endif]-->
+
+    <!--[if !IE]>-->
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+
+    //实例化编辑器          
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+</script>
+    <!--<![endif]-->
+
+    <!--[if IE]>
+    
+        <script type="text/javascript">
+        window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+        </script>
+        
+    <![endif]-->
+    <script src="__PUBLIC__/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/bootstrap.min.js"></script> 
+    
+    
+    <!-- page scripts -->
+    <script src="__PUBLIC__/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/moment/moment.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    
+    <!-- theme scripts -->
+    <script src="__PUBLIC__/Admin/assets/js/SmoothScroll.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/jquery.mmenu.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/core.min.js"></script>
+    
+    <!-- inline scripts related to this page -->
+    <script src="__PUBLIC__/Admin/assets/js/pages/form-elements.js"></script>
+    <script language="javascript" type="text/javascript" src="__PUBLIC__/admin/timepicker/WdatePicker.js"></script>
+
+    <!-- end: JavaScript-->
+    
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css" />
+    <link rel="stylesheet" href="__PUBLIC__/Home/css/swiper.min.css" />
+</head>
+<Include file="Public/header" />
+<body>
+    
+    <!-- 轮播 -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+        <foreach name='tupian' item='a'>
+            <div class="swiper-slide">
+                <img width="1920px" height="500px" src="__UPLOADS__/{$a.photo}" alt="" >
+            </div>
+        </foreach>
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    <!-- 轮播结束 -->
+    <div class="content">
+        <div class="intro">
+            <h2>企业简介<a href="{:U('intro1')}">
+                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
+                </a></h2>
+            <p>
+                {$jianjie.content}
+            </p>
+        </div>
+        <div class="shuang">
+            <h2>
+                双曲板材
+                <a href="{:U('product')}">
+                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
+                </a>
+            </h2>
+            <div class="leftImg">
+                <div id="slideBox" class="slideBox">
+                    <div class="hd">
+                        <ul><li>1</li><li>2</li><li>3</li></ul>
+                    </div>
+                    <div class="bd">
+                        <ul>
+                            <foreach name='sq' item='q'>
+                            <li><img width='217px' height="289px" src="__UPLOADS__/{$q.photo}" /></li>
+                            </foreach>
+                        </ul>
+                    </div>
+
+                    <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+                    <a class="prev" href="javascript:void(0)"></a>
+                    <a class="next" href="javascript:void(0)"></a>
+
+                </div>
+            </div>
+            <div class="rightCon">
+                <ul>
+                <foreach name='shuangqu' item='s'>
+                    <li>
+                        <a href="{:U('product_details?id='.$s['type_id'])}">
+                            {$s.title}
+                            <span>{$s.update_time|date="Y-m-d",###}</span>
+                        </a>
+                    </li>
+                </foreach>
+                </ul>
+            </div>
+        </div>
+        <div class="shuang shuang2">
+            <h2>
+                业务范围
+                <a href="{:U('business')}">
+                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
+                </a>
+            </h2>
+            <div class="leftImg">
+                <div id="slideBox" class="slideBox">
+            <div class="hd">
+                <ul><li>1</li><li>2</li><li>3</li></ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <foreach name='ywu' item='y'>
+                    <li><img  width='344px' height="284px" src="__UPLOADS__/{$y.photo}" /></li>
+                    </foreach>
+                </ul>
+            </div>
+
+            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
+            <a class="prev" href="javascript:void(0)"></a>
+            <a class="next" href="javascript:void(0)"></a>
+
+        </div>
+            </div>
+            <div class="rightCon">
+                <ul>
+                <foreach name='yewu' item='y'>
+                    <li>
+                        <a href="{:U('business?id='.$y['type_id'])}">
+                            {$y.title}
+                            <span>{$y.update_time|date="Y-m-d",###}</span>
+                        </a>
+                    </li>
+                </foreach>
+                </ul>
+            </div>
+        </div>
+        <div class="touch">
+            <h2>联系方式</h2>
+            <Include file="Public/lianxi" />
+        </div>
+    </div>
+    <!-- 底部 -->
+<Include file="Public/footer" />
+
+</body>
+    <script src="__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/nav.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/swiper.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.SuperSlide.2.1.1.js"></script>
+
+    <script>
+         var swiper = new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        nextButton: '.swiper-button-next',
+        prevButton: '.swiper-button-prev',
+        paginationClickable: true,
+        spaceBetween: 30,
+        centeredSlides: true,
+        autoplay: 2500,
+        autoplayDisableOnInteraction: false
+         });
+    </script>
+    <!-- // 悬浮窗口 -->
+    <script>
+$(function() {
+
+    $(".yb_conct").hover(function() {
+        $(".yb_conct").css("right", "5px");
+        $(".yb_bar .yb_ercode").css('height', '200px');
+    }, function() {
+        $(".yb_conct").css("right", "-127px");
+        $(".yb_bar .yb_ercode").css('height', '53px');
+    });
+    // 返回顶部
+    $(".yb_top").click(function() {
+        $("html,body").animate({
+            'scrollTop': '0px'
+        }, 300)
+    });
+});
+// jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
+jQuery(".slideBox").slide( { mainCell:".bd ul",effect:"left",autoPlay:true} );
+</script>
+</html>

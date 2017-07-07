@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+<include file="Include/head" />
+
+ 
+
+<style type="text/css">
+    div{
+        width:100%;
+    }
+</style>
+<script type="text/javascript">
+	function ourgame(id)
+	{
+		$.post("{:U('Setpost/ourorgame')}",{id:id},function(data){
+			acc="<option value=''>--请选择--</option>"
+			str="<option value=''>--请选择--</option>";
+			$.each(data.row,function(k,v){
+				if(data.type==1)
+				{
+					str+="<option value="+v.id+">"+v.one_name+"</option>";	
+				}
+				if(data.type==2)
+				{
+					str+="<option value="+v.id+">"+v.two_name+"</option>";
+				}
+			
+			});
+			$("#two").html(acc);
+			$("#one").html(str);
+		});
+	}
+	//换一级分类有问题
+	function typeone(id)
+	{
+		ourorgame=$("#our").val();
+		$.post("{:U('Setpost/changes_one')}",{id:id,ourorgameid:ourorgame},function(data){
+			str2="<option value=''>--请选择--</option>";
+			$.each(data.row2,function(k,v){
+				if(data.type2==1)
+				{
+					str2+="<option value="+v.id+">"+v.one_name_son+"</option>";	
+				}
+				else
+				{
+					str2+="<option value="+v.id+">"+v.two_name_son+"</option>";
+				}
+			
+			});
+			$("#two").html(str2);
+		});
+	}
+</script>
+</head>
+
+<body>
+	<!-- start: Header -->
+
+
+	<!-- end: Header -->
+	
+	<div class="container-fluid content">
+	
+		<div class="row">
+				
+			<!-- start: Main Menu -->
+<include file="Include/left" />
+
+			<!-- end: Main Menu -->
+						
+		<!-- start: Content -->
+		<div class="main ">
+		
+
+			
+			<div class="row">
+			
+			      
+			            <div class="panel-heading">
+			                <a href="{:U('Setpost/postlist')}"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
+			            </div>
+						<div class="panel-body" style="width:50%;margin-left:20%">
+							<form action="{:U('Setpost/addpost')}" method="post" enctype="multipart/form-data" class="form-horizontal ">
+
+								<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">模块选择：</label>
+				                    <div class="col-md-9">
+				                        <select id="our" name="ourorgame" class="form-control" onchange="ourgame(this.value)" style="width:150px;display:inline-block ">
+				                        	<option value="">--请选择--</option>
+				                        	<option value="1">官方区</option>
+				                        	<option value="2">游戏区</option>
+				                        </select>
+				                        <select id="one" onchange="typeone(this.value)" name="type_one" class="form-control" style="width:150px;display:inline-block ">
+				                        	<option value="">--请选择--</option>
+				                
+				                        </select>
+				                        <select id="two" name="type_two" class="form-control" style="width:150px;display:inline-block ">
+				                        	<option value="">--请选择--</option>
+				                        	
+				                        </select>
+				                    </div>
+				                </div>
+								<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">标题名：</label>
+				                    <div class="col-md-9">
+				                        <input type="text" name="title" class="form-control" >
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">内容： </label>
+				                    <div class="col-md-9">
+				                    	<textarea id="editor" name="content" style="width:860px;height:500px;"></textarea>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">游戏库链接：</label>
+				                    <div class="col-md-9">
+				                        <input type="text" name="gameurl" value="http://" class="form-control" >
+				                    </div>
+				                </div>
+
+				              	<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">标签选择：</label>
+				                    <div class="col-md-9">
+				                       <input type="checkbox" name="first" value="1">置顶
+				                       <input type="checkbox" name="great" value="1">精华
+				                       <input type="checkbox" name="index" value="1">首页
+				                       <input type="checkbox" name="please" value="1">推荐
+				                    </div>
+				                </div>
+				            
+								<br>
+							
+								   <button style="width:50%;margin-left:38%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>
+				            </form>
+				         
+	
+						</div>
+
+	
+
+				
+		
+			</div><!--/.row-->
+
+		</div>
+		<!-- end: Content -->
+		
+	
+	
+
+	<!-- start: JavaScript-->
+	<!--[if !IE]>-->
+
+			<script src="__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js"></script>
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script src="__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js"></script>
+	
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript">
+
+    //实例化编辑器          
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+</script>
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+		</script>
+		
+	<![endif]-->
+	<script src="__PUBLIC__/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/js/bootstrap.min.js"></script>	
+	
+	
+	<!-- page scripts -->
+	<script src="__PUBLIC__/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/moment/moment.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="__PUBLIC__/Admin/assets/js/SmoothScroll.js"></script>
+	<script src="__PUBLIC__/Admin/assets/js/jquery.mmenu.min.js"></script>
+	<script src="__PUBLIC__/Admin/assets/js/core.min.js"></script>
+	
+	<!-- inline scripts related to this page -->
+	<script src="__PUBLIC__/Admin/assets/js/pages/form-elements.js"></script>
+	<script language="javascript" type="text/javascript" src="__PUBLIC__/admin/timepicker/WdatePicker.js"></script>
+
+	<!-- end: JavaScript-->
+	
+</body>
+</html>

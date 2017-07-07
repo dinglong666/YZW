@@ -1,0 +1,176 @@
+<div class="sidebar ">
+								
+				<div class="sidebar-collapse">
+					<div class="sidebar-header t-center">
+                        <span><i class="fa fa-space-shuttle fa-3x blue">鼎龙后台</i></span>
+                    </div>
+                    <div style="padding-bottom: 20px">
+                    	<span style="padding-right: 10px;margin-left: 15px" align="center">您好，欢迎您 :</span>
+                    	<span style="padding-right: 10px;color: red;">{$_SESSION['admin_info']['username']}</span>
+                    	<span>管理员</span>
+                    </div>
+                    <div>
+                    	<span style="margin-left: 30px;padding-right: 20px"><a href="{:U('Home/Index/index')}">进入主页</a></span>|
+                    	<span style="margin-left: 20px;"><a href="{:U('Login/tlog')}">退出系统</a></span>
+                    </div>							
+					<div class="sidebar-menu">						
+						<ul class="nav nav-sidebar">
+
+						<if condition="$_SESSION['admin_info']['id'] eq 1" >
+							<li><a href="{:U('Index/index')}"><i class="fa fa-table"></i><span class="text">网站设置</span></a></li>
+						</if>
+
+							<li>
+								<a href="#"><i class="fa fa-key"></i><span class="text">权限管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="$_SESSION['admin_info']['id'] eq 1" >
+									<li>
+										<a href="{:U('admin/adminlist')}"><i class="fa fa-align-left"></i><span class="text">管理员列表</span></a>
+									</li>
+									<li>
+										<a href="{:U('admin/adminPower')}"><i class="fa fa-align-left"></i><span class="text">权限分类</span></a>
+									</li>
+								</if>
+									<li>
+										<a href="{:U('admin/adminLog')}"><i class="fa fa-columns"></i><span class="text">管理员日志</span></a>
+									</li>
+								</ul>
+							</li>
+
+						<if condition="(dhl_qx(11) eq success) || (dhl_qx(12) eq success) || (dhl_qx(13) eq success) || (dhl_qx(14) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+							<li>
+								<a href="#"><i class="fa fa-briefcase"></i><span class="text">内容管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="(dhl_qx(11) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/shouye')}"><i class="fa fa-align-left"></i><span class="text">首页图片</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(12) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/type_list')}"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(13) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/video')}"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(14) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/cooperation_list')}"><i class="fa fa-outdent"></i><span class="text">合作企业</span></a>
+									</li>
+								</if>
+								</ul>
+							</li>
+						</if>
+
+						<if condition="(dhl_qx(21) eq success) || (dhl_qx(22) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+							<li>
+								<a href="#"><i class="fa fa-columns"></i><span class="text">广告管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="(dhl_qx(21) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('advert/advertList')}"><i class="fa fa-columns"></i><span class="text">广告列表</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(22) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('advert/advertPosition')}"><i class="fa fa-columns"></i><span class="text">广告位置</span></a>
+									</li>
+								</if>
+								</ul>
+							</li>
+						</if>
+						
+						<if condition="(dhl_qx(31) eq success) || (dhl_qx(32) eq success) || (dhl_qx(33) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+							<li>
+								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="(dhl_qx(31) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Project/projectList')}"><i class="fa fa-columns"></i><span class="text">项目列表</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(32) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Project/projectList_type')}"><i class="fa fa-columns"></i><span class="text">项目分类列表</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(33) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Project/projectList_complete')}"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li>
+								</if>
+								</ul>
+							</li>
+						</if>
+
+						<if condition="(dhl_qx(41) eq success) || (dhl_qx(42) eq success) || (dhl_qx(43) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+							<li>
+								<a href="#"><i class="fa fa-columns"></i><span class="text">会员管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="(dhl_qx(41) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Users/usersList')}"><i class="fa fa-columns"></i><span class="text">会员列表</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(42) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Users/users_random')}"><i class="fa fa-columns"></i><span class="text">生成公司会员</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(43) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Users/users_staff')}"><i class="fa fa-columns"></i><span class="text">公司员工列表</span></a>
+									</li>
+								</if>
+								</ul>
+							</li>
+						</if>
+
+						<if condition="(dhl_qx(51) eq success) || (dhl_qx(52) eq success) || (dhl_qx(53) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+							<li>
+								<a href="#"><i class="fa fa-columns"></i><span class="text">消息管理</span> <span class="fa fa-angle-down pull-right"></span></a>
+								<ul class="nav sub">
+								<if condition="(dhl_qx(51) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('News/newsList')}"><i class="fa fa-columns"></i><span class="text">站内消息</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(52) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('News/changeList')}"><i class="fa fa-columns"></i><span class="text">变更消息</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(53) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('News/commissionList')}"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
+									</li>
+								</if>
+								</ul>
+							</li>
+						</if>
+
+						</ul>
+					</div>					
+				</div>
+				<div class="sidebar-footer">					
+					
+					<div class="sidebar-brand">
+						DingLong
+					</div>
+					
+					<ul class="sidebar-terms">
+						<li><a href="{:U('GuanFang/guanyu')}">关于我们</a></li>
+						<li><a href="{:U('Admin/adminlist')}">管理员</a></li>
+						<li><a href="#">使用帮助</a></li>
+						<li><a href="#">About</a></li>
+					</ul>
+					
+<!-- 					<div class="copyright text-center">
+						<small>Proton <i class="fa fa-coffee"></i> from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small>
+					</div>		 -->			
+				</div>	
+				
+			</div>

@@ -1,0 +1,53 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="{$jiben['guanjianzi']}" />
+<meta name="description" content="{$jiben['miaoshu']}"/>
+<title>{$jiben['title']}</title>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/Home/css/style.css"/>
+<!--banner开始-->
+<style>
+.flexslider {	margin: 0px auto 20px;	position: relative;	width: 100%;	height: 370px;	overflow: hidden;	zoom: 1;}
+.flexslider .slides li {	width: 100%;	height: 100%;}
+.flex-direction-nav a {	width: 70px;height: 70px;line-height: 99em;	overflow: hidden;margin: -35px 0 0;	display: block;	background: url(__PUBLIC__/Home/images/ad_ctr.png) no-repeat;position: absolute;
+	top: 50%;z-index: 10;cursor: pointer;opacity: 0;filter: alpha(opacity=0);-webkit-transition: all .3s ease;border-radius: 35px;}
+.flex-direction-nav .flex-next {	background-position: 0 -70px;	right: 0;}
+.flex-direction-nav .flex-prev {	left: 0;}
+.flexslider:hover .flex-next {	opacity: 0.8;	filter: alpha(opacity=25);}
+.flexslider:hover .flex-prev {	opacity: 0.8;	filter: alpha(opacity=25);}
+.flexslider:hover .flex-next:hover,
+.flexslider:hover .flex-prev:hover {	opacity: 1;	filter: alpha(opacity=50);}
+.flex-control-nav {	width: 100%;	position: absolute;	bottom: 10px;	text-align: center;}
+.flex-control-nav li {	margin: 0 2px;	display: inline-block;	zoom: 1;*display: inline;}
+.flexslider .slides a img {	width: 100%;height:370px;	display: block;}
+</style>
+<!--banner结束-->
+
+
+</head>
+<body>
+<!--导航-->
+<include file="Include/header" />
+<div class="nav">
+  <ul>
+    <a href="{:U('Index/index')}"><li>网站首页</li></a>
+    <a href="{:U('Index/gywm')}"><li>关于我们</li></a>
+    <a href="{:U('Index/cyxx')}"><li>车源信息</li></a>
+    <a href="{:U('Index/wymc')}"><li>我要卖车</li></a>
+    <a href="{:U('Index/xwzx')}"><li class="boxone">新闻中心</li></a>
+    <a href="{:U('Index/zxly')}"><li>在线留言</li></a>
+    <a href="{:U('Index/lxwm')}"><li>联系我们</li></a>
+  </ul>
+</div>
+<!--详情页-->
+<div class="xxxx">
+  <div class="xxxx_A"><p>详细信息</p></div>
+  <div class="xxxx_B">
+  <span>{$selectCart.miaoshu}</span></br></br>
+  <p>{$selectCart.content}</p></div>
+</div>
+<!--页脚-->
+<include file="Include/foot" />
+</body>
+</html>

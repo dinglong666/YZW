@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="{$jiben['guanjianzi']}" />
+    <meta name="description" content="{$jiben['miaoshu']}"/>
+    <title>{$jiben['title']}</title>
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/common.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/swiper.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/source.css"/>
+<style>
+.pagination ul {
+    display: inline-block;
+    margin-bottom: 0;
+    margin-left: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    -moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+.pagination ul li {
+  display: inline;
+}
+
+.pagination ul li.rows {
+    line-height: 30px;
+    padding-left: 5px;
+}
+.pagination ul li.rows b{color: #f00}
+.pagination ul li:hover{ border:#fff solid 1px; }
+
+.pagination ul li a, .pagination ul li span {
+    float: left;
+    padding: 4px 12px;
+    line-height: 20px;
+    text-decoration: none;
+    background-color: #fff;
+    background: url('../images/bottom_bg.png') 0px 0px;
+    border: 1px solid #d3dbde;
+    /*border-left-width: 0;*/
+    margin-left: 2px;
+    color: #08c;
+}
+.pagination ul li a:hover{
+    color: red;
+    background: #0088cc;
+}
+.pagination ul li.first-child a, .pagination ul li.first-child span {
+    border-left-width: 1px;
+    -webkit-border-bottom-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-top-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    -moz-border-radius-topleft: 3px;
+}
+.pagination ul .disabled span, .pagination ul .disabled a, .pagination ul .disabled a:hover {
+color: #999;
+cursor: default;
+background-color: transparent;
+}
+.pagination ul .active a, .pagination ul .active span {
+color: #999;
+cursor: default;
+}
+.pagination ul li a:hover, .pagination ul .active a, .pagination ul .active span {
+background-color: #f0c040;
+}
+.pagination ul li.last-child a, .pagination ul li.last-child span {
+    -webkit-border-top-right-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    -moz-border-radius-bottomright: 3px;
+}
+
+.pagination ul li.current a{color: #f00 ;font-weight: bold; background: #ddd}
+}
+</style>
+</head>
+<body>
+<include file="pubilic/header" />
+    <div class="alpha">
+    </div>
+    <nav class="nav" id="nlist">
+        <ul class="nav_ul">
+            <li class="nav_item">
+                <div>
+                    <i class="back-ioc"></i>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/index')}">
+                        网站首页
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="javascript:void(0)">车源信息 </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/sell')}">我要卖车</a>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/newscenter')}">新闻中心</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/online')}">在线留言</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/aboutus')}">关于我们</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/contactus')}">联系我们</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                 <foreach name="selectBanner" item="value">
+                     <if condition="$value['one_img'] neq ''">
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="__ROOT__/Uploads/{$value.one_img}" alt="" />
+                            </div>
+                        </div>  
+                     </if>
+                </foreach>
+            </div>
+        </div>
+    </div>
+    
+    <!--以下-->
+    <div class="main">
+        <div class="m_item">
+            <div class="item_tbg"><h1 class="item_t">快速选车</h1></div>
+            <foreach name="CartArray" item="value" key='key'>
+            <if condition="$value['two_name']=='车型'">
+       		<div class="anche">
+            	<span>按车型</span>
+                <ul class="cartype">
+                <input type="hidden" value="{$id}" id="id">             
+                <li>
+                   <a href="{:U('Index/source?qtype='.$value['two_name'])}" style="color: black;">车型不限</a>
+                </li>
+                <foreach name="value.type_name" item="val">
+                    <li>
+                        <a href="{:U('Index/source?id='.$val['id'])}" <if condition="$id eq $val['id']"> style="color: red" </if>>
+                        {$val.two_name_son}
+                        </a>
+                    </li>
+                </foreach>
+                </ul>
+            </div>
+            <else />
+            <div class="anjia">
+            	<span>按价格</span>
+           		<ul class="carmoney">
+                <input type="hidden" value="{$idt}" id="idt"> 
+                <li>
+                   <a href="{:U('Index/source?qprice='.$value['two_name'])}" style="color: black;">价格不限</a>
+                </li>
+                 <foreach name="value.type_name" item="val">
+                 <li>
+                     <a href="{:U('Index/source?idt='.$val['id'])}" <if condition="$idt eq $val['id']"> style="color: red" </if>>
+                    {$val.two_name_son}
+                    </a>
+                </li>
+                </foreach>
+                </ul>
+            </div>
+            </if>
+            </foreach>
+        </div>
+        <div class="m_item2">
+           <div class="item_tbg"> <h1 class="item_t">车源信息</h1></div>
+            <ul class="carfrom">
+                <foreach name="selectCart" item="value">
+                <li class="carfrom-item1">
+                    <div class="top-img">
+                        <a href="{:U('Index/cartlist?gameid='.$value['id'])}">
+                            <img src="__ROOT__/Uploads/{$value['game_img']}" alt="" class=""/>
+                        </a>
+                    </div>
+                    <div class="sub-info">
+                        <h1 class="title">{$value['game_name']}</h1>
+                        <div class="info">
+                            <span class="price" style="color:red;">车辆价格 : {$value['price']}</span>
+                            <span class="year">{$value['carttime']}</span>
+                        </div>
+                    </div>
+                </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+        <div class="pagination comment_li" align="center" style="">
+          <ul style="align:center;height: 50px" >
+             <li style="height: 50px; border:rgba(0,0,0,0)">{$page}</li>
+          </ul>
+        </div>
+<include file="pubilic/foot" />
+<script src="__PUBLIC__/mobile/js/zepto.min.js"></script>
+<script src="__PUBLIC__/mobile/js/touch.js"></script>
+<script src="__PUBLIC__/mobile/js/fx.js"></script>
+<script src="__PUBLIC__/mobile/js/resetRem.js"></script>
+<script src="__PUBLIC__/mobile/js/swiper-3.4.1.jquery.min.js"></script>
+<script src="__PUBLIC__/mobile/js/common.js"></script>
+<script src="__PUBLIC__/mobile/js/jquery-1.8.3.min.js"></script>
+<script>
+    var oid=document.getElementById('id').value;
+    var oidt=document.getElementById('idt').value;
+    if(oid=='')
+    {
+        $(".main .m_item .anche ul").hide();
+        $(".main .m_item .anche span").addClass("anchehuan1");        
+    }else{
+        $(".main .m_item .anche span").addClass("anchehuan2");
+    }
+    if(oidt=='')
+    {
+        $(".main .m_item .anjia ul").hide();
+        $(".main .m_item .anjia span").addClass("anjiahuan1");        
+    }else{
+        $(".main .m_item .anjia span").addClass("anjiahuan2"); 
+    }  
+    
+
+
+
+    $(".main .m_item .anche span").on('click',function(){
+        $(".main .m_item .anche ul").slideToggle()
+        $(".main .m_item .anche span").toggleClass("anchehuan1").toggleClass("anchehuan2")
+    });
+    $(".main .m_item .anjia span").on('click',function(){
+        $(".main .m_item .anjia ul").slideToggle()
+        $(".main .m_item .anjia span").toggleClass("anjiahuan1").toggleClass("anjiahuan2")
+    });
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,3 @@
+<?php
+//000000000000a:17:{s:10:"store_name";s:0:"";s:11:"store_title";s:0:"";s:10:"store_desc";s:0:"";s:14:"store_keywords";s:0:"";s:12:"contact_name";s:0:"";s:13:"contact_phone";s:0:"";s:15:"contact_address";s:0:"";s:11:"contact_qq1";s:0:"";s:11:"contact_qq2";s:0:"";s:11:"contact_qq3";s:0:"";s:12:"jurisdiction";s:1:"1";s:13:"contact_email";s:0:"";s:7:"profit1";s:0:"";s:7:"profit2";s:0:"";s:6:"alipay";s:0:"";s:6:"wechat";s:0:"";s:10:"store_logo";N;}
+?>

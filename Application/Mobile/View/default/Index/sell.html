@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/common.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/sell.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/mobile/css/swiper.min.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="keywords" content="{$jiben['guanjianzi']}" />
+    <meta name="description" content="{$jiben['miaoshu']}"/>
+    <title>{$jiben['title']}</title>
+</head>
+<script src="__PUBLIC__/mobile/js/fastclick.js"></script>
+<body>
+    <div class="wrap">
+<include file="pubilic/header" />
+        <div class="alpha">
+        </div>
+        <nav class="nav" id="nlist">
+            <ul class="nav_ul">
+                <li class="nav_item">
+                    <div>
+                        <i class="back-ioc"></i>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/index')}">
+                            网站首页
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/source')}">车源信息 </a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="javascript:void(0)">我要卖车</a>
+
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/newscenter')}">新闻中心</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/online')}">在线留言</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/aboutus')}">关于我们</a>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <a href="{:U('Index/contactus')}">联系我们</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <div class="banner">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                 <foreach name="selectBanner" item="value">
+                     <if condition="$value['one_img'] neq ''">
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="__ROOT__/Uploads/{$value.one_img}" alt="" />
+                            </div>
+                        </div>  
+                     </if>
+                </foreach>
+                </div>
+            </div>
+        </div>
+        <div class="title_s">
+            <h1>我要卖车</h1>
+        </div>
+        <div class="main_s">
+        <form action="{:U('Index/sell1')}" method="post">
+            <div class="item_s">
+                <label for="name_s">姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</label>
+                <input type="text" id="name_s" placeholder="请输入姓名" />
+                <p class="hint_s">请重新输入</p>
+                <p class="hint_s">姓名不能为空</p>
+            </div>
+            <div class="item_s item2_s">
+                <label for="email_s">电子邮箱：</label>
+                <input type="text" id="email_s" placeholder="请输入电子邮箱"/>
+                <p class="hint_s">格式不正确</p>
+                <p class="hint_s">邮箱不能为空</p>
+            </div>
+            <div class="item_s item3_s">
+                <label for="phone_s">手&nbsp;&nbsp;机&nbsp;&nbsp;号：</label>
+                <input type="text" id="phone_s" placeholder="请输入手机号"/>
+                <p class="hint_s">请输入11位号码</p>
+                <p class="hint_s">号码不能为空</p>
+            </div>
+            <div class="item_s item4_s">
+                <label for="info_s">车辆描述：</label>
+                <textarea id="info_s" placeholder="请输入描述 如：14款奥迪A3,2万公里"></textarea>
+                <p class="hint_s">描述不能为空</p>
+            </div>
+        </form>
+            <div class="sub_s">
+                <input type="button" value="提交" id="sub_s" onclick="send()" />
+                <input type="button" value="重置" id="reset_s"/>
+            </div>
+        </div>
+<include file="pubilic/foot" />
+    </div>
+    <script src="__PUBLIC__/mobile/js/zepto.min.js"></script>
+    <script src="__PUBLIC__/mobile/js/touch.js"></script>
+    <script src="__PUBLIC__/mobile/js/fx.js"></script>
+    <script src="__PUBLIC__/mobile/js/resetRem.js"></script>
+    <script src="__PUBLIC__/mobile/js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="__PUBLIC__/mobile/js/common.js"></script>
+    <script src="__PUBLIC__/mobile/js/sell.js"></script>
+</body>
+<script>
+function send(){
+        var name = $('#name_s').val();
+        var mail = $('#email_s').val();
+        var phone = $('#phone_s').val();
+        var content = $('#info_s').val();
+          $.post('{:U("Index/sell1")}',{username:name,useremail:mail,phone:phone,content:content},function(data){
+            if(data==1)
+            {
+              alert('提交成功');
+              window.location.reload();
+            }else{
+              alert(data);
+            }
+          },'json');
+}
+    $(function() {
+        FastClick.attach(document.body);
+    });
+</script>
+</html>

@@ -1,0 +1,408 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+<include file="Include/head" />
+
+
+<style type="text/css">
+    div{
+        width:100%;
+    }
+</style>
+<!--上传图片预览-->
+ <script>
+
+window.onload=function()
+
+{
+
+    document.getElementById('file').onchange = function(evt) {
+
+    // 浏览器不支持FileReader，则不处理
+
+    if (!window.FileReader) return;
+
+    var files = evt.target.files;
+
+    for (var i = 0, f; f = files[i]; i++) {
+
+        if (!f.type.match('image.*')) {
+
+            continue;
+
+        }
+
+        var reader = new FileReader();
+
+        reader.onload = (function(theFile) {
+
+            return function(e) {
+
+                // img 元素
+
+                document.getElementById('previewImage').src = e.target.result;
+
+            };
+
+        })(f);
+
+        reader.readAsDataURL(f);
+
+        }
+
+    }
+
+
+}
+
+</script>
+<!--上传图片预览-->
+</head>
+
+<body>
+    <!-- start: Header -->
+
+
+    <!-- end: Header -->
+    
+    <div class="container-fluid content">
+    
+        <div class="row">
+                
+            <!-- start: Main Menu -->
+<include file="Include/left" />
+
+            <!-- end: Main Menu -->
+                        
+        <!-- start: Content -->
+        <div class="main ">
+        
+            
+            <div class="row">
+            
+                  
+                        <div class="panel-heading">
+                            <a href="{:U('Project/projectList')}"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
+                        </div>
+                        <div class="panel-body" style="width:50%;margin-left:20%">
+                          <form action="{:U('Project/project_information')}" method="post" class="form-horizontal ">
+                          <input type="hidden" name='id' value="{$find['project_id']}">
+                            <div style='margin-left:40px;' class="form-horizontal ">
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目发布人：  </label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['user_id']|user_in}" type="text" class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目名称：  </label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['project_name']}" type="text" class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目分类：</label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['type_id']|user_ty}" type="text" class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">预计投资金额：</label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['project_estimate']}" type="text" class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">发布时间：  </label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{:date('Y-m-d',$find['project_time'])}" type="text"  class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目所在地：  </label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['project_address']}" type="text"  class="form-control" readonly >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目描述：  </label>
+                                    <div class="col-md-9">
+                                        <textarea style='resize:none;' readonly  cols="36" rows="8" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;">{$find['project_contents']}</textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-5 control-label" style='font-size:20px' for="text-input">可填写信息：</label>
+                                </div>
+                            <if condition="$find['pd'] eq 0" >
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">选择项目完成度类型：</label>
+                                    <div class="col-md-3">
+                                        <select id="xz" style='width:200px;height:30px'>
+                                          <volist  name="find['project_state']" id='f' >
+                                             <option  value="{$f['id']}">{$f['name']}</option>
+                                          </volist>
+                                        </select>
+                                    </div>
+                                    <label class="col-md-1 control-label" for="text-input"><input id='zt' style='margin-left:18px;margin-top:-4px' value='确认此类型' type="button"></label>
+                                </div>
+                            </if>
+                            <if condition="$find['pd'] eq 1" >
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目完成度：</label>
+                                    <div class="col-md-3">
+                                        <input style='width:200px;'  value="{$state}" type="text" class="form-control" readonly >
+                                    </div>
+                                <if condition="$find['num'] eq 0" >
+                                    <label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:18px;margin-top:-4px' value='下一阶段' type="button"></label>
+                                </if>
+                                </div>
+                            </if>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">项目保证金：</label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['project_price']}" type="text" name="bzj" class="form-control">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">实际投资金额：</label>
+                                    <div class="col-md-9">
+                                        <input style='width:200px;'  value="{$find['project_actual']}"  type="text" name="sj" class="form-control"  >
+                                    </div>
+                                </div>
+                            </div>
+                                <br>
+                                   <button style="width:50%;margin-left:20%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>                         
+                            </form>
+                        </div>
+
+    
+
+                
+        
+            </div><!--/.row-->
+
+        </div>
+        <!-- end: Content -->
+        
+    
+    
+
+    <!-- start: JavaScript-->
+    <!--[if !IE]>-->
+
+            <script src="__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js"></script>
+
+    <!--<![endif]-->
+
+    <!--[if IE]>
+    
+        <script src="__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js"></script>
+    
+    <![endif]-->
+
+    <!--[if !IE]>-->
+
+        <script type="text/javascript">
+            window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
+
+    //实例化编辑器          
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    var ue = UE.getEditor('editor');
+
+
+    function isFocus(e){
+        alert(UE.getEditor('editor').isFocus());
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function setblur(e){
+        UE.getEditor('editor').blur();
+        UE.dom.domUtils.preventDefault(e)
+    }
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        UE.getEditor('editor').execCommand('insertHtml', value)
+    }
+    function createEditor() {
+        enableBtn();
+        UE.getEditor('editor');
+    }
+    function getAllHtml() {
+        alert(UE.getEditor('editor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UE.getEditor('editor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用ueditor')方法可以设置编辑器的内容");
+        UE.getEditor('editor').setContent('欢迎使用ueditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UE.getEditor('editor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UE.getEditor('editor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UE.getEditor('editor').selection.getRange();
+        range.select();
+        var txt = UE.getEditor('editor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UE.getEditor('editor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UE.getEditor('editor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UE.getEditor('editor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UE.getEditor('editor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = UE.dom.domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            UE.dom.domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+
+    function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+    }
+
+    function clearLocalData () {
+        UE.getEditor('editor').execCommand( "clearlocaldata" );
+        alert("已清空草稿箱")
+    }
+
+    $('#zt').click(function()
+        {
+            var zt = confirm('是否选择此类型');
+            if(zt==true){       
+                var xz=$('#xz').val();
+                $.ajax({
+                    url:'{:U("Project/complete_ajax")}',
+                    type:'post',
+                    data:{
+                        x:xz,
+                        dq:{$find['project_id']},
+                    },
+                    dataType:'json',
+                    success:function(data){
+                        if(data.m=='success'){
+                            location.href="{:U('Project/project_detail?id='.$find['project_id'])}";
+                        }
+                    }
+                });
+            }
+        });
+
+    $('#xia').click(function()
+        {
+            var zt = confirm('项目是否进入下一阶段');
+            if(zt==true){
+                $.ajax({
+                    url:'{:U("Project/complete_ajaxUP")}',
+                    type:'post',
+                    data:{
+                        dqq:{$find['project_id']},
+                    },
+                    dataType:'json',
+                    success:function(data){
+                        if(data.m=='success'){
+                            location.href="{:U('Project/project_detail?id='.$find['project_id'])}";
+                        }
+                    },
+                    error:function(data){
+                        alert('error');
+                    }
+                });
+            }
+        });
+</script>
+    <!--<![endif]-->
+
+    <!--[if IE]>
+    
+        <script type="text/javascript">
+        window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+        </script>
+        
+    <![endif]-->
+    <script src="__PUBLIC__/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/bootstrap.min.js"></script> 
+    
+    
+    <!-- page scripts -->
+    <script src="__PUBLIC__/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/moment/moment.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+    
+    <!-- theme scripts -->
+    <script src="__PUBLIC__/Admin/assets/js/SmoothScroll.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/jquery.mmenu.min.js"></script>
+    <script src="__PUBLIC__/Admin/assets/js/core.min.js"></script>
+    
+    <!-- inline scripts related to this page -->
+    <script src="__PUBLIC__/Admin/assets/js/pages/form-elements.js"></script>
+    <script language="javascript" type="text/javascript" src="__PUBLIC__/admin/timepicker/WdatePicker.js"></script>
+
+    <!-- end: JavaScript-->
+    
+</body>
+</html>

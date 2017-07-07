@@ -1,0 +1,146 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<include file="Include/head" />
+<script type="text/javascript" src="__PUBLIC__/admin/kindeditor/lang/zh_CN.js"></script>
+<script type="text/javascript" src="__PUBLIC__/admin/kindeditor/kindeditor-min.js"></script>
+</head>
+</head>
+
+<body>
+	<!-- start: Header -->
+	<include file="Include/header" />
+
+	<!-- end: Header -->
+	
+	<div class="container-fluid content">
+
+		<div class="row">
+
+			<!-- start: Main Menu -->
+			<include file="Include/left" />
+			<!-- end: Main Menu -->
+
+			<!-- start: Content -->
+			<div class="main" style="width:65%;margin-left:18%">
+
+				<script>
+					var editor;
+					KindEditor.ready(function(K) {
+						editor = K.create('textarea[name="news_content"]', {
+							allowFileManager : true,
+							width:'685px',
+							height:'500px',
+							extraFileUploadParams : {
+								sessionid :  '<?php echo session_id(); ?>'
+							}
+						});
+					});
+				</script>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						<h2><i class="fa fa-indent red"></i><strong>编辑通知</strong></h2>
+					</div>
+					<div class="panel-body">
+						<form name="newsadd" action="__SELF__" method="post" enctype="multipart/form-data" class="form-horizontal ">
+							<div class="form-group">
+								<label class="col-md-3 control-label">通知标题：</label>
+								<div class="col-md-9">
+									<input type="text" name="title" class="form-control" placeholder="公告标题">
+								</div>
+							</div>
+
+
+				                <div class="form-group">
+				                	<label class="col-md-3 control-label" for="textarea-input">通知详情：</label>
+				                	<div class="col-md-9">
+				                		<textarea name="content" rows="9" class="form-control"></textarea>
+				                	</div>
+				                </div>
+
+				                <br>
+				          
+				        </div>
+				        <!-- <input type="hidden" value="{$member.id}" name="user_detailed[user_id]"> -->
+				        <div class="panel-footer">
+				        	<input style="margin-left:40%;width:200px"  class="btn btn-sm btn-success" type="submit" value="   提      交   ">
+				        </div>	
+				          </form>
+				    </div>	
+
+
+
+
+				    <!-- end: Content -->
+				    <br><br><br>
+
+
+
+				</div><!--/container-->
+
+
+				<div class="clearfix"></div>
+
+
+				<!-- start: JavaScript-->
+				<!--[if !IE]>-->
+
+				<script src="__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js"></script>
+
+				<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script src="__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js"></script>
+	
+		<![endif]-->
+
+		<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+		</script>
+
+		<!--<![endif]-->
+
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='__PUBLIC__/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+		</script>
+		
+		<![endif]-->
+		<script src="__PUBLIC__/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/js/bootstrap.min.js"></script>	
+
+
+		<!-- page scripts -->
+		<script src="__PUBLIC__/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/moment/moment.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+		<!-- theme scripts -->
+		<script src="__PUBLIC__/Admin/assets/js/SmoothScroll.js"></script>
+		<script src="__PUBLIC__/Admin/assets/js/jquery.mmenu.min.js"></script>
+		<script src="__PUBLIC__/Admin/assets/js/core.min.js"></script>
+
+		<!-- inline scripts related to this page -->
+		<script src="__PUBLIC__/Admin/assets/js/pages/form-elements.js"></script>
+
+		<!-- end: JavaScript-->
+
+	</body>
+	</html>

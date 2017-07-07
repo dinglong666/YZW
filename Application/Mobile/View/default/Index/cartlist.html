@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="{$jiben['guanjianzi']}" />
+    <meta name="description" content="{$jiben['miaoshu']}"/>
+    <title>{$jiben['title']}</title>
+    <head lang="en">
+        <meta charset="UTF-8">
+        <title></title>
+        <link rel="stylesheet" href="__PUBLIC__/mobile/css/aboutus.css"/>
+        <link rel="stylesheet" href="__PUBLIC__/mobile/css/common.css"/>
+        <link rel="stylesheet" href="__PUBLIC__/mobile/css/swiper.min.css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    </head>
+<body>
+<!--header start-->
+<include file="pubilic/header" />
+    <div class="alpha">
+    </div>
+    <nav class="nav" id="nlist">
+        <ul class="nav_ul">
+            <li class="nav_item">
+                <div>
+                    <i class="back-ioc"></i>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/index')}">
+                        网站首页
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/source')}">车源信息 </a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/sell')}">我要卖车</a>
+
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/newscenter')}">新闻中心</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/online')}">在线留言</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/aboutus')}">关于我们</a>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <a href="{:U('Index/contactus')}">联系我们</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                 <foreach name="selectBanner" item="value">
+                     <if condition="$value['one_img'] neq ''">
+                        <div class="swiper-slide">
+                            <div class="banner-img">
+                                <img src="__ROOT__/Uploads/{$value.one_img}" alt="" />
+                            </div>
+                        </div>  
+                     </if>
+                </foreach>
+            </div>
+        </div>
+    </div>
+<!--header end-->
+<!--content start-->
+    <div class="content">
+    <div >
+        <div style="font-weight: bold;font-size: 0.26rem;height: 0.8rem;margin-bottom: 0.1rem;color: #000;display: block;text-align: left;">{$selectCart['game_name']}</div>
+        <div><img src="__ROOT__/Uploads/{$selectCart['game_img']}" alt="" /></div>
+        <div>{$selectCart['content']}</div>        
+    </div>
+
+    </div>
+<!--content end-->
+<!--footer start-->
+<include file="pubilic/foot" />
+<!--footer end-->
+</body>
+	<script src="__PUBLIC__/mobile/js/zepto.min.js"></script>
+    <script src="__PUBLIC__/mobile/js/touch.js"></script>
+    <script src="__PUBLIC__/mobile/js/fx.js"></script>
+    <script src="__PUBLIC__/mobile/js/resetRem.js"></script>
+    <script src="__PUBLIC__/mobile/js/swiper-3.4.1.jquery.min.js"></script>
+    <script src="__PUBLIC__/mobile/js/common.js"></script>
+</html>
