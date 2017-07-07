@@ -107,9 +107,14 @@ class ProjectController extends BaseController {
     public function complete_ajaxUP(){
         $find=M('project')->where("project_id=".$_POST['dqq'])->find();
         $time=$find['project_stime'].'|'.time();
-        // if(count(implode($time))==6){
-
-        // }
+        if(count(explode('|',$time))==6){
+            $arr=array('user_id'=>$find['user_id'],
+                'project_id'=>$find['project_id'],
+                'information_type'=>2,
+                'information_content'=>'您的'.$find['project_name'].'项目佣金已发送，请注意查收!',
+                'add_time'=>time());
+            M('information')->add($arr);
+        }
         $m=M('project')->where("project_id=".$_POST['dqq'])->save(array('project_stime'=>$time));
         if($m){
             $s='success';
