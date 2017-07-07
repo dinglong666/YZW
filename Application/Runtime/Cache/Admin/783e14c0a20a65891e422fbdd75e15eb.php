@@ -203,42 +203,47 @@
 			<!-- start: Content -->
 
 			<div class="main sidebar-minified">
-
 				<div class="row">		
 					<div class="col-lg-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h2><i class="fa fa-table red"></i><span class="break"></span><strong>管理员日志</strong></h2>
+								<h2><i class="fa fa-table red"></i><span class="break"></span><strong>项目分类管理</strong> | <a href="<?php echo U('Project/projectList_type_add');?>"><strong>添加项目分类</strong></a></h2>
+
 <!-- 							<div class="panel-actions">  //刷新 收回 关闭按钮
 								<a href="table.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
 								<a href="table.html#" class="btn-minimize"><i class="fa fa-chevron-up"></i></a>
 								<a href="table.html#" class="btn-close"><i class="fa fa-times"></i></a>
 							</div> -->
+
 							</div>
 						<div class="panel-body">
-							<table class="table table-striped table-bordered bootstrap-datatable datatable">
+							<table  class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 									<tr>
 										<th>编号</th>
-										<th>管理员账号</th>
-										<th>描述</th>
-										<th>IP</th>
-										<th>操作时间</th>
+										<th>项目分类名称</th>
+										<th>项目分类描述</th>
+										<th>是否显示</th>
+										<th>操作</th>
 									</tr>
 								</thead>   
 								<tbody>		
 									<?php if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
-											<td><?php echo ($v['log_id']); ?></td>
-											<td><?php echo ($v['admin_username']); ?></td>
-											<td><?php echo ($v['log_info']); ?></td>
-											<td><?php echo long2ip($v['log_ip']);?></td>
-											<td><?php echo date('Y-m-d H:i:s',$v['log_time']);?></td>
+											<td><?php echo ($v['type_id']); ?></td>
+											<td><?php echo ($v['type_name']); ?></td>
+											<td><?php echo ($v['type_desc']); ?></td>
+											<td><a href="<?php echo U('Project/projectList_type_state?id='.$v['type_id']);?>"><?php echo ($xs[$v['type_state']]); ?></a></td>
+											<td>
+												<a href="<?php echo U('Project/projectList_type_up?id='.$v['type_id']);?>">编辑</a> &nbsp;
+												|&nbsp;&nbsp;
+												<a onclick="return confirm('确认删除？')" href="<?php echo U('Project/projectList_type_del?id='.$v['type_id']);?>" target="blank">删除</a> &nbsp;
+											</td>
 										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 								</tbody>
-							</table>    
+							</table>  
 							<div class="w-page w-left w-m-3 ">
 					            <?php echo ($page); ?>
-					        </div>    
+					        </div>  
 						</div>
 					</div>
 				</div><!--/col-->

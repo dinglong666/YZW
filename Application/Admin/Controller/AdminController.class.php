@@ -208,8 +208,11 @@ class AdminController extends BaseController {
 
     //操作日志
     public function adminLog(){
-        $sel=M('admin_log')->order('log_time desc')->select();
+        $count=M('admin_log')->count();
+        $page=new page($count,10);
+        $sel=M('admin_log')->limit($page->firstRow.','.$page->listRows)->order('log_time desc')->select();
         $this->assign('sel',$sel);
+        $this->assign('page',$page->show());
         $this->display();
     }
 }
