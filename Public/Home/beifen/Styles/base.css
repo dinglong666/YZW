@@ -1,0 +1,589 @@
+@charset "utf-8";
+
+/* import */
+@import url("reset.css");
+@import url("layout.css");
+
+/************************* content ***************************/
+#content{ width:100%; float:left; background: #e9f9ff; padding-bottom:50px;}
+section{ width:100%; float:left;}
+.part{ width:100%; max-width:1200px; margin:auto;}
+
+/*-------------------------------------------------------------------
+****************************** index *******************************
+---------------------------------------------------------------------*/
+/*banner*/
+.banner{ float:left; width:100%; margin-top: 16px;}
+.index_guan_th div+div+div+div{
+ height:30px
+}
+
+.index_th{ float: left; width: 100%;}
+/*left*/
+.index_left{ float: left; width: 65%;}
+.index_forum{ float: left; width: 100%; padding: 12px; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); }
+.index_forum_title{ float: left; width: 100%; border-bottom: solid 1px #f2f2f2; padding-bottom: 12px;}
+.index_forum_title span{ float: left; width: 30px; border-radius: 15px; overflow: hidden;}
+.index_forum_title img{ width: 100%; float: left;}
+.index_forum_title p{ float: left; width: 70%; line-height: 30px; font-size: 0.875em; padding-left: 20px;}
+.index_liu{ float: right; background: url(../Images/icon06.png) no-repeat 0 3px; padding-left: 20px; color: #999; margin-left: 15px;}
+.index_zz{ float: right; background: url(../Images/icon05.png) no-repeat 0 3px; padding-left: 20px; color: #999; margin-left: 15px;}
+.index_forum_th{ float: left; width: 100%; margin-top: 10px;}
+.index_forum_th h2{ font-weight: 400; color: #59c3e1; font-size: 1em; line-height: 30px;}
+.index_forum_th img{ float: left; width: 100%; margin-top: 10px;}
+.index_forum_th p{ float: left; width: 100%; line-height: 30px; font-size: 0.875em; color: #999; margin-top: 10px;}
+.index_forum_title a{ color:#000;}
+.index_forum_more{ float:left; width:100%; margin-top:30px;}
+.index_forum_more a{ float:left; text-align:center; background:#59c3e1; border-radius:5px; color:#FFF; line-height:35px; padding:0px 25px; font-size:0.875em;}
+
+/*right*/
+.index_right{ float: left; width: 33%; margin-left: 2%;}
+.index_game{ float: left; width: 100%; background: #6780e6; border-radius: 5px; margin-top: 24px;}
+.index_game h2{ float: left; background: url(../Images/icon03.png) no-repeat 10px 8px; line-height: 55px; padding-left:60px; font-size:1.5em; color:#fff; font-weight:normal;}
+.index_game span{ float:left; margin-left:5px; color:#ffddba; font-size:1.125em; line-height:55px;}
+.index_game small{ float:right; margin-top:13px; margin-right:10px;}
+
+.index_yula{ float: left; width: 100%; background: #59c3e1; border-radius: 5px; margin-top: 24px;}
+.index_yula h2{ float: left; background: url(../Images/icon07.png) no-repeat 10px 8px; line-height: 55px; padding-left:60px; font-size:1.5em; color:#fff; font-weight:normal;}
+.index_yula span{ float:left; margin-left:5px; color:#acedff; font-size:1.125em; line-height:55px;}
+.index_yula small{ float:right; margin-top:13px; margin-right:10px;}
+
+.index_rightpart{ float: left; width: 100%; padding: 12px; padding-top:0; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3);}
+.index_right_title{ float:left; width:100%; border-bottom:solid 1px #f2f2f2; padding:12px 0;}
+.index_right_title h2{ float:left; padding-left:30px; font-size:1.125em; color:#59c3e1; font-weight:normal;}
+.index_right_title a{ float:right; color:#59c3e1;}
+.index_shou_title{ background:url(../Images/icon11.png) no-repeat 0px 13px;}
+.index_shou_th{ float:left; width:100%;}
+.index_shou_th ul{ float:left; width:100%; padding-bottom:30px;}
+.index_shou_th li{ float:left; width:29.33%; margin-top:30px; height:0; padding-bottom:26.33%; overflow:hidden; margin-left:2%; margin-right:2%; border:solid 4px #fff;  -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border-radius:20px;}
+.index_shou_th img{ width:100%; float:left;}
+
+.index_guan_title{ background:url(../Images/icon12.png) no-repeat 0px 13px;}
+.index_guan_th{ float:left; width:100%; padding-bottom:20px;}
+.index_guan_demo{ float:left; width:100%; margin-top:30px; margin-bottom:5px;}
+.index_guan_pic{ float:left; width:15%; height:0; padding-bottom:14%; overflow:hidden; border:solid 2px #fff;  -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border-radius:50px;}
+.index_guan_pic img{ float:left; width:100%;}
+.index_guan_txt{ float:left; width:82%; margin-left:3%;}
+.index_guan_txt p{ float:left; width:100%; line-height:30px; font-size:0.875em; height:30px; overflow:hidden;}
+.index_guan_txt span{ float:left; width:100%; padding-left:20px; background:url(../Images/icon09.png) no-repeat 0px 5px; font-size:0.75em; color:#666; line-height:24px;}
+
+.index_tie_title{ background:url(../Images/icon13.png) no-repeat 0px 13px;}
+.index_tie_demo{ float:left; width:100%; margin-top:30px; margin-bottom:5px;}
+.index_tie_hao{ float:left; padding:5px; color:#FFF; background:#e1596c; border-radius:10px; line-height:6px; font-size:0.75em; margin-top:5px;}
+.index_tie_hao2{ float:left; padding:5px; color:#e1596c; background:#fff; border-radius:10px; line-height:6px; font-size:0.75em; margin-top:5px;}
+.index_tie_pic{ float:left; width:15%; height:0; padding-bottom:14%; overflow:hidden; border:solid 2px #fff;  -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border-radius:50px; margin-left:2%;}
+.index_tie_pic img{ float:left; width:100%;}
+.index_tie_txt{ float:left; width:70%; margin-left:3%;}
+.index_tie_txt p{ float:left; width:100%; line-height:30px; font-size:1em; height:30px; overflow:hidden;}
+.index_tie_txt span{ float:left; width:100%; padding-left:20px; background:url(../Images/icon10.png) no-repeat 0px 5px; font-size:0.75em; color:#666; line-height:24px;}
+
+.index_re_title{background:url(../Images/icon14.png) no-repeat 0px 13px;}
+.index_re_txt{ float:left; width:70%; margin-left:3%;}
+.index_re_txt p{ float:left; width:100%; line-height:30px; font-size:1em; height:30px; overflow:hidden;}
+.index_re_txt span{ float:left; width:100%; padding-left:20px; background:url(../Images/icon08.png) no-repeat 0px 5px; font-size:0.75em; color:#666; line-height:24px;}
+
+/*-------------------------------------------------------------------
+****************************** forum *******************************
+---------------------------------------------------------------------*/
+/*banner*/
+.list_banner{ float:left; width:100%; margin-top: 16px;}
+.list_banner img{ width: 100%; float: left;}
+
+.forum_title{ float:left; width:100%; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:0 15px;}
+.forum_title h2{ float:left; padding-left:30px; font-size:1.125em; color:#59c3e1; font-weight:normal; line-height:50px;}
+.forum_title a{ float:right; color:#59c3e1; line-height:50px;}
+.forum_gf h2{ background:url(../Images/icon23.png) no-repeat 0px 13px;}
+.forum_yx h2{ background:url(../Images/icon24.png) no-repeat 0px 13px;}
+.forum_th{ float:left; width:100%; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 15px;}
+.forum_th_demo{ float:left; width:32%; margin-right:2%; height:0; padding-bottom:25%; border-radius:3px; overflow:hidden; position:relative;}
+.forum_th_demo:nth-child(3n){ margin-right:0;}
+.forum_th_demo>img{ float:left; width:100%;}
+.forum_th_xx{ position:absolute; background:rgba(0,0,0,0.6) none repeat 0 0 scroll !important; filter:Alpha(opaity=60); padding-left:15px; padding-right:15px;  background:#17191d; z-index:1; width:100%; height:100%;  top:100%; margin-top:-40px;
+-webkit-transition: all 0.35s ease-in-out;
+    -moz-transition: all 0.35s ease-in-out;
+    transition: all 0.35s ease-in-out;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+	}
+.forum_th_xx p{ float:left; width:100%; color:#FFF; line-height:40px; font-size:0.875em;}
+.forum_th_demo:hover .forum_th_xx{ top:0; margin-top:0; padding-top:15px;}
+.forum_th_xx span{ float:left; width:100%; color:#FFF; line-height:18px; font-size:0.875em;  margin-bottom:10px;}
+.forum_th_xx a{ padding:0px 15px; color:#FFF; line-height:24px; border:solid 1px #FFF; float:left; font-size:0.875em; margin-top:5px;}
+.forum_zz{ float:left; background:url(../Images/icon21.png) no-repeat 0 5px; color:#FFF; line-height:28px; padding-left:20px; font-size:0.875em;}
+.forum_qq{ float:left; background:url(../Images/icon22.png) no-repeat 0 5px; color:#FFF; line-height:28px; padding-left:20px; margin-left:15px; font-size:0.875em;}
+.forum_zq{ float:left; width:100%;}
+.forum_th_demo:hover .forum_th_xx p{ line-height:30px;}
+
+.forum_lists{ float:left; width:100%; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 15px; padding-top:0;}
+.forum_lists_demo{float:left; width:32%; margin-right:2%; border-radius:3px; background:#e9f9ff; padding:15px 10px; margin-top:20px;}
+.forum_lists .forum_lists_demo:nth-child(3n){ margin-right:0;}
+.forum_listspic{ float:left; width:27%; height:0; padding-bottom:25%; overflow:hidden; border:solid 3px #fff;  -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border-radius:10px;}
+.forum_liststxt{ float:left; width:73%; padding-left:20px;}
+.forum_listspic img{ width:100%;}
+.forum_liststxt p{ float:left; width:100%; line-height:30px; font-size:0.875em; color:#000; height:30px; overflow:hidden;}
+.forum_liststxt span{ float:left; width:100%; line-height:20px; font-size:0.875em; color:#666; height:20px; overflow:hidden;}
+.forum_lists_cc{ float:left; width:100%;}
+.forum_lists_title{ float:left; width:100%; background:#FFFFFF; margin-top: 20px; }
+.forum_lists_title h2{ float:left; padding-left:15px; font-size:1.125em; color:#59c3e1; font-weight:normal; line-height:24px;  border-left: 5px #59c3e1 solid;}
+.forum_lists_title a{ float:right; color:#59c3e1; line-height:24px;}
+
+
+/*-------------------------------------------------------------------
+****************************** forum-list *******************************
+---------------------------------------------------------------------*/
+.forum_fb h2{ background:url(../Images/icon25.png) no-repeat 0px 13px;}
+.forum_fabu{ background:url(../Images/icon26.png) no-repeat 0px 13px; padding-left:30px;}
+.forum_list_th{ float:left; width:100%; background:#FFFFFF; border-radius: 3px; margin-top: 24px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 15px;}
+.forum_list_title{ float:left; width:100%; border-bottom:solid 1px #f2f2f2; padding-bottom:10px;}
+.forum_list_pic{ float:left; width:30px; height:30px; border-radius:20px; overflow: hidden;}
+.forum_list_pic img{ width:100%;}
+.forum_list_title p{ float:left; margin-left:20px; color:#000; line-height:30px; font-size:0.875em;}
+.forum_list_title p a{ color:#000;}
+.forum_list_title span{ color:#999; font-size:0.875em; float:right; line-height:30px;}
+.forum_list_thing{ float:left; width:100%; margin-top:10px;}
+.forum_list_thing h2{ float:left; line-height:30px; color:#59c3e1; font-size:1em; font-weight:normal;}
+.forum_zhiding{ float:left; padding:0px 5px; border-radius:3px; background:#59c3e1; color:#FFF; line-height:20px; margin-top:5px; margin-left:15px; font-size:0.75em; font-weight:normal;}
+.forum_jinghua{ float:left; padding:0px 5px; border-radius:3px; background:#ff7474; color:#FFF; line-height:20px; margin-top:5px; margin-left:15px; font-size:0.75em; font-weight:normal;}
+.forum_shouye{float:left; padding:0px 5px; border-radius:3px; background:#ffc60b; color:#FFF; line-height:20px; margin-top:5px; margin-left:15px; font-size:0.75em; font-weight:normal;}
+.forum_list_thing p{ float:left; width:100%; color:#000; line-height:24px; font-size:0.875em;}
+.forum_list_thing span{ float:left; width:32%; margin-right:2%;}
+.forum_list_thing span:nth-child(3n){ margin-right:0;}
+.forum_list_thing span img{ width:100%;}
+.forum_list_xt{ float:left; width:100%; margin-top:20px;}
+.forum_list_di{ float:left; width:100%; margin-top:20px; font-size:0.875em; color:#999; line-height:30px;}
+.forum_zan{ background:url(../Images/icon30.png) no-repeat;padding-left:28px;}
+.forum_see{ background:url(../Images/icon28.png) no-repeat; padding-left:28px; margin-left:20px;}
+.forum_shou{ background:url(../Images/icon29.png) no-repeat; padding-left:28px; margin-left:20px;}
+
+.fy{ float:left; width:100%; margin-top:20px;}
+
+.right_news{ float:left; width:100%; margin-top:24px; background:#FFF; border-radius:3px; border-top:5px solid #59c3e1; overflow:hidden;}
+.right_news_c{ float:left; width:100%; padding:10px 15px; padding-bottom:30px;}
+.right_news_title{ float:left; width:100%; padding-bottom:10px; padding-top:5px; border-bottom: solid 1px #f2f2f2;}
+.right_news_title h2{ float:left; width:100%; border-left:4px #59c3e1 solid; padding-left:15px; line-height:20px; font-size:1em; color:#59c3e1; font-weight:normal;}
+.right_news ul{ float:left; width:100%;}
+.right_news li{ float:left; width:100%; color:#59c3e1; font-size:0.875em; line-height:30px; text-align:left; margin-top:10px; border-bottom: dashed 1px #e7e7e7; background:url(../Images/dian.png) no-repeat 0 13px; padding-left:15px;}
+.right_news p{ color:#000; display:block;}
+.right_news_more{ width:100%; float:left; background:#59c3e1; color:#FFF; padding:10px 15px;}
+.right_news_more a{ color:#FFF; background:url(../Images/icon31.png) no-repeat right; float:left; width:100%; font-size:0.875em;}
+
+/*-------------------------------------------------------------------
+****************************** forum-detail *******************************
+---------------------------------------------------------------------*/
+.forum_detail{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px; background:#FFF; border-radius:3px;}
+.forum_detail_title{ float:left; width:100%; border-bottom:solid 1px #f2f2f2; padding-bottom:15px;}
+.forum_de_pic{ float:left; width:60px; height:60px; border-radius:30px; overflow:hidden;}
+.forum_de_pic img{ width:100%;}
+.forum_de_txt{ float:left; margin-left:20px; margin-top:15px; line-height:30px; width:50%;}
+.forum_de_date{ float:right; margin-top:15px; line-height:30px; width:30%; text-align:right;}
+.forum_de_txt p{ float:left; color:#000; margin-right:20px;}
+.forum_de_txt p a{ color:#000;}
+.forum_de_txt span{ color:#59c3e1; margin-right:5px; font-size:0.875em;}
+.forum_de_txt span a{ color:#59c3e1;}
+.forum_de_date a{ padding:0px 15px; background:#59c3e1; color:#FFF; font-size:0.75em; border-radius:5px; line-height:30px; display:inline-block;}
+.forum_de_date span{ color:#999; background:url(../Images/icon09.png) no-repeat; margin-left:20px; padding-left:25px; font-size:0.875em;}
+.forum_detail_th{ float:left; padding:30px 15px; width:100%;}
+.forum_detail_th h2{ float:left; color:#59c3e1; font-weight:normal; font-size:1.5em; line-height:30px;}
+.forum_deth{ float:left; width:100%; margin-top:30px; line-height:30px; font-size:0.875em;}
+.forum_deth img{ max-width:100%;}
+
+.forum_share{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:15px 20px; background:#FFF; border-radius:3px;}
+.forum_fen{ float:left;}
+.forum_fen>img{ float:left;}
+.forum_fxz{ float:right; text-align:right; line-height:30px; font-size:0.875em;}
+.forum_fxz a{ border-radius:3px; padding:5px 0;}
+.for_dezan{ background:url(../Images/icon30.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_deyu{ background:url(../Images/icon32.png) no-repeat; padding-left:25px; color:#999;margin:0px 10px;}
+.for_deshuo{ background:url(../Images/icon33.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_desee{ background:url(../Images/icon28.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_deshou{ background:url(../Images/icon29.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_deju{ background:url(../Images/icon34.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_dedate{ background:url(../Images/icon39.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+.for_debei{ background:url(../Images/icon46.png) no-repeat; padding-left:25px; color:#999; margin:0px 10px;}
+
+/*.forum_fxz a:hover .for_dezan{ background:url(../Images/icon36.png) no-repeat; color:#59c3e1;}
+.forum_fxz a:hover{ background:#e9f9ff;}
+.forum_fxz a:hover .for_deshou{ background:url(../Images/icon35.png) no-repeat; color:#59c3e1;}*/
+.zan_active .for_dezan{ background:url(../Images/icon36.png) no-repeat; color:#59c3e1;}
+.zan_active .for_deshou{ background:url(../Images/icon35.png) no-repeat; color:#59c3e1;}
+.zan_active{ background:#e9f9ff;}
+
+.forum_fxz p{ display:inline-block;  margin:0px 10px;}
+
+.forum_ping{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:15px 20px; background:#FFF; border-radius:3px;}
+.forum_ping_demo{ float:left; width:100%; margin-top:20px; position:relative;}
+.forum_ping_pic{ position:absolute; width:60px; height:60px; overflow:hidden; border-radius:30px;}
+.forum_ping_pic img{ width:100%;}
+.forum_ping_txt{ float:left; width:100%; padding-left:80px; border-bottom:solid 1px #f2f2f2; padding-bottom:15px;}
+.forum_ping_name{ float:left; width:100%;}
+.forum_ping_name>p{ float:left; max-width:50%; line-height:30px;}
+.forum_ping_txt>p{ float:left; width:100%; line-height:24px; font-size:0.875em; color:#666; margin-top:20px;}
+.forum_ping_yc{ margin-top:20px; float:left; width:100%;}
+.forum_ping_ydemo{ float:left; width:100%; position:relative;}
+.forum_ping_ydemo .forum_ping_txt{ border-bottom:0; border-top:solid 1px #f2f2f2; padding-top:20px; padding-left:60px;}
+.forum_ping_ydemo .forum_ping_pic{ width:40px; height:40px; margin-top:20px;}
+.forum_zhankai{ float:right; color:#59c3e1; background:url(../Images/icon38.png) no-repeat right;font-size:0.875em; padding-right:20px; cursor:pointer;}
+.forum_shouqi{ float:right; color:#59c3e1; background:url(../Images/icon37.png) no-repeat right;font-size:0.875em; padding-right:20px; cursor:pointer;}
+.froum_huifu{ float:left; width:100%; margin-top:24px;}
+.froum_huifu_title{ float:left; width:100%; border-left: solid 4px #59c3e1; padding-left:20px; color:#59c3e1; font-size:1em; line-height:20px;}
+.froum_huifu_th{ float:left; width:100%; margin-top:15px;}
+.froum_huifu_th>img{ width:100%;}
+
+/*-------------------------------------------------------------------
+****************************** game *******************************
+---------------------------------------------------------------------*/
+.game_guan{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 20px; background:#FFF; border-radius:3px;}
+.game_guan_title{ float:left; height:20px; line-height:20px; width:100%; padding-left:20px; border-left:4px solid #59c3e1; color:#59c3e1; font-size:1em;}
+.game_guan_th{ float:left; width:100%; margin-top:20px;}
+.game_guan_a{ float:left; width:15%; height:0; padding-bottom:22%; overflow:hidden; background:#e9f9ff; border-radius:3px; text-align:center; padding-left:15px; padding-right:15px;}
+.game_guan_b{ float:left; width:34%; height:0; padding-bottom:22%; overflow:hidden; margin-left:1%; background:#e9f9ff; border-radius:3px; padding-left:15px; padding-right:15px; }
+.game_guan_c{ float:left; width:24%; height:0; padding-bottom:22%; overflow:hidden; margin-left:1%; background:#e9f9ff; border-radius:3px; padding-left:15px; padding-right:15px;}
+.game_guan_d{ float:left; width:24%; height:0; padding-bottom:22%; overflow:hidden; margin-left:1%; background:#e9f9ff; border-radius:3px; padding-left:15px; padding-right:15px;}
+.game_guan_pic{ display:inline-block; width:75%; border:solid 2px #FFFFFF; border-radius:15px; overflow:hidden; margin-top:30px;}
+.game_guan_pic>img{ width:100%; float:left;}
+.game_guan_a>p{ float:left; width:100%; text-align:center; margin-top:5px; line-height:30px; height:30px; overflow:hidden; color:#000;}
+.game_guan_a>a>p{ float:left; width:100%; text-align:center; margin-top:5px; line-height:30px; color:#000; overflow:hidden;}
+.game_guan_a>span{ display:inline-block; background:url(../Images/icon42.png) no-repeat 0 2px; padding-left:20px; color:#999; line-height:20px;}
+.game_guan_b>span{ float:left; margin-top:20px; width:100%; line-height:30px; color:#59c3e1;}
+.game_guan_b>p{ float:left; width:100%; line-height:24px; height:144px; overflow:hidden; color:#000; font-size:0.875em;}
+.game_star{ float:left; width:100%;}
+.game_starbj{ float:left; width:90px; background:url(../Images/icon41.png) repeat-x; height:12px; margin-top:15px;}
+.game_starbj p{ float:left; height:12px;line-height:0px}
+.game_star>span{ color:#F00; line-height:12px; float:left; margin-top:15px; margin-left:10px; font-size:0.75em;}
+.game_guan_c>span{ float:left; margin-top:20px; width:100%; line-height:30px; color:#59c3e1;}
+.game_guan_xx{ float:left; width:100%; margin-top:10px;}
+.game_guan_pics{ float:left; width:22%; border-radius:25px; overflow:hidden; margin-right:5%;}
+.game_guan_pics img{ float:left; width:100%;}
+.game_guan_name{ float:left; width:73%;} 
+.game_guan_name p{ float:left; width:100%; font-size:0.875em; color:#000;}
+.game_guan_xx>p{ float:left; width:100%; font-size:0.875em; margin-top:10px; line-height:24px; height:72px; overflow:hidden; color:#000;}
+
+.game_list{float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 20px; background:#FFF; border-radius:3px; padding-top:0;}
+.game_list .game_guan_a{ margin-right:2%; margin-top:20px;}
+.game_list .game_guan_a:nth-child(6n){ margin-right:0}
+
+/*-------------------------------------------------------------------
+****************************** game-detail *******************************
+---------------------------------------------------------------------*/
+.game_xx{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 20px; background:#FFF; border-radius:3px; position:relative;}
+.game_pic{ position:absolute; width:150px; text-align:center;}
+.game_pic p{ width:150px; height:150px; border-radius:25px; overflow:hidden; border:solid 4px #fff;  -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1);}
+.game_pic img{ width:100%;}
+.game_pic span{ background:url(../Images/icon42.png) no-repeat 0px 4px; color:#999; padding-left:25px; display:inline-block; margin-top:20px;}
+.game_txt{ float:left; width:100%; padding-left:200px;}
+.game_txta{ float:left; width:100%;}
+.game_txta h1{ float:left; font-size:1.5em; font-weight:normal;}
+.game_txta span{ float:right; line-height:30px; margin-left:10px;}
+.game_txta_s{ background:url(../Images/icon35.png) no-repeat 10px 5px; padding-left:30px; border: solid 1px #59c3e1; border-radius:3px; padding-right:15px; font-size:0.875em; color:#59c3e1;}
+.game_txta_k{ background:#59c3e1; color:#FFF; border-radius:3px; font-size:0.875em; padding:0 15px;}
+.game_txtb{ float:left; width:100%; margin-top:20px; background:#e9f9ff; border-radius:3px; padding:15px;}
+.game_txtb>h3{ float:left; border-left: solid 3px #00629b; color:#00629b; font-weight:normal; padding-left:15px; line-height:20px;}
+.game_txtb>p{ float:left; width:100%; font-size:0.875em; line-height:24px; margin-top:20px; overflow:hidden;}
+.game_txtb .game_star>span{ color:#59c3e1; font-size:0.875em;}
+.game_dianping{ color:#59c3e1; font-size:0.875em; margin-left:20px; margin-top:15px; line-height:12px; float:left; cursor:pointer;}
+.game_dianping span{color:#59c3e1; }
+.game_zk{ float:right; margin-top:15px; line-height:18px; font-size:0.875em; color:#00629b; background:url(../Images/icon44.png) no-repeat right; padding-right:20px;}
+.game_sq{ float:right; margin-top:15px; line-height:18px; font-size:0.875em; color:#00629b; background:url(../Images/icon45.png) no-repeat right; padding-right:20px;}
+
+.game_left{ float:left; width:49%; margin-right:2%; margin-top:24px; border-radius:3px; overflow:hidden; background:#FFF;}
+.game_left:last-child{ margin-right:0;}
+.game_left_title{ float:left; width:100%; height:50px; line-height:50px; color:#FFF; background:#59c3e1; text-align:center;}
+.game_left_th{ float:left; width:100%; padding:15px; max-height:700px; overflow-y:scroll;}
+
+/*-------------------------------------------------------------------
+****************************** member-index *******************************
+---------------------------------------------------------------------*/
+.member_xx{ float:left; width:100%; margin-top:24px; border-radius:3px; border-top:7px solid #59c3e1; background:#FFF; padding:20px; position:relative;  min-height:150px;}
+.member_xxpic{ position:absolute; width:120px; height:120px; border:#FFF solid 2px; border-radius:60px;-webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); overflow:hidden;}
+.member_xxpic img{ width:100%;}
+.member_xxtxt{ float:left; width:100%; padding-left:150px;}
+.member_xxa{ float:left; width:40%; margin-top:20px;}
+.member_xxb{ float:left; width:60%; margin-top:20px;}
+.member_xxc{ float:left; width:100%; margin-top:20px;}
+.member_xxa p{ float:left; width:100%; font-size:1.125em; color:#000;}
+.member_xxa span{ float:left; width:100%; font-size:0.875em; color:#59c3e1;}
+.member_xxb ul{ float:left; width:25%; text-align:right; border-right:solid 1px #cbf4ff}
+.member_xxb li{ float:left; width:100%; line-height:20px; font-size:1.125em; text-align:center; color:#59c3e1;}
+.member_xxb li a{ color:#59c3e1; font-size:0.75em;}
+.member_xxbian{ float:right; background:url(../Images/icon47.png) no-repeat 20px 5px #59c3e1; border-radius:3px; padding-left:40px; padding-right:25px; color:#FFF; font-size:0.875em; line-height:30px;}
+.member_xxbian2{ float:right; background:url(../Images/personal_2_03.png) no-repeat 15px 9px #59c3e1; border-radius:3px; padding-left:40px; padding-right:25px; color:#FFF; font-size:0.875em; line-height:30px;}
+
+.member_part{ float:left; width:100%; margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 15px; background:#FFF; border-radius:3px; padding-top:0;}
+.icon_title_game{ background: url(../Images/icon24.png) no-repeat 0px 13px;}
+.icon_title_coll{ background: url(../Images/icon48.png) no-repeat 0px 13px;}
+.icon_title_tie{background: url(../Images/icon50.png) no-repeat 0px 13px;}
+.icon_title_reply{background: url(../Images/icon51.png) no-repeat 0px 13px;}
+.icon_title_fans{ background: url(../Images/icon49.png) no-repeat 0px 13px;}
+.member_lgame{ float:left; width:100%;}
+.member_lgame .game_guan_a{ margin-top:20px; width:23.5%; margin-right:2%; padding-bottom:35%;}
+.member_lgame .game_guan_a:nth-child(4n){ margin-right:0;}
+
+.member_lcoll{ float:left; width:100%;}
+.member_lcoll_demo{ float:left; width:100%; margin-top:20px; padding-bottom:10px; border-bottom:solid 1px #f2f2f2;}
+.member_lcoll h2{ float:left; width:100%; font-size:1em; color:#000; line-height:30px;}
+.member_lcoll p{ float:left; width:100%; font-size:0.875em; color:#666; line-height:24px;}
+.member_lcoll_pic{ float:left; width:100%; margin-top:20px;}
+.member_lcoll_pic span{ width:49%; float:left; margin-right:1%;}
+.member_lcoll_pic img{ width:100%;}
+.member_lcoll_date{ float:left; width:100%; margin-top:20px;}
+.member_lcoll_date p{ float:left; color:#999; line-height:24px; width:50%;}
+.member_lcoll_date span{ float:right; color:#999; background:url(../Images/icon28.png) no-repeat 0 3px; padding-left:25px; line-height:24px;}
+
+.member_lreply{ float:left; width:100%; line-height:24px; margin-top:10px; color:#666;}
+.member_lreply span{ color:#59c3e1;}
+.member_lreply p{ float:left; width:100%;}
+
+.member_rfoll{ float:left; width:100%;}
+.member_rfoll_demo{ float:left; width:100%; padding:10px 0; border-bottom:solid 1px #f2f2f2; position:relative; cursor:pointer;}
+.member_rfoll_pic{ position:absolute; width:40px; height:40px; border-radius:20px; overflow:hidden;}
+.member_rfoll_pic img{ width:100%;}
+.member_rfoll_txt{ float:left; width:70%; padding-left:50px;}
+.member_rfoll_txt p{ float:left; width:100%; line-height:24px; color:#000; font-size:0.875em;}
+.member_rfoll_txt span{ float:left; width:100%; line-height:20px; color:#999; font-size:0.875em;}
+.member_rfoll_guan{ float:right; font-size:0.875em; color:#59c3e1; border:solid 1px #59c3e1; border-radius:3px; padding:0px 15px; line-height:30px; margin-top:10px; display:none;}
+.member_rfoll_demo:hover .member_rfoll_guan{ display:block;}
+
+/*-------------------------------------------------------------------
+****************************** member-collection *******************************
+---------------------------------------------------------------------*/
+.member_th{ float:left; width:100%;}
+.member_th .member_lcoll{ padding:0px 20px;}
+.member_th .member_lcoll_pic span{ width:32.3%;}
+.member_fans{ float:left; width:100%; padding:0px 30px;}
+.member_fans_demo{ float:left; width:32%; padding:15px 20px; margin-right:2%; position:relative; cursor:pointer; background:#e9f9ff; border-radius:3px; margin-top:20px;}
+.member_fans_demo:nth-child(3n){ margin-right:0;}
+.member_fans_pic{ position:absolute; width:70px; height:70px; border-radius:35px; overflow:hidden; -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border:solid 2px #FFF;}
+.member_fans_pic img{ width:100%;}
+.member_fans_txt{ float:left; width:100%; padding-left:90px;  border-bottom:solid 1px #fff; padding-bottom:20px;}
+.member_fans_txt p{ float:left; width:100%; line-height:30px; margin-top:5px; color:#000; font-size:1em;}
+.member_fans_txt span{ float:left; width:100%; line-height:30px; color:#999; font-size:1em;}
+.member_fans_guan{ float:left; width:100%; text-align:center; font-size:0.875em; color:#59c3e1;  line-height:30px; margin-top:10px;}
+
+.member_game{float:left; width:100%;}
+.member_game .game_guan_a{ margin-right:2%; margin-top:20px;}
+.member_game .game_guan_a:nth-child(6n){ margin-right:0}
+
+/*-------------------------------------------------------------------
+****************************** member-message *******************************
+---------------------------------------------------------------------*/
+.listnavtab_title{ width:100%; float:left; margin-top:24px; border-top: solid 4px #59c3e1;}
+#listnavtags { float:left; width:100%; font-family:"微软雅黑"; font-size:1em;}
+#listnavtags>li { float:left; line-height:46px; list-style-type:none; width:20%; text-align:center; background:#59c3e1; position: relative;}
+.cccc li { float:left; line-height:46px; list-style-type:none; width:33.333333333333% !important; text-align:center; background:#59c3e1; position: relative;}
+#listnavtags>li:first-child{ margin-left:0;}
+#listnavtags>LI A { display:block; color:#fff;}
+#listnavtags>LI.listnavselectTag { position: relative; background:#fff;}
+#listnavtags>LI.listnavselectTag A { COLOR: #59c3e1;}
+#listnavtagContent { width:100%; float:left;border-top:0; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+.listnavtagContent { DISPLAY: none;}
+#listnavtagContent div.listnavselectTag {DISPLAY: block;}
+.member_message{ float:left; width:100%;}
+.member_message ul{ float:left; width:100%; margin-bottom:20px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:20px 15px; background:#FFF;}
+.member_message li{ float:left; width:100%; line-height:30px; color:#000;}
+.member_message p{ color:#666; font-size:0.875em;}
+.member_message span{ float:right; color:#999; font-size:0.875em;}
+
+/*-------------------------------------------------------------------
+****************************** member-information *******************************
+---------------------------------------------------------------------*/
+.member_infor{ margin:auto; width:900px; max-width:100%; }
+.member_information{ float:left; width:100%;margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:50px 15px; background:#FFF; border-radius:3px; text-align:center;}
+.member_infor_xx{ float:left; width:100%; text-align:center;}
+.member_infor_xxpic{ display:inline-block;  width:120px; height:120px; border-radius:60px; overflow:hidden; -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border:solid 2px #FFF;}
+.member_infor_xxpic img{ width:100%;}
+.member_infor_xx p{ float:left; width:100%; line-height:50px; font-size:1.5em; color:#000;}
+.member_infor_xx span{ float:left; width:100%; line-height:50px; font-size:1em; color:#59c3e1;}
+.member_infor_th{ display:inline-block; width:500px; margin-top:50px; max-width:100%;}
+.member_infor_th ul{ float:left; width:100%; position:relative; text-align:left; margin-top:10px;}
+.member_infor_th li{ width:100%; padding-left:80px; line-height:40px;}
+.member_infor_th label{ position:absolute; width:80px; color:#999; font-size:0.875em; line-height:40px;}
+.member_infor_th li a{ color:#59c3e1; font-size:0.875em;}
+.member_infor_th li>span{ float:left; width:100%; color:#F00; font-size:0.875em;}
+.member_infor_th li p{ color:#999; font-size:0.875em; float:left; margin-right:10px;}
+.text_infor01{ float:left; width:100%; border-radius:3px; border: solid 1px #CCC; line-height:40px; height:40px; padding:0px 10px; font-size:1.125em;}
+.select_infor01{ float:left; width:26%; border-radius:3px; border: solid 1px #CCC; line-height:40px; height:40px; padding:0px 10px; font-size:0.875em; color:#999; margin-right:5px;}
+.select_infor02{ float:left; width:100%; border-radius:3px; border: solid 1px #CCC; line-height:40px; height:40px; padding:0px 10px; font-size:0.875em; color:#999;}
+.radio_infor01{ float:left; margin-top:13px; margin-right:5px;}
+.textarea_infor01{ float:left; width:100%; border-radius:3px; border: solid 1px #CCC; line-height:40px; height:40px; padding:0px 10px; font-size:0.875em;}
+.button_infor01{ display:inline-block; margin-top:50px; background:#59c3e1; border-radius:3px; color:#FFF; padding:0px 35px; line-height:30px; border:0; font-size:0.875em;}
+
+
+/*-------------------------------------------------------------------
+****************************** member-release *******************************
+---------------------------------------------------------------------*/
+.member_release{ float:left; width:100%; text-align:center; margin-top:50px;}
+.member_release_title{ display:inline-block; background:url(../Images/icon26.png) no-repeat ; padding-left:30px; color:#59c3e1;}
+.memeber_release_th{ float:left; width:100%; margin-top:50px;}
+.member_reb{ float:left; width:100%;}
+.text_infor03{ float:left; width:100%; border-radius:3px; border: 0; line-height:40px; height:40px; padding:0px 10px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); }
+.member_ren{ float:left; width:100%; margin-top:20px;}
+.textarea_infor3{float:left; width:100%; border-radius:3px; border: 0; line-height:40px; height:400px; padding:0px 10px; -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3);}
+.member_ren>img{ width:100%;}
+.button_infor03{  display:inline-block; margin-top:50px; background:#59c3e1; border-radius:3px; color:#FFF; padding:0px 35px; line-height:30px; border:0; font-size:0.875em;}
+
+/*-------------------------------------------------------------------
+****************************** member-pay *******************************
+---------------------------------------------------------------------*/
+.member_pay{float:left; width:100%;margin-top:24px;  -webkit-box-shadow:0 0 7px rgba(103, 128, 230, .3);  -moz-box-shadow:0 0 7px rgba(103, 128, 230, .3);  box-shadow:0 0 7px rgba(103, 128, 230, .3); padding:50px 35px; background:#FFF; border-radius:3px;}
+.member_order{ float:left; width:100%; line-height:30px;}
+.member_order p{ float:left; width:100%;}
+.member_order span{ color:#F00;}
+.pay_th{ float:left; width:100%; border:solid 1px #CCC; background:#fafafa; padding:30px 20px; margin-top:30px;}
+.pay_th ul{ float:left; border-right: solid 1px #CCC; padding-right:20px;}
+.pay_th label{ float:left; line-height:50px;}
+.pay_th p{ float:left; margin-left:5px; line-height:50px;}
+.text_pay{ float:left; width:200px; background:#FFF; border:solid 1px #f2f2f2; padding:0px 10px; height:40px; margin-top:5px; margin-left:5px;}
+.pay_th span{ color:#F00; line-height:50px; margin-left:20px;}
+.pay_sele{ float:left; width:100%;}
+.pay_sele ul{ float:left; width:100%;}
+.pay_sele li{ float:left; width:100%; border-bottom:solid 1px #f2f2f2; padding:20px 0;}
+.pay_sele p{ float:left; line-height:50px; width:100px; margin-left:10px;}
+.pay_sele span{ float:left; width:144px; height:41px; border:solid 1px #f2f2f2; overflow:hidden; margin-top:5px;}
+.pay_sele span img{ width:100%;}
+.checkbox_pay{ float:left; margin-top:20px; margin-left:10px;}
+
+/*-------------------------------------------------------------------
+****************************** pay_success *******************************
+---------------------------------------------------------------------*/
+.pay_success{ float:left; width:100%; text-align:center; min-height:500px; padding-top:150px;}
+.pay_success p{ float:left; width:100%; margin-bottom:50px;}
+.success p>span{ background:url(../Images/pay-success.png) no-repeat;}
+.fail p>span{ background:url(../Images/pay-fail.png) no-repeat;}
+.pay_success p>span{ height:70px; line-height:70px; font-size:2em; color:#000; width:230px; padding-left:100px; display:inline-block;}
+.pay_success>span{ display:block; line-height:30px;}
+.pay_success a{ padding-left:20px; color:#59c3e1}
+
+/*-------------------------------------------------------------------
+****************************** login *******************************
+---------------------------------------------------------------------*/
+.login{ float:left; width:100%; text-align:center;}
+.login_logo{ float:left; width:100%; text-align:center; margin-top:20px;}
+.login_th{ float:left; width:100%; margin-top:30px; text-align:center; padding:0px 50px;}
+.login_left{ float:left; width:50%; padding:30px;}
+.login_right{ float:left; width:50%; padding:30px; text-align:center;}
+.login_left ul{ float:left; width:100%;}
+.login_left li{ float:left; width:100%; margin-top:10px; border-bottom:solid 1px #f2f2f2;}
+.login_left li>span{ float:left; width:100%; color:#F00; font-size:0.875em;}
+.text_login01{ background:url(../Images/icon53.png) no-repeat 0px 13px; width:100%; border:0; padding:10px 10px 10px 30px; float:left; line-height:30px;}
+.text_login02{ background:url(../Images/icon54.png) no-repeat 0px 13px; width:100%; border:0; padding:10px 10px 10px 30px; float:left; line-height:30px;}
+.text_login03{ background:url(../Images/icon52.png) no-repeat 0px 13px; width:100%; border:0; padding:10px 10px 10px 30px; float:left; line-height:30px;}
+.text_login04{ background:url(../Images/icon55.png) no-repeat 0px 13px; width:60%; border:0; padding:10px 10px 10px 30px; float:left; line-height:30px;}
+.radio_login01{ float:left; margin-top:10px;}
+.login_left li>p{ line-height:30px; float:left; margin-left:10px; color:#999; font-size:0.875em;}
+.login_left li>a{ float:right; color:#59c3e1; font-size:0.875em; text-decoration:underline;}
+.button_login01{ float:left; width:100%; text-align:center; color:#FFF; border-radius:3px; background:#59c3e1; border:0; line-height:40px; margin-top:30px;}
+.button_login02{ float:left; width:40%; text-align:center; color:#FFF; border-radius:3px; background:#59c3e1; border:0; line-height:30px; margin-top:5px;}
+
+.login_right_th{ display:inline-block; max-width:350px;}
+.login_right_th>p{ float:left; width:100%; height:13px; border-bottom:solid 1px #f2f2f2; text-align:center;}
+.login_right_th>p>span{text-align:center; background:#FFF; padding:0px 15px;}
+.login_right_th ul{ float:left; width:100%; margin-top:50px; text-align:center;}
+.login_right_th li{ float:left; text-align:center; width:20%;}
+.login_right_th img{ max-width:100%;}
+.login_right_th>span{ float:left; margin-top:30px; width:100%; line-height:30px; text-align:left; font-size:0.875em;}
+.login_right_th>a{ float:left; border-radius:3px; background:#ff5c5c; color:#FFF; padding:0px 25px; font-size:0.875em; line-height:30px; margin-top:5px;}
+
+.register_th{ margin:auto; max-width:100%; width:500px;}
+.register_th .login_left{ width:100%;}
+
+
+.member_password{ margin:auto; width:500px; max-width:100%;}
+.member_password>p{ float:left; line-height:30px;}
+.member_password ul{ float:left; width:100%; margin-top:30px;}
+.member_password li{ width:100%; float:left; margin-top:15px;}
+.text_pass01{ float:left; width:60%; height:30px; line-height:30px; border:solid 1px #CCC; padding:0px 10px;}
+.button_pass01{ float:left; width:35%; text-align:center; color:#FFF; height:30px; line-height:30px; margin-left:5%; background:#59c3e1; border:0; font-size:0.875em;}
+.member_password li p{ line-height:30px; color:#999; float:left; font-size:0.875em; padding-left:5%;}
+.button_pass02{ float:left; width:80px; text-align:center; color:#FFF; height:30px; line-height:30px; margin-right:20px; background:#59c3e1; border-radius:3px; border:0; font-size:0.875em;}
+.button_pass03{ float:left; width:80px; text-align:center; color:#FFF; height:30px; line-height:30px; margin-right:20px; background:#959595; border-radius:3px; border:0; font-size:0.875em;}
+
+
+.pingjiaxx{ float:left; width:100%; border-radius:3px; padding:10px 20px; background:#e9f9ff;}
+.pingjiaxx p{ float:left; width:85px; height:85px; border-radius:15px; overflow:hidden; -webkit-box-shadow:0 0 5px rgba(0, 0, 0, .1);  -moz-box-shadow:0 0 5px rgba(0, 0, 0, .1);  box-shadow:0 0 5px rgba(0, 0, 0, .1); border:solid 2px #FFF;}
+.pingjiaxx p img{ width:100%;}
+.pingjiaxx span{ float:left; line-height:50px; font-size:1.5em; color:#000; padding-left:30px;}
+.pingjia_th{ float:left; width:100%; margin-top:10px;}
+.pingjia_th ul{ float:left; width:100%;}
+.pingjia_th li{ float:left; width:100%; margin-top:10px;}
+.pingjia_th p{ float:left; width:100%; line-height:30px; color:#59c3e1; text-align:left;}
+.textarea_ping{ float:left; width:100%; margin-top:10px; border:solid 1px #CCC; line-height:24px; padding:10px;}
+
+
+
+@media only screen and (min-width: 901px) and (max-width: 1280px) {
+.part{ padding:0 1%;}
+
+}
+@media only screen and (min-width: 641px) and (max-width: 900px) {
+.part{ padding:0 1%;}
+.index_forum_title p{ width:60%;}
+.index_game h2{ font-size:1.125em;}
+.index_game span{ font-size:1em;}
+.index_game small{ display:none;}
+.index_yula h2{ font-size:1.125em;}
+.index_yula span{ font-size:1em;}
+.index_yula small{ display:none;}
+.forum_th_demo:hover .forum_th_xx{ top:0; margin-top:0; padding-top:0px;}
+.forum_th_xx span{ margin-bottom:5px;}
+.forum_lists_demo{width:49%; margin-right:2%;}
+.forum_lists .forum_lists_demo:nth-child(3n){ margin-right:2%;}
+.forum_lists .forum_lists_demo:nth-child(2n){ margin-right:0;}
+.game_guan_a{ padding-bottom:25%;}
+.game_guan_b{ padding-bottom:25%;}
+.game_guan_c{ padding-bottom:25%;}
+.game_guan_b>p{ height:72px;}
+.game_guan_c .game_star>span{ display:none;}
+.game_guan_xx>p{ height:48px;}
+.game_guan_c .game_starbj{ margin-top:5px;}
+.game_guan_a p{ font-size:0.875em;}
+.member_fans_demo{  width:49%; margin-right:2%; }
+.member_fans_demo:nth-child(3n){ margin-right:2%;}
+.member_fans_demo:nth-child(2n){ margin-right:0;}
+}
+@media only screen and (max-width: 640px) {
+.part{ padding:0 1%;}
+.index_left{ width:100%;}
+.index_right{ width:100%; margin-left:0;}
+#content{ margin-top:57px;}
+.forum_th_demo{ width:100%; margin-right:0; padding-bottom:78.5%; margin-top:20px;}
+.forum_th_demo:first-child{ margin-top:0;}
+.forum_lists_demo{width:49%; margin-right:2%;}
+.forum_lists .forum_lists_demo:nth-child(3n){ margin-right:2%;}
+.forum_lists .forum_lists_demo:nth-child(2n){ margin-right:0;}
+.forum_de_date{ width:100%;}
+.forum_detail_th h2{ width:100%;}
+.game_guan_a{ padding-bottom:75%; width:49%;}
+.game_guan_b{ padding-bottom:75%; width:50%;}
+.game_guan_c{ padding-bottom:75%; width:100%; margin-left:0; margin-top:10px;}
+.game_list .game_guan_a:nth-child(6n){ margin-right:2%;}
+.game_list .game_guan_a:nth-child(2n){ margin-right:0;}
+.member_game .game_guan_a:nth-child(6n){ margin-right:2%;}
+.member_game .game_guan_a:nth-child(2n){ margin-right:0;}
+.game_txt{ padding-left:0; margin-top:20px;}
+.game_pic{ position:relative;}
+.game_left{ width:100%; margin-right:0;}
+.member_lgame .game_guan_a{ width:49%; margin-right:2%; padding-bottom:70%;}
+.member_lgame .game_guan_a:nth-child(2n){ margin-right:0;}
+.member_xxtxt{ padding-left:0;}
+.member_xxa{ width:100%; padding-left:130px;}
+.member_xxb{ width:100%; margin-top:50px;}
+.member_xxc{ width:100%;}
+.member_fans_demo{  width:100%; margin-right:0; }
+.member_fans_demo:nth-child(3n){ margin-right:0;}
+.member_fans_demo:nth-child(2n){ margin-right:0;}
+.select_infor01{ width:20%;}
+.text_pay{ width:100px;}
+.pay_th ul{ width:100%; padding-right:0; border:0;}
+.pay_th label{ font-size:0.875em;}
+.pay_th span{ margin-left:0;}
+.member_pay{ padding:40px 15px;}
+.login_left{ width:100%; padding:0;}
+.login_right{ width:100%; padding:0; margin-top:30px;}
+.login_th{ padding:0;}
+}
+
+
+

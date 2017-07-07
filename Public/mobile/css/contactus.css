@@ -1,0 +1,47 @@
+/*content start*/
+.content{
+    overflow: hidden;
+}
+.content .title p{
+    height:0.4rem;
+    background-color:#313399;
+    font-size:0.24rem;
+    color:#fff;
+    line-height:0.4rem;
+    text-indent:1em;
+}
+.content  p{
+    font-size:0.24rem;
+    color:#333;
+    text-indent:1em;
+    margin-bottom: 0.2rem;
+}
+.content .focus img{
+    width:0.7rem;
+    height:0.7rem;
+    margin:0.1rem 0 0 0.2rem;
+}
+.content .focus {
+    width:2.1rem;
+}
+.content .focus p{
+    float:right;
+    margin-right:0.2rem;
+    color:#F00;
+}
+.content .focus span{
+    display:block;
+    float:right;
+    margin:-20px 10px 0 0;
+}
+.content .gps .icon{
+    width:0.7rem;
+    height:0.7rem;
+}
+/*content end*/
+.amap-maps div{
+    display: block;
+}
+.amap-controls .amap-zoomcontrol{
+    right: 210px;
+}

@@ -1,0 +1,120 @@
+
+.carfrom{
+    overflow: hidden;
+    padding: 0.2rem 0px;
+}
+.carfrom-item1{
+    width: 3rem;
+    margin-left: 0.2rem;
+    float: left;
+}
+.top-img{
+    width: 2.7rem;
+    height: 1.8rem;
+}
+.top-img img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    font-size: 0.24rem;
+    color: #404040;
+    width: 2.7rem;
+}
+.info{
+    width: 2.7rem;
+    overflow: hidden;
+}
+.price{
+    color: red;
+    font-size: 0.24rem;
+    float: left;
+}
+.year{
+    color: #ccc;
+    font-size: 0.12rem;
+    float: right;
+}
+.top-block{
+    width: 6.4rem;
+    overflow: hidden;
+}
+.top-block img{
+    width: 100%;
+    height: 100%;
+}
+.top-block a{
+    width: 6.4rem;
+    float: left;
+}
+.sub-block{
+    width: 6.4rem;
+    border-top: 0.01rem solid #f0f0f0;
+    overflow: hidden;
+}
+.left-block{
+    width: 50%;
+    float: left;
+    border-right: 0.01rem solid #f0f0f0;
+    box-sizing: border-box;
+}
+.left-block img{
+    width: 3.2rem;
+    float: left;
+}
+.left-block a{
+    float: left;
+}
+.right-block{
+    float: left;
+    width: 50%;
+}
+.right-top-block img{
+    width: 3.2rem;
+    border-bottom:0.01rem solid #f0f0f0 ;
+}
+.right-sub-block img{
+    width: 3.2rem;
+}
+.title2{
+    font-size: 0.24rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    font-family: 'Î¢ÈíÑÅºÚ';
+}
+.title3{
+    font-size: 0.24rem;
+    height: 0.6rem;
+    line-height: 0.6rem;
+    text-indent: 1em;
+    font-family: 'Î¢ÈíÑÅºÚ';
+}
+.type .title2{
+    background: url("../images/xiangxia.png") center right 0.2rem no-repeat;
+    background-size: 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+.money .title2{
+    background: url("../images/xiangxia.png") center right 0.2rem no-repeat;
+    background-size: 0.2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.type .title3{
+    background: url("../images/xiangshang.png") center right 0.2rem no-repeat;
+    background-size: 0.2rem;
+    border-bottom: 1px solid #ccc;
+}
+.money .title3{
+    background: url("../images/xiangshang.png") center right 0.2rem no-repeat;
+    background-size: 0.2rem;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.cartype{
+    display: none;
+}
+.carmoney{
+    display: none;
+}

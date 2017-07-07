@@ -1,0 +1,19 @@
+/*content start*/
+	.content{
+		width:6.4rem;
+		overflow:hidden;
+		}
+	.content .title p{
+		height:0.4rem;
+		background-color:#313399;
+		font-size:0.24rem;
+		color:#fff;
+		line-height:0.4rem;
+		text-indent:1em;
+		}
+	.content .introduce p{
+		font-size:0.18rem;
+		color:#333;
+		text-indent:3em;
+		}
+/*content end*/

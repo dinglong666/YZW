@@ -1,0 +1,79 @@
+.title_s{
+    background: #313399;
+    text-indent: 2em;
+}
+.title_s h1{
+    font-size: 0.32rem;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    color: #fff;
+}
+.main_s{
+    width: 6.4rem;
+    overflow: hidden;
+    padding-top: 0.4rem;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-bottom: 0.2rem;
+    background: url("../images/sell.jpg") 0 0 no-repeat;
+    background-size: cover;
+}
+.item_s{
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 0.5rem;
+    overflow: hidden;
+}
+.item_s label{
+    width: 1.3rem;
+    float: left;
+}
+.item_s input{
+    float: left;
+    margin-right: 0.3rem;
+}
+#info_s{
+    height: 1.6rem;
+    float: left;
+    margin-right: 0.3rem;
+}
+.sub_s{
+    padding-left: 1.3rem;
+}
+#sub_s{
+    background: #00a3eb;
+    width: 1.2rem;
+    height: 0.4rem;
+    font-size: 0.16rem;
+    cursor: pointer;
+    margin-right: 0.05rem;
+    border: 0;
+}
+#reset_s{
+    width: 1.2rem;
+    height: 0.4rem;
+    background: #ddd;
+    font-size: 0.16rem;
+    cursor: pointer;
+    margin-right: 0.05rem;
+    border: 0;
+}
+.hint_s{
+    float: left;
+    color: red;
+    display: none;
+}
+.active_s{
+    display: block;
+}
+/*-------------------online-css-------------------------------*/
+.main_o{
+    width: 6.4rem;
+    overflow: hidden;
+    padding-top: 0.4rem;
+    box-sizing: border-box;
+    padding-left: 1rem;
+    padding-bottom: 0.2rem;
+    background: url(../images/online.jpg) 0 0 no-repeat;
+    background-size: cover;
+}

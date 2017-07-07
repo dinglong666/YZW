@@ -1,0 +1,97 @@
+.cartype{
+    overflow: hidden;
+    padding:0.1rem 0;
+}
+.cartype li{
+    float: left;
+    width: 1.56rem;
+    text-align: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-indent: 2em;
+
+}
+.carmoney{
+    overflow: hidden;
+    padding:0.1rem 0;
+}
+.carmoney li{
+    float: left;
+    width: 1.56rem;
+    text-align: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-indent: 2em;
+}
+.anche span{
+    display:block;
+    text-indent: 1em;
+    line-height:0.6rem;
+    font-size:0.24rem;
+    font-family:"Î¢ÈíÑÅºÚ";
+    border-bottom:1px solid #ccc;
+    background-repeat:no-repeat;
+    background-position:center right 0.2rem ;
+    background-size:0.2rem;
+}
+.anchehuan1{
+    background-image:url(../images/xiangxia.png);
+}
+.anchehuan2{
+    background-image:url(../images/xiangshang.png);
+}
+
+.anjia span{
+    display:block;
+    text-indent: 1em;
+    line-height:0.6rem;
+    font-size:0.24rem;
+    font-family:"Î¢ÈíÑÅºÚ";
+    border-bottom:1px solid #ccc;
+    border-top:1px solid #ccc;
+    background-repeat:no-repeat;
+    background-position:center right 0.2rem ;
+    background-size:0.2rem;
+}
+.anjiahuan1{
+    background-image:url(../images/xiangxia.png);
+}
+.anjiahuan2{
+    background-image:url(../images/xiangshang.png);
+}
+.carfrom{
+    overflow: hidden;
+    padding: 0.2rem 0px;
+}
+.carfrom-item1{
+    width: 3rem;
+    margin-left: 0.2rem;
+    float: left;
+}
+.top-img{
+    width: 2.7rem;
+    height: 1.8rem;
+}
+.top-img img{
+    width: 100%;
+    height: 100%;
+}
+.title{
+    font-size: 0.24rem;
+    color: #404040;
+    width: 2.7rem;
+}
+.info{
+    width: 2.7rem;
+    overflow: hidden;
+}
+.price{
+    color: red;
+    font-size: 0.24rem;
+    float: left;
+}
+.year{
+    color: #ccc;
+    font-size: 0.12rem;
+    float: right;
+}

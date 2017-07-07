@@ -1,0 +1,181 @@
+@charset "utf-8";
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input,
+textarea, th, td { margin:0; padding:0; }
+body, button, input, select, textarea { font-size:0.12rem; font-family:"Microsoft YaHei",
+"Microsoft YaHei","Microsoft JhengHei","Hiragino Sans GB","STHeiti","sans-serif","Tahoma","arial"; }
+h1, h2, h3, h4, h5, h6{ font-size:0.12rem; font-weight: normal;}
+address, cite, dfn, em, var { font-style:normal; }
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
+small{ font-size:12px; }
+ul, ol { list-style:none; }
+a { text-decoration:none; color:#666}
+a:hover { text-decoration:none; }
+sup { vertical-align:text-top; }
+sub{ vertical-align:text-bottom; }
+fieldset, img { border:0; }
+button, input, select, textarea { font-size:0.12rem; }
+table { border-collapse:collapse; border-spacing:0; }
+textarea,input {outline: none;}
+.wrap{
+    width: 6.4rem;
+    background:#fff;
+    position: relative;
+}
+.header{
+    width: 6.4rem;
+    background: #fff;
+    overflow: hidden;
+}
+.logo{
+    float: left;
+    margin:0.1rem 0 0 0.15rem;
+}
+.logo img{
+    width: 3.6rem;
+    height: 0.6rem;
+}
+.iphone{
+    float: right;
+    margin: 0.2rem 0.2rem 0 0;
+}
+.iphone h1{
+    text-align: center;
+
+}
+.iphone h2{
+    color: #a0a0a0;
+}
+.nav{
+    width: 2.2rem;
+    background: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 13;
+    height: 100%;
+    transform: translate(2.4rem,0px);
+    display: none;
+}
+
+.nav_ul{
+    width: 2.2rem;
+    overflow: hidden;
+}
+.nav_ul li{
+    font-size: 0.24rem;
+    height: 0.48rem;
+    line-height: 0.48rem;
+    border-bottom: 0.01rem solid #ccc;
+    text-align: center;
+}
+.nav_item{
+    overflow: hidden;
+}
+.back-ioc{
+    background: url("../images/sub-icon.png") no-repeat;
+    background-position: -165px -508px;
+    width: 0.48rem;
+    height: 0.48rem;
+    margin-right: 0.15rem;
+    float: right;
+    background-size: 200px;
+}
+.alpha{
+    background-color: rgba(0,0,0,.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 12;
+    display: none;
+    opacity: 0;
+}
+.cartype{
+    overflow: hidden;
+}
+.cartype li{
+    float: left;
+    width: 1.56rem;
+    text-align: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-indent: 2em;
+
+}
+.carmoney{
+    overflow: hidden;
+}
+.carmoney li{
+    float: left;
+    width: 1.56rem;
+    text-align: left;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    text-indent: 2em;
+}
+.item_t{
+    height: 0.4rem;
+    line-height: 0.4rem;
+    font-size: 0.24rem;
+    color: #fff;
+    background-color: #313399;
+    text-indent: 1em;
+}
+.footer{
+    background: #2E2E2E;
+    color: #fff;
+    overflow: hidden;
+
+}
+.footer-top{
+    overflow: hidden;
+}
+.weixin{
+    width: 35%;
+    float: left;
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-top: 5%;
+}
+.weixin img{
+    width: 1.3rem;
+    height: 1.3rem;
+    float: left;
+}
+.message{
+    width: 65%;
+    float: left;
+    padding-top: 5%;
+    box-sizing: border-box;
+}
+.message h1{
+    margin-bottom: 0.1rem;
+    height: 0.24rem;
+    line-height: 0.24rem;
+}
+.address{
+    text-align: center;
+    margin: 0.1rem auto;
+}
+.address h1{
+    height: 0.12rem;
+    line-height: 0.12rem;
+}
+
+/*--------------------------swiper设置--------------------------------------*/
+.swiper-container {
+    width: 6.4rem;
+    height: 2.6rem;
+}
+.banner-img{
+    overflow: hidden;
+    width: 6.4rem;
+    height: 2.6rem;
+}
+.banner-img img{
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+/*--------------------------swiper设置--------------------------------------*/
