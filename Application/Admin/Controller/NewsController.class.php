@@ -21,7 +21,8 @@ class NewsController extends BaseController {
                 $this->error('信息不能为空',U('News/newsList_add'));
                 die;                  
             }
-            M('information')->add(array('information_type'=>0,'information_content'=>trim($_POST['ntext']),'add_time'=>time()));
+            $m=M('information')->add(array('information_type'=>0,'information_content'=>trim($_POST['ntext']),'add_time'=>time()));
+            admin_log('管理员发布站内消息编号为'.$m);
             $this->redirect('News/newsList');
             die;
         }
@@ -43,6 +44,7 @@ class NewsController extends BaseController {
         }
         if(!empty($_POST)){
             M('information')->save(array('information_id'=>$id,'information_content'=>trim($_POST['ntext'])));
+            admin_log('管理员修改站内消息编号为'.$id);            
             $this->redirect('News/newsList');
             die;
         }
@@ -64,6 +66,7 @@ class NewsController extends BaseController {
             die;            
         }
         M('information')->where('information_id='.$id)->delete();
+                    admin_log('管理员删除站内消息编号为'.$id);
         $this->redirect('News/newsList');        
     }
 

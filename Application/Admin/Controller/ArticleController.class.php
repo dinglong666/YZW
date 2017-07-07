@@ -55,8 +55,6 @@ class ArticleController extends BaseController {
 	}
 
 	public function type_add_go(){
-		// dump($_POST);
-		// dump($_FILES);
 		if (!empty($_FILES['photo']['name'])) {
             $photo=$this->upload($_FILES['photo']);
             $_POST['img_url']=$photo['savepath'].$photo['savename'];
@@ -67,6 +65,20 @@ class ArticleController extends BaseController {
 		if (!empty($_POST['article_id'])) {
 			$_POST['publish_time']=time();
         	$a=M('article')->where('article_id='.$_POST['article_id'])->data($_POST)->save();
+			switch ($_POST['ltype']) {
+				case 'sp':
+					admin_log('管理员修改视频');
+					break;
+				case 'tp':
+					admin_log('管理员修改图片');
+					break;
+				case 'qy':
+					admin_log('管理员修改企业文章');
+					break;
+				case 'fl':
+					admin_log('管理员修改文章分类');
+					break;
+			}
         }else{
         	if (empty($_POST['video_name']) && empty($_POST['img_chain']) && $_POST['ttype']=='video') {
         		$this->error('视频名称和视频外链必须填写一个!');
@@ -74,6 +86,17 @@ class ArticleController extends BaseController {
         	if($artic->create()){
 	        	$_POST['add_time']=time();
 	        	$a=M('article')->data($_POST)->add();
+			switch ($_POST['ltype']) {
+				case 'sp':
+					admin_log('管理员添加视频');
+					break;
+				case 'tp':
+					admin_log('管理员添加图片');
+					break;
+				case 'qy':
+					admin_log('管理员添加企业文章');
+					break;				
+			}
         	}else{
         		$this->error($artic->getError());
         	}
@@ -85,18 +108,6 @@ class ArticleController extends BaseController {
 		}else{
 			$this->error('保存失败');
 		}
-		// if (!empty($_FILES['photo']['name'])) {
-  //           $photo=$this->upload($_FILES['photo']);
-  //           $_POST['img_url']=$photo['savepath'].$photo['savename'];
-  //       }
-        
-  //       $_POST['publish_time']=time();
-		// $a=M('article')->where('article_id='.$_POST['article_id'])->data($_POST)->save();
-		// if ($a) {
-		// 	$this->success('保存成功','type_list');
-		// }else{
-		// 	$this->error('保存失败','',100);
-		// }
 	}
 
 	public function cooperation_list(){//////////////合作企业
@@ -119,6 +130,17 @@ class ArticleController extends BaseController {
 
 	public function del(){
 		M('article')->delete($_GET['id']);
+		switch ($_GET['type']) {
+			case 'tp':
+				admin_log('管理员删除编号为'.$_GET['id'].'的首页图片');
+				break;
+			case 'sp':
+				admin_log('管理员删除编号为'.$_GET['id'].'的视频');
+				break;
+			case 'qy':
+				admin_log('管理员删除编号为'.$_GET['id'].'的企业文章');
+				break;			
+		}
 		$this->success('删除成功');
 	}
 
