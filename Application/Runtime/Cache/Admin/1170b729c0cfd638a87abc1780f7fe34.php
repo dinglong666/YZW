@@ -210,7 +210,7 @@
 					<div class="col-lg-12">
 						<div class="panel panel-default">
 							<div class="panel-heading">
-								<h2><i class="fa fa-table red"></i><span class="break"></span><strong>消息管理</strong></h2>
+								<h2><i class="fa fa-table red"></i><span class="break"></span><strong>消息管理</strong> | <a href="<?php echo U('News/newsList_add');?>"><strong>发布站内消息</strong></a></h2>
 
 <!-- 							<div class="panel-actions">  //刷新 收回 关闭按钮
 								<a href="table.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
@@ -220,16 +220,11 @@
 
 							</div>
 						<div class="panel-body">
-						<form action="<?php echo U('News/commissionList');?>" method='post'>
-							<input type='text' placeholder="请输入会员账号" name="ss" />	
-							<button>搜索</button>
-						</form>
 							<table style="table-layout:fixed;"  class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
 									<tr>
 										<th>编号</th>
-										<th>会员账号</th>
-										<th>项目名称</th>
+										<th>消息内容</th>
 										<th>发布时间</th>
 										<th>操作</th>
 									</tr>
@@ -237,13 +232,10 @@
 								<tbody>		
 									<?php if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
 											<td><?php echo ($v['information_id']); ?></td>
-											<td><?php echo (user_ad($v['user_id'])); ?></td>
-											<td style='width:100%;word-break:keep-all;white-space:nowrap;overflow: hidden'><?php echo (pro_name($v['project_id'])); ?></td>
+											<td style='width:100%;word-break:keep-all;white-space:nowrap;overflow: hidden'><?php echo ($v['information_content']); ?></td>
 											<td><?php echo date('Y-m-d',$v['add_time']);?></td>
 											<td>
-												<a href="<?php echo U('News/commission_detail?id='.$v['information_id']);?>">查看详细信息</a> &nbsp;
-<!-- 												|&nbsp;&nbsp;
-												<a onclick="return confirm('确认删除？')" href="<?php echo U('News/newsList_del?id='.$v['information_id']);?>" target="blank">删除</a> &nbsp; -->
+												<a href="<?php echo U('News/homepage_sel?id='.$v['information_id']);?>">查看</a> &nbsp;
 											</td>
 										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 								</tbody>

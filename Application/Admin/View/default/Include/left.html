@@ -148,6 +148,11 @@
 										<a href="{:U('News/commissionList')}"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
 									</li>
 								</if>
+								<if condition="(dhl_qx(54) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('News/homepage')}"><i class="fa fa-columns"></i><span class="text">首页最新消息</span></a>
+									</li>
+								</if>
 								</ul>
 							</li>
 						</if>

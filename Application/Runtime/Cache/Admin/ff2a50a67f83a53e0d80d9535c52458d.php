@@ -212,6 +212,9 @@ window.onload=function()
 								<?php if((dhl_qx(53) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('News/commissionList');?>"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
 									</li><?php endif; ?>
+								<?php if((dhl_qx(54) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('News/homepage');?>"><i class="fa fa-columns"></i><span class="text">首页最新消息</span></a>
+									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
 

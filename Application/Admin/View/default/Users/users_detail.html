@@ -124,7 +124,35 @@ window.onload=function()
                                         <input style='width:200px;'  value="{$find['introduce']|user_in}" type="text" name="pname" class="form-control" readonly >
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label style='font-size: 20px' class="col-md-5 control-label" for="text-input">钱包变动信息</label>
+                                </div>
                             </div>
+                            <div class="panel-body">
+                            <table  class="table table-striped table-bordered bootstrap-datatable datatable">
+                                <thead>
+                                    <tr>
+                                        <th>变动原因</th>
+                                        <th>变动金额</th>
+                                        <th>余额</th>
+                                        <th>变动时间</th>
+                                    </tr>
+                                </thead>   
+                                <tbody>     
+                                    <volist name="wa" id="v">
+                                        <tr>
+                                            <td>{$v['reason']}</td>
+                                            <td>{$v['price_change']}</td>
+                                            <td>{$v['price']}</td>
+                                            <td>{$v['timer']|date="Y-m-d H:i",###}</td>
+                                        </tr>
+                                    </volist>
+                                </tbody>
+                            </table>  
+                            <div class="w-page w-left w-m-3 ">
+                                {$page}
+                            </div>  
+                        </div>
                          
     
                         </div>

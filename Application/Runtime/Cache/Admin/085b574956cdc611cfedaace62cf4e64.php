@@ -213,6 +213,9 @@ window.onload=function()
 								<?php if((dhl_qx(53) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('News/commissionList');?>"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
 									</li><?php endif; ?>
+								<?php if((dhl_qx(54) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('News/homepage');?>"><i class="fa fa-columns"></i><span class="text">首页最新消息</span></a>
+									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
 
@@ -373,10 +376,11 @@ window.onload=function()
                                     <div class="form-group">
                                         <label class="col-md-3 control-label" for="text-input">官方微信账号:</label>
                                         <div class="col-md-9">
-                                            <input type="text" name="wechat" class="form-control" value='<?php echo ($find["wechat"]); ?>' placeholder="请输入官方微信账号">
-                                            
+                                            <input type="text" name="wechat" class="form-control" value='<?php echo ($find["wechat"]); ?>' placeholder="请输入官方微信账号">                                            
                                         </div>
                                     </div> 
+
+                                    
                                 
 								<br>
 									<!-- <input type="hidden" name="old_id" value="<?php echo ($row["id"]); ?>"> -->

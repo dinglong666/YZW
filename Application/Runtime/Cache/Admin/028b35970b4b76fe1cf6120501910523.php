@@ -2,7 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+	<head>
     	<meta charset="utf-8">
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -95,16 +95,16 @@ window.onload=function()
 </head>
 
 <body>
-    <!-- start: Header -->
+	<!-- start: Header -->
 
 
-    <!-- end: Header -->
-    
-    <div class="container-fluid content">
-    
-        <div class="row">
-                
-            <!-- start: Main Menu -->
+	<!-- end: Header -->
+	
+	<div class="container-fluid content">
+	
+		<div class="row">
+				
+			<!-- start: Main Menu -->
 <div class="sidebar ">
 								
 				<div class="sidebar-collapse">
@@ -212,9 +212,6 @@ window.onload=function()
 								<?php if((dhl_qx(53) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('News/commissionList');?>"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
 									</li><?php endif; ?>
-								<?php if((dhl_qx(54) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('News/homepage');?>"><i class="fa fa-columns"></i><span class="text">首页最新消息</span></a>
-									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
 
@@ -241,132 +238,91 @@ window.onload=function()
 				
 			</div>
 
-            <!-- end: Main Menu -->
-                        
-        <!-- start: Content -->
-        <div class="main ">
-        
-            
-            <div class="row">
-            
-                  
-                        <div class="panel-heading">
-                            <a href="<?php echo U('Project/projectList');?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
-                        </div>
-                        <div class="panel-body" style="width:50%;margin-left:20%">
-                          <form action="<?php echo U('Project/project_information');?>" method="post" class="form-horizontal ">
-                          <input type="hidden" name='id' value="<?php echo ($find['project_id']); ?>">
-                            <div style='margin-left:40px;' class="form-horizontal ">
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目发布人：  </label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo (user_in($find['user_id'])); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目名称：  </label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_name']); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目分类：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo (user_ty($find['type_id'])); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">预计投资金额：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_estimate']); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">发布时间：  </label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo date('Y-m-d',$find['project_time']);?>" type="text"  class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目所在地：  </label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_address']); ?>" type="text"  class="form-control" readonly >
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目描述：  </label>
-                                    <div class="col-md-9">
-                                        <textarea style='resize:none;' readonly  cols="36" rows="8" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"><?php echo ($find['project_contents']); ?></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-5 control-label" style='font-size:20px' for="text-input">可填写信息：</label>
-                                </div>
-                            <?php if($find['pd'] == 0): ?><div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">选择项目完成度类型：</label>
-                                    <div class="col-md-3">
-                                        <select id="xz" style='width:200px;height:30px'>
-                                          <?php if(is_array($find['project_state'])): $i = 0; $__LIST__ = $find['project_state'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i;?><option  value="<?php echo ($f['id']); ?>"><?php echo ($f['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </select>
-                                    </div>
-                                    <label class="col-md-1 control-label" for="text-input"><input id='zt' style='margin-left:18px;margin-top:-4px' value='确认此类型' type="button"></label>
-                                </div><?php endif; ?>
-                            <?php if($find['pd'] == 1): ?><div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目完成度：</label>
-                                    <div class="col-md-3">
-                                        <input style='width:200px;'  value="<?php echo ($state); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                <?php if($find['num'] == 0): ?><label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:18px;margin-top:-4px' value='下一阶段' type="button"></label><?php endif; ?>
-                                </div><?php endif; ?>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目保证金：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_price']); ?>" type="text" name="bzj" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">实际投资金额：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_actual']); ?>"  type="text" name="sj" class="form-control"  >
-                                    </div>
-                                </div>
-                            </div>
-                                <br>
-                                   <button style="width:50%;margin-left:20%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>                         
-                            </form>
-                        </div>
+			<!-- end: Main Menu -->
+						
+		<!-- start: Content -->
+		<div class="main ">
+		
 
-    
+			
+			<div class="row">
+			
+			      
+			            <div class="panel-heading">
+			                <a href="<?php echo U('Advert/advertPosition');?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
+			            </div>
+						<div class="panel-body" style="width:50%;margin-left:20%">
+							<form action="<?php echo U('Advert/advertPosition_up?id='.$ad['position_id']);?>" method="post" enctype="multipart/form-data" class="form-horizontal ">
+								<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">广告位名称：</label>
+				                    <div class="col-md-9">
+				                        <input type="text" name="aname" value="<?php echo ($ad['position_name']); ?>" class="form-control" >
+				                    </div>
+				                </div>
+				           		<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">广告位宽度：</label>
+				                    <div class="col-md-9">
+				                        <input style="width:100px" value="<?php echo ($ad['ad_width']); ?>" type="number" name="awidth" class="form-control" >
+				                    </div>
+				                </div>
+				             	<div class="form-group">
+				                    <label class="col-md-3 control-label" for="text-input">广告位高度：</label>
+				                    <div class="col-md-9">
+				                        <input style="width:100px" value="<?php echo ($ad['ad_height']); ?>" type="number" name="aheight" class="form-control" >
+				                    </div>
+				                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">广告位描述：</label>
+                                    <div class="col-md-9" >
+                                        <input type="text"   name="adesc"  value="<?php echo ($ad['position_desc']); ?>" class="form-control" >
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">广告位显示：</label>
+                                    <div class="col-md-9">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" value='1' name="axs" <?php if($ad['is_open'] == 1): ?>checked<?php endif; ?> />显示&nbsp;&nbsp;&nbsp;
+                                        <input type="radio" value='0' name="axs" <?php if($ad['is_open'] == 0): ?>checked<?php endif; ?>  />不显示
+                                    </div>
+                                </div>
+								<br>
+								   <button style="width:50%;margin-left:38%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>
+				            </form>
+				         
+	
+						</div>
 
-                
-        
-            </div><!--/.row-->
+	
 
-        </div>
-        <!-- end: Content -->
-        
-    
-    
+				
+		
+			</div><!--/.row-->
 
-    <!-- start: JavaScript-->
-    <!--[if !IE]>-->
+		</div>
+		<!-- end: Content -->
+		
+	
+	
 
-            <script src="/Public/Admin/assets/js/jquery-2.1.1.min.js"></script>
+	<!-- start: JavaScript-->
+	<!--[if !IE]>-->
 
-    <!--<![endif]-->
+			<script src="/Public/Admin/assets/js/jquery-2.1.1.min.js"></script>
 
-    <!--[if IE]>
-    
-        <script src="/Public/Admin/assets/js/jquery-1.11.1.min.js"></script>
-    
-    <![endif]-->
+	<!--<![endif]-->
 
-    <!--[if !IE]>-->
+	<!--[if IE]>
+	
+		<script src="/Public/Admin/assets/js/jquery-1.11.1.min.js"></script>
+	
+	<![endif]-->
 
-        <script type="text/javascript">
-            window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
-        </script>
-        <script type="text/javascript">
+	<!--[if !IE]>-->
+
+		<script type="text/javascript">
+			window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+		</script>
+		<script type="text/javascript">
 
     //实例化编辑器          
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
@@ -478,90 +434,45 @@ window.onload=function()
         UE.getEditor('editor').execCommand( "clearlocaldata" );
         alert("已清空草稿箱")
     }
-
-    $('#zt').click(function()
-        {
-            var zt = confirm('是否选择此类型');
-            if(zt==true){       
-                var xz=$('#xz').val();
-                $.ajax({
-                    url:'<?php echo U("Project/complete_ajax");?>',
-                    type:'post',
-                    data:{
-                        x:xz,
-                        dq:<?php echo ($find['project_id']); ?>,
-                    },
-                    dataType:'json',
-                    success:function(data){
-                        if(data.m=='success'){
-                            location.href="<?php echo U('Project/project_detail?id='.$find['project_id']);?>";
-                        }
-                    }
-                });
-            }
-        });
-
-    $('#xia').click(function()
-        {
-            var zt = confirm('项目是否进入下一阶段');
-            if(zt==true){
-                $.ajax({
-                    url:'<?php echo U("Project/complete_ajaxUP");?>',
-                    type:'post',
-                    data:{
-                        dqq:<?php echo ($find['project_id']); ?>,
-                    },
-                    dataType:'json',
-                    success:function(data){
-                        if(data.m=='success'){
-                            location.href="<?php echo U('Project/project_detail?id='.$find['project_id']);?>";
-                        }
-                    },
-                    error:function(data){
-                        alert('error');
-                    }
-                });
-            }
-        });
 </script>
-    <!--<![endif]-->
+	<!--<![endif]-->
 
-    <!--[if IE]>
-    
-        <script type="text/javascript">
-        window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
-        </script>
-        
-    <![endif]-->
-    <script src="/Public/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
-    <script src="/Public/Admin/assets/js/bootstrap.min.js"></script> 
-    
-    
-    <!-- page scripts -->
-    <script src="/Public/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/moment/moment.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
-    <script src="/Public/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
-    
-    <!-- theme scripts -->
-    <script src="/Public/Admin/assets/js/SmoothScroll.js"></script>
-    <script src="/Public/Admin/assets/js/jquery.mmenu.min.js"></script>
-    <script src="/Public/Admin/assets/js/core.min.js"></script>
-    
-    <!-- inline scripts related to this page -->
-    <script src="/Public/Admin/assets/js/pages/form-elements.js"></script>
-    <script language="javascript" type="text/javascript" src="/Public/admin/timepicker/WdatePicker.js"></script>
+	<!--[if IE]>
+	
+		<script type="text/javascript">
+	 	window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
+		</script>
+		
+	<![endif]-->
+	<script src="/Public/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
+	<script src="/Public/Admin/assets/js/bootstrap.min.js"></script>	
+	
+	
+	<!-- page scripts -->
+	<script src="/Public/Admin/assets/plugins/jquery-ui/js/jquery-ui-1.10.4.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/chosen/js/chosen.jquery.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/moment/moment.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
+	<script src="/Public/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	
+	<!-- theme scripts -->
+	<script src="/Public/Admin/assets/js/SmoothScroll.js"></script>
+	<script src="/Public/Admin/assets/js/jquery.mmenu.min.js"></script>
+	<script src="/Public/Admin/assets/js/core.min.js"></script>
+	
+	<!-- inline scripts related to this page -->
+	<script src="/Public/Admin/assets/js/pages/form-elements.js"></script>
+	<script language="javascript" type="text/javascript" src="/Public/admin/timepicker/WdatePicker.js"></script>
 
-    <!-- end: JavaScript-->
-    
+	<!-- end: JavaScript-->
+	
 </body>
 </html>

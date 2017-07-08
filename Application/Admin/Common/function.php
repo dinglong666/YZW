@@ -37,7 +37,7 @@ function user_sj(){
 
 //获取账户余额
 function user_pr($id){
-    $find=M('user_wallet')->where('user_id='.$id)->find();
+    $find=M('user_wallet')->where('user_id='.$id)->order('timer desc')->find();
     if($find==''){
         return 0;
         exit;

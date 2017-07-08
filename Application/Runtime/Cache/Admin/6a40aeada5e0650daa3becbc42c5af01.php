@@ -251,89 +251,75 @@ window.onload=function()
             
                   
                         <div class="panel-heading">
-                            <a href="<?php echo U('Project/projectList');?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
+                            <a href="<?php echo U($ar);?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
                         </div>
                         <div class="panel-body" style="width:50%;margin-left:20%">
-                          <form action="<?php echo U('Project/project_information');?>" method="post" class="form-horizontal ">
-                          <input type="hidden" name='id' value="<?php echo ($find['project_id']); ?>">
-                            <div style='margin-left:40px;' class="form-horizontal ">
+                            <div style='margin-left:40px;margin-top:50px;' class="form-horizontal ">
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目发布人：  </label>
+                                    <label class="col-md-3 control-label" for="text-input"><?php if($ar == 'Users/users_staff'): ?>账号：<?php else: ?> 手机号:<?php endif; ?>  </label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo (user_in($find['user_id'])); ?>" type="text" class="form-control" readonly >
+                                        <input style='width:200px;'  value="<?php echo ($find['mobile']); ?>" type="text" name="pname" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目名称：  </label>
+                                    <label class="col-md-3 control-label" for="text-input">用户名：</label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_name']); ?>" type="text" class="form-control" readonly >
+                                        <input style='width:200px;'  value="<?php echo ($find['user_name']); ?>" type="text" name="pname" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目分类：</label>
+                                    <label class="col-md-3 control-label" for="text-input">微信号：</label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo (user_ty($find['type_id'])); ?>" type="text" class="form-control" readonly >
+                                        <input style='width:200px;'  value="<?php echo ($find['wx_user']); ?>" type="text" name="pname" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">预计投资金额：</label>
+                                    <label class="col-md-3 control-label" for="text-input">支付宝号：</label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_estimate']); ?>" type="text" class="form-control" readonly >
+                                        <input style='width:200px;'  value="<?php echo ($find['zfb_user']); ?>"  type="text" name="pdesc" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">发布时间：  </label>
+                                    <label class="col-md-3 control-label" for="text-input">账户余额：</label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo date('Y-m-d',$find['project_time']);?>" type="text"  class="form-control" readonly >
+                                        <input style='width:200px;' value="<?php echo (user_pr($find['user_id'])); ?>" type="text" name="pdesc" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目所在地：  </label>
+                                    <label class="col-md-3 control-label" for="text-input">项目介绍人：</label>
                                     <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_address']); ?>" type="text"  class="form-control" readonly >
+                                        <input style='width:200px;'  value="<?php echo (user_in($find['introduce'])); ?>" type="text" name="pname" class="form-control" readonly >
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目描述：  </label>
-                                    <div class="col-md-9">
-                                        <textarea style='resize:none;' readonly  cols="36" rows="8" id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"><?php echo ($find['project_contents']); ?></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-5 control-label" style='font-size:20px' for="text-input">可填写信息：</label>
-                                </div>
-                            <?php if($find['pd'] == 0): ?><div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">选择项目完成度类型：</label>
-                                    <div class="col-md-3">
-                                        <select id="xz" style='width:200px;height:30px'>
-                                          <?php if(is_array($find['project_state'])): $i = 0; $__LIST__ = $find['project_state'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i;?><option  value="<?php echo ($f['id']); ?>"><?php echo ($f['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </select>
-                                    </div>
-                                    <label class="col-md-1 control-label" for="text-input"><input id='zt' style='margin-left:18px;margin-top:-4px' value='确认此类型' type="button"></label>
-                                </div><?php endif; ?>
-                            <?php if($find['pd'] == 1): ?><div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目完成度：</label>
-                                    <div class="col-md-3">
-                                        <input style='width:200px;'  value="<?php echo ($state); ?>" type="text" class="form-control" readonly >
-                                    </div>
-                                <?php if($find['num'] == 0): ?><label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:18px;margin-top:-4px' value='下一阶段' type="button"></label><?php endif; ?>
-                                </div><?php endif; ?>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目保证金：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_price']); ?>" type="text" name="bzj" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">实际投资金额：</label>
-                                    <div class="col-md-9">
-                                        <input style='width:200px;'  value="<?php echo ($find['project_actual']); ?>"  type="text" name="sj" class="form-control"  >
-                                    </div>
+                                    <label style='font-size: 20px' class="col-md-5 control-label" for="text-input">钱包变动信息</label>
                                 </div>
                             </div>
-                                <br>
-                                   <button style="width:50%;margin-left:20%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>                         
-                            </form>
+                            <div class="panel-body">
+                            <table  class="table table-striped table-bordered bootstrap-datatable datatable">
+                                <thead>
+                                    <tr>
+                                        <th>变动原因</th>
+                                        <th>变动金额</th>
+                                        <th>余额</th>
+                                        <th>变动时间</th>
+                                    </tr>
+                                </thead>   
+                                <tbody>     
+                                    <?php if(is_array($wa)): $i = 0; $__LIST__ = $wa;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
+                                            <td><?php echo ($v['reason']); ?></td>
+                                            <td><?php echo ($v['price_change']); ?></td>
+                                            <td><?php echo ($v['price']); ?></td>
+                                            <td><?php echo (date("Y-m-d H:i",$v['timer'])); ?></td>
+                                        </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                                </tbody>
+                            </table>  
+                            <div class="w-page w-left w-m-3 ">
+                                <?php echo ($page); ?>
+                            </div>  
+                        </div>
+                         
+    
                         </div>
 
     
@@ -478,51 +464,6 @@ window.onload=function()
         UE.getEditor('editor').execCommand( "clearlocaldata" );
         alert("已清空草稿箱")
     }
-
-    $('#zt').click(function()
-        {
-            var zt = confirm('是否选择此类型');
-            if(zt==true){       
-                var xz=$('#xz').val();
-                $.ajax({
-                    url:'<?php echo U("Project/complete_ajax");?>',
-                    type:'post',
-                    data:{
-                        x:xz,
-                        dq:<?php echo ($find['project_id']); ?>,
-                    },
-                    dataType:'json',
-                    success:function(data){
-                        if(data.m=='success'){
-                            location.href="<?php echo U('Project/project_detail?id='.$find['project_id']);?>";
-                        }
-                    }
-                });
-            }
-        });
-
-    $('#xia').click(function()
-        {
-            var zt = confirm('项目是否进入下一阶段');
-            if(zt==true){
-                $.ajax({
-                    url:'<?php echo U("Project/complete_ajaxUP");?>',
-                    type:'post',
-                    data:{
-                        dqq:<?php echo ($find['project_id']); ?>,
-                    },
-                    dataType:'json',
-                    success:function(data){
-                        if(data.m=='success'){
-                            location.href="<?php echo U('Project/project_detail?id='.$find['project_id']);?>";
-                        }
-                    },
-                    error:function(data){
-                        alert('error');
-                    }
-                });
-            }
-        });
 </script>
     <!--<![endif]-->
 

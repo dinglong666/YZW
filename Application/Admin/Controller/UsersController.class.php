@@ -40,6 +40,13 @@ class UsersController extends BaseController {
             $this->error('参数错误',U($ar));
             die;
         }
+        $wallet=M('user_wallet');///////////////钱包变动
+        $where='user_id='.$id;
+        $count=$wallet->where($where)->count();
+        $page=new Page($count,5);
+        $wa=$wallet->where($where)->limit($page->firstRow.','.$page->listRows)->order('timer desc')->select();
+        $this->assign('wa',$wa);
+        $this->assign('page',$page->show());
         $this->assign('find',$find);
         $this->assign('ar',$ar);
         $this->display();
@@ -72,7 +79,6 @@ class UsersController extends BaseController {
                 $arr=array('mobile'=>user_sj(),'password'=>md5($pwd),'reg_time'=>time(),'stateid'=>1,'user_name'=>'default');
                 $user=M('users')->add($arr);
                 $qr=qrcode($user);
-                M('user_wallet')->add(array('user_id'=>$user,'price'=>'0'));
                 $ar=array('qrcode_path'=>$qr);
                 $qrcode=M('qrcode')->add($ar);
                 $ss['user_id']=$user;
