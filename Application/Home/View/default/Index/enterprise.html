@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<style type="text/css">    
+            .paging { clear: both; }
+.paging a {
+    display: inline-block;
+    padding: 0 10px;
+    min-width: 28px;
+    height: 28px;
+    margin-left: 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #666;
+    text-align: center;
+    line-height: 28px;
+}
+.paging .num:hover,
+.paging .prev:hover,
+.paging .next:hover {
+    text-decoration: none;
+    border: 1px solid #0080f0;
+    color: #0080f0;
+}
+.paging .total {
+    display: inline-block;
+    height: 30px;
+    padding: 0 10px;
+    line-height: 30px;
+}
+.paging .current {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+    text-align: center;
+    line-height: 30px;
+}
+.paging .prev,
+.paging .current {
+    margin-left: 0;
+}
+.paging .rows {
+    margin-left: 5px;
+    color: #666;
+} 
+        </style>    
+<!--content 开始-->
+<div class="hzqy-content">
+
+  <div class="row">
+  
+     <nav class="col-sm-3" id="myScrollspy">
+       <div class="container-fluid">
+            <ul class="nav nav-pills nav-stacked"  id="dong">
+               <li class="ptjs-center-img2"><img src="__UPLOADS__/<?= C('STORE_LOGO')?>" /></li>
+               <li class="active"><a href="">合作企业</a></li>
+             </ul>
+       </div>
+     </nav>
+     <div class="col-sm-9 col-md-9">
+     
+       <volist name='arr' id='a'>
+       <div class="hzqy1" style='overflow: hidden'>
+         <div class="col-sm-4 col-md-4">
+           <img src="__UPLOADS__/{$a.img_url}" />
+         </div>
+         <div class="col-sm-7 col-md-7">
+           <h3>{$a.title}</h3>
+           <br>
+           {$a.description}
+          <p></p>
+           <a href="{:U('hzqy_ym?id='.$a['article_id'])}"><button type="button" id="more">查看更多>></button></a>
+         </div>                                   
+       </div>
+      </volist> 
+       
+       
+              <div class="paging text-right">
+                {$page}
+              </div>  
+         
+     </div>
+                
+  </div>
+  
+</div>
+<!--content 结束-->   
+
+
+
+<script type="text/javascript">
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+</script>
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head> 
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<!--content 开始-->
+<div class="wodeqianbao-content">
+
+  <div class="row">
+  
+     
+  <include file="Public/left" />
+     <div class="col-sm-9 col-md-9">
+     	<div class="wodeqianbao-header">
+        	<span class="header1"><i class="fa fa-jpy"></i>我的钱包</span>            
+        </div>
+        <div class="wodeqianbao-body">
+            <p class="pull-left"><strong>账户余额：</strong><span class="money">¥{$num?:0}</span></p>
+            <a href="" data-toggle="modal" data-target="#myModal2"><button type="button" class="btn btn-primary pull-right">提现</button></a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="wodeqianbao-tixian">
+        	<p>提现方式<span>（任选其一）</span></p>
+            <div class="zhifubao-tixian">
+              <div class="zhifubao">
+              	<center><div class="radio">
+                	<label>
+                    	<input type="radio" id='zfb' name="optionsRadios" checked>支付宝提现
+                    </label>
+                </div></center>
+            	<center><img src="__PUBLIC__/Home/images/zfb.png" /></center>
+              </div>
+              <if condition="$find['zfb_user'] eq ''">
+                <p class="click"><a href="#" data-toggle="modal" data-target="#myModal">点击此处绑定支付宝</a></p>
+              <else/>
+                <p class="click">已绑定，<a href="#" data-toggle="modal" data-target="#myModal">点击此处修改账户</a></p>
+              </if>
+              <!--绑定start-->
+              <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	           <div class="modal-dialog" id="modal-dialog">
+		         <div class="modal-content">
+			      <div class="modal-header">
+				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				   </button>
+				   <h4 class="modal-title" id="myModalLabel">
+					绑定支付宝
+				   </h4>
+			      </div>
+			      <div class="modal-body">
+                   <form class="form-horizontal"  id='zfb_bind_form' action="{:U('zfb_bind')}" method='post'>
+                     <div class="form-group">
+                       <label class="col-sm-3 col-md-3 control-label">支付宝账号：</label>
+                       <div class="co-sm-9 col-md-9">
+                         <input type="text" class="form-control" name='zfb_num'>
+                       </div>
+                     </div>                
+                     <div class="form-group">
+                      <label class="col-sm-3 col-md-3 control-label">用户姓名：</label>
+                       <div class="co-sm-9 col-md-9">
+                         <input type="text" class="form-control" name='zfb_name'>
+                       </div>
+                   </div>
+                  </form>               
+			      </div>
+			     <div class="modal-footer">
+				  <button type="sunmit" class="btn btn-primary pull-right" id='zfb_bind' 
+          >确定</button>
+			   </div>
+		      </div><!-- /.modal-content -->
+	         </div><!-- /.modal -->
+          </div>
+          <!--绑定end-->
+            </div>
+            
+            <div class="weixin-tixian">
+              <div class="weixin">
+              	<center><div class="radio">
+                	<label>
+                    	<input type="radio" name="optionsRadios" id='wx'>微信提现
+                    </label>
+                </div></center>
+            	<center><img src="__PUBLIC__/Home/images/wx.png" /></center>
+              </div>
+              <if condition="$find['wx_user'] eq ''">
+                <p class="click"><a href="#" data-toggle="modal" data-target="#myModal1">点击此处绑定微信</a></p>
+              <else/>
+                <p class="click">已绑定，<a href="#" data-toggle="modal" data-target="#myModal1">点击此处修改账户</a></p>
+              </if>
+               <!--扫码start-->
+              <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	           <div class="modal-dialog" id="modal-dialog1">
+		         <div class="modal-content">
+			      <div class="modal-header">
+				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				   </button>
+				   <h4 class="modal-title" id="myModalLabel">
+					绑定微信
+				   </h4>
+			      </div>
+			      <div class="modal-body">
+                  	<center><img src="__PUBLIC__/Home/images/ew.png" /></center>             
+			      </div>
+			     <div class="modal-footer">
+				  <a href="wodeqianbao-bangding.html"><button type="button" class="btn btn-primary pull-right">确定</button></a>
+			   </div>
+		      </div><!-- /.modal-content -->
+	         </div><!-- /.modal -->
+          </div>
+          <!--扫码end-->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="wodeqianbao-chaxun">
+        	<div class="chaxun-header">
+        	  <p class="pull-left">账单查询</p>
+            <form action="{:U('UserWallet')}" id='query'>
+              <div class="input-group col-sm-4 col-md-4 pull-right">
+	            <input type="text" class="form-control" name='order_id' value='{$order_id}' placeholder="请输入订单号">
+	            <span class="input-group-addon" id="input-group-addon"><i class=" fa fa-search"></i></span>
+              </div>
+            </form>
+            </div>
+            <div class="chaxun-body">
+              <table class="table table-hover">
+            	<thead>
+                	<tr>
+                    	
+                        <th>订单号</th>
+                        <th>佣金金额</th>
+                        <th>发放状态</th>
+                        <th>发放日期</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <volist name='se' id='s'>
+                	<tr>
+                    	
+                        <td>{$s.order_id}</td>
+                        <td>¥{$s.price_change}</td>
+                        <td>{$s['status']==0?'未发放':已发放}</td>
+                        <td>{$s.timer|date="Y-m-d",###}</td>
+
+
+                    </tr>
+                </volist>
+                </tbody>
+              </table>
+                <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div> 
+            </div>
+        </div>
+                             
+     </div>
+                
+  </div>
+  
+</div>
+
+
+<!--提现弹框start-->
+              <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	           <div class="modal-dialog" id="modal-dialog2">
+		         <div class="modal-content">
+			      <div class="modal-header">
+				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				   </button>
+				   <h4 class="modal-title" id="myModalLabel">
+					提现
+				   </h4>
+			      </div>
+			      <div class="modal-body">
+                  	<div class="tixian-money">
+                  	  <p>可用余额：<span>¥{$num?:0}</span></p>
+                    </div>
+                    <div class="tixian-fangshi">
+                    	<center><img id='img' src="__PUBLIC__/Home/images/zfb.png" /></center>
+                        <center><p id='fangshi'>支付宝提现</p></center>
+                    </div>
+                    <div class="tixian-jine">
+                     <form class="form-horizontal" id='zh_form' role="form" action="{:U('alipay')}" method="post">
+                     <div class="form-group">
+                       <label class="col-sm-4 col-md-4 control-label" >提现金额：</label>
+                       <div class="co-sm-6 col-md-6">
+                         <input type="text" class="form-control" name='amount'>
+                       </div>
+                     </div>               
+                     <div class="form-group">
+                      <label class="col-sm-4 col-md-4 control-label">输入密码（即登录密码）：</label>
+                       <div class="co-sm-6 col-md-6">
+                         <input type="text" class="form-control" name='password'>
+                       </div>
+                       <span><a href="" data-toggle="modal" data-target="#myModal3" class="password">忘记密码</a></span>
+                   </div>
+
+                  </form>
+                    </div>                                
+			      </div>
+			     <div class="modal-footer">
+				  <button type="button" class="btn btn-primary pull-right" data-dismiss="modal" id='zh'>确定</button>
+			   </div>
+		      </div><!-- /.modal-content -->
+	         </div><!-- /.modal -->
+
+<!--提现弹框end-->
+
+<!--忘记密码弹框start-->
+	           <div class="modal-dialog" id="modal-dialog3">
+		         <div class="modal-content">
+			      <div class="modal-header">
+				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				   </button>
+				   <h4 class="modal-title" id="myModalLabel">
+					重置密码
+				   </h4>
+			      </div>
+			      <div class="modal-body">
+                   <form class="form-horizontal" role="form">
+                     <div class="form-group">
+                       <label class="col-sm-3 col-md-3 control-label">支付密码：</label>
+                       <div class="co-sm-6 col-md-6">
+                         <input type="text" class="form-control">
+                       </div>
+                       <span>密码为6位数字组成</span>
+                     </div>                
+                     <div class="form-group">
+                      <label class="col-sm-3 col-md-3 control-label">确认密码：</label>
+                       <div class="co-sm-6 col-md-6">
+                         <input type="text" class="form-control">
+                       </div>
+                   </div>
+                  </form>               
+			      </div>
+			     <div class="modal-footer">
+				  <a href="wodeqianbao.html"><button type="button" class="btn btn-primary pull-right">确定</button></a>
+			   </div>
+		      </div><!-- /.modal-content -->
+	         </div><!-- /.modal -->
+         </div>
+
+<!--忘记密码弹框end-->
+
+
+
+<script type="text/javascript">
+$('#zh').click(function(){
+  $("#zh_form").submit();
+})
+
+$('#zfb_bind').click(function(){
+  if(confirm('确认绑定?')){
+    $('#zfb_bind_form').submit();
+  }
+  
+})
+
+$('#wx').click(function(){
+  $("#img").attr('src','__PUBLIC__/Home/images/wx.png');
+  $("#fangshi").html('微信提现');
+  $("#zh_form").attr('action',"{:U('wx')}");
+})
+
+$('#zfb').click(function(){
+  $("#img").attr('src','__PUBLIC__/Home/images/zfb.png');
+  $("#fangshi").html('支付宝提现');
+})
+
+$("#input-group-addon").click(function(){
+  $('#query').submit();
+})
+
+// __PUBLIC__/Home/images/wx.png
+
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+$("#modal-dialog3").hide();
+$(".password").click(function(){
+	$("#modal-dialog2").hide();
+	$("#modal-dialog3").show();
+})
+
+
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+
+</script>
+<!--content 结束-->   
+
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

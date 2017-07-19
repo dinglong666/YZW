@@ -1,6 +1,4 @@
-<?php if (!defined('THINK_PATH')) exit();?>
-
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
     <head>
     	<meta charset="utf-8">
@@ -170,7 +168,7 @@ window.onload=function()
 								</ul>
 							</li><?php endif; ?>
 						
-						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || (dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 								<ul class="nav sub">
 								<?php if((dhl_qx(31) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
@@ -181,6 +179,9 @@ window.onload=function()
 									</li><?php endif; ?>
 								<?php if((dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Project/projectList_complete');?>"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Project/projectList_address');?>"><i class="fa fa-columns"></i><span class="text">项目所在地</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
@@ -211,6 +212,9 @@ window.onload=function()
 									</li><?php endif; ?>
 								<?php if((dhl_qx(53) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('News/commissionList');?>"><i class="fa fa-columns"></i><span class="text">佣金发放消息</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(54) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('News/homepage');?>"><i class="fa fa-columns"></i><span class="text">首页最新消息</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
@@ -251,13 +255,20 @@ window.onload=function()
                             <a href="<?php echo U('Project/projectList_complete');?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
                         </div>
                         <div class="panel-body" style="width:50%;margin-left:20%">
-                        <form action="<?php echo U('Project/projectList_complete_up?id='.$id);?>" method="post" class="form-horizontal ">
-                            <div style='margin-left:40px;' class="form-horizontal ">
+                        <form action="<?php echo U('Project/projectList_complete_up?id='.$id);?>" method="post" class="form-horizontal " enctype="multipart/form-data" >
+                            <div class="form-horizontal ">
+                                <div style="padding-left:100px" class="form-group">
+                                    <label class="col-md-4 control-label" for="text-input">请选择未派发项目图片：  </label>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-4 control-label" for="text-input"><img src="<?php echo ($arr[0]['img_url']); ?>" /></label>
+                                </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">阶段一：  </label>
                                     <div class="col-md-3" >
                                         <input style='width:200px;' value="<?php echo ($find[0]); ?>"  type="text" name="one" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[1]['img_url']); ?>"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -267,6 +278,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($find[1]); ?>"  type="text" name="two" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[2]['img_url']); ?>"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -276,6 +289,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($find[2]); ?>"  type="text" name="three" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[3]['img_url']); ?>"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -285,6 +300,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($find[3]); ?>"  type="text" name="four" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[4]['img_url']); ?>"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -294,6 +311,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($find[4]); ?>"  type="text" name="five" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[5]['img_url']); ?>"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -303,6 +322,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($find[5]); ?>"  type="text" name="six" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="<?php echo ($arr[6]['img_url']); ?>"  /></label>
                                 </div>
                                 <br>
                                    <button style="width:50%;margin-left:10%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>

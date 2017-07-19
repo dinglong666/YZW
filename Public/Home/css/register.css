@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+/*这是登录注册*/		
+		* {font-family: "微软雅黑";margin:0;padding: 0;border: 0;}
+		a:hover { text-decoration: none;}
+		a:focus { text-decoration: none;}
+		body { background-image: url(../images/bg.png)}
+		.register-box {width: 800px;margin: 0 auto;}
+		.logo { width: 40%;}
+		.logo img {width: 100%;}
+		.register-box h3 {color: #ffffff;	}
+		#xuanxiang {width: 100%;background-color: #ffffff;margin-top: 20px;}
+		#xuanxiang li {font-size: 26px;width: 33%;text-align: center;}
+		#xuanxiang .active a {color: #000000;	}
+		#myTabContent {padding: 4%;}
+		.nav-tabs {background-color: #0087d2;		}
+		.nav-tabs a {color: #ffffff;}
+		#phone .phone-left {width: 50%;float: left;}
+		.phone-left img {width: 50%;}
+		.phone-right {width: 50%;float: left;}
+		.phone-right img {width: 50%;}
+		.phone-right .android,.phone-right .ios {width: 32px;}
+		#phone .btn-primary {background-color: #0087d2;border: 1px solid #0087d2;margin-top: 40px;display: block;line-height: 40px;font-size: 16px;width: 150px;}
+		#phone .btn-primary:hover {background-color: #337ab7;border: 1px solid #337ab7;}
+		#phone .btn-warning {background-color: #ffa726;border: 1px solid #ffa726;margin-top: 40px;display: block;line-height: 40px;font-size: 16px;width: 150px;}
+		#phone .btn-warning:hover {background-color: #e69723;border: 1px solid #e69723;}
+		#sign {width: 50%;margin: 0 auto;padding: 5% 0;}
+		#sign i {font-size: 30px;}
+		#sign .form-control {height: 60px;}
+		#sign .input-group {margin-top: 20px;}
+		#sign .form-inline {margin-top: 10px;}
+		#sign .btn-primary {background-color: #0087d2;border: 1px solid #0087d2;margin-top: 60px;display: block;line-height: 40px;font-size: 16px;width: 150px;}
+		#sign .btn-primary:hover {background-color: #337ab7;border: 1px solid #337ab7;}
+		#register {width: 70%;margin: 0 auto;}
+		#register i {font-size: 30px;}
+		#register .form-control {height: 60px;}
+		#register .input-group {margin-top: 10px;}
+		#register .form-inline {margin-top: 10px;}
+		#register .btn-primary {background-color: #0087d2;border: 1px solid #0087d2;margin-top: 60px;display: block;line-height: 40px;font-size: 16px;width: 150px;}
+		#register .btn-primary:hover {background-color: #337ab7;border: 1px solid #337ab7;}
+		#input-group-addon {background-color: #ffffff;color: #ff0000;border: 1px solid #ffffff;}
+		#select {width: 480px;border-radius: 4px;}
+		.form-inline button {background-color: #ffffff;}
+		#modal-dialog {width: 600px;margin: 0 auto;margin-top: 200px;}
+		#input-group {width: 400px;margin-left: 80px;}
+		#yanzhengma { background-color: #0087d2; border: 1px solid #0087d2; color: #ffffff;}
+		.yanzhengma_1 { background-color: #cccccc; border: 1px solid #cccccc; color: #000000; }
+		#yanzheng { background-color: #0087d2; border: 1px solid #0087d2; color: #ffffff;}
+		.yanzheng_1 { background-color: #cccccc; border: 1px solid #cccccc; color: #000000; }
+		.nav-tabs>li>a:hover{ border-radius: 0; background-color: #337ab7; color: #ffffff; border-top: 1px solid #337ab7; border-left: 1px solid #337ab7; border-right: 1px solid #337ab7;}
+		.nav-tabs>li>a { border-radius: 0; }
+		#myTab .zhuce { margin-left: 0.5%; margin-right: 0.5%; }

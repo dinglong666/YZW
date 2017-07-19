@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<!--content 开始-->
+<div class="lxwm-content">
+
+  <div class="row">
+  
+     <nav class="col-sm-3" id="myScrollspy">
+       <div class="container-fluid">
+            <ul class="nav nav-pills nav-stacked"  id="dong">
+               <li class="ptjs-center-img2"><img src="__UPLOADS__/<?= C('STORE_LOGO')?>"></li>
+               <li class="active"><a href="#section1">联系我们</a></li>
+             </ul>
+       </div>
+     </nav>
+     <div class="col-sm-9 col-md-9">
+     	<div class="lxwm-msg"> 
+         <i class="glyphicon glyphicon-map-marker" id="address"></i><span style=" font-size: 16px; color: #101010; margin-left: 20px;">地 址 : {$address}</span>
+        </div>
+     	<div class="lxwm-msg"> 
+         <i class="glyphicon glyphicon-earphone" id="phone"></i><span style=" font-size: 16px; color: #101010; margin-left: 20px;">联系电话 : {$phone}</span>
+        </div>
+     	<div class="lxwm-msg"> 
+         <i class="glyphicon glyphicon-envelope" id="email"></i><span style=" font-size: 16px; color: #101010; margin-left: 20px;">邮       箱 : {$email}</span>
+        </div>
+        
+        <div class="lxwm-map">
+        	<img src="__UPLOADS__/{$map.img_url}" />
+        </div>    
+     </div>
+                     
+  </div>
+  
+</div>
+<!--content 结束-->   
+
+
+<script type="text/javascript">
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+$(function() {
+    $('#carousel1 ul').carouFredSel({
+		scroll: 1000
+	});
+});
+
+$(function() {
+    $('#carousel2 ul').carouFredSel({
+		scroll: 2000
+	});
+});
+
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+
+</script>
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

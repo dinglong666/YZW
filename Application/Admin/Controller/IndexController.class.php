@@ -16,7 +16,7 @@ class IndexController extends BaseController {
 
     public function system_go(){
         $post=I('post.');
-
+        reqx('admin_phone',$post['contact_phone']);
         if (!empty($_FILES['photo']['name'])) {
             $photo=$this->upload($_FILES['photo']);
             $post['store_logo']=$photo['savepath'].$photo['savename'];

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+  
+<!--content 开始-->
+<div class="jcsp-content">
+
+  <div class="row">
+  
+     <nav class="col-sm-3" id="myScrollspy">
+       <div class="container-fluid">
+            <ul class="nav nav-pills nav-stacked"  id="dong">
+               <li class="ptjs-center-img2"><img src="__HOME__/images/logo.png"></li>
+               <li class="active"><a href="jingcaishipin.html">精彩视频</a></li>
+             </ul>
+       </div>
+     </nav>
+     <div class="col-sm-9 col-md-9">
+     <volist name='arr' id='a'>
+     <if condition="$key%3==0"><div class="clearfix"></div></if>
+       <div class="col" style='overflow: hidden;'>
+         <a href="{:U('jcsp_xq?id='.$a['article_id'])}" >
+           <img src="__UPLOADS__/{$a.img_url}" />
+           <center><p class="jcsp-text">{$a.title}</p></center>
+         </a>
+       </div>
+      </volist>
+     </div>  
+  </div>
+  
+</div>
+<!--content 结束-->   
+
+<script type="text/javascript">
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+
+</script>
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

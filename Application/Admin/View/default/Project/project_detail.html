@@ -135,30 +135,19 @@ window.onload=function()
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" style='font-size:20px' for="text-input">可填写信息：</label>
                                 </div>
-                            <if condition="$find['pd'] eq 0" >
-                                <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">选择项目完成度类型：</label>
-                                    <div class="col-md-3">
-                                        <select id="xz" style='width:200px;height:30px'>
-                                          <volist  name="find['project_state']" id='f' >
-                                             <option  value="{$f['id']}">{$f['name']}</option>
-                                          </volist>
-                                        </select>
-                                    </div>
-                                    <label class="col-md-1 control-label" for="text-input"><input id='zt' style='margin-left:18px;margin-top:-4px' value='确认此类型' type="button"></label>
-                                </div>
-                            </if>
-                            <if condition="$find['pd'] eq 1" >
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">项目完成度：</label>
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$state}" type="text" class="form-control" readonly >
                                     </div>
-                                <if condition="$find['num'] eq 0" >
-                                    <label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:18px;margin-top:-4px' value='下一阶段' type="button"></label>
+
+                                <if condition="$find['num'] eq 1">
+                                    <label class="col-md-1 control-label" for="text-input"><input id='shang' style='margin-left:10px;margin-top:-4px' value='上一阶段' type="button"></label>
+                                </if>
+                                <if condition="$find['num'] neq 2" >
+                                    <label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:25px;margin-top:-4px' value='下一阶段' type="button"></label>
                                 </if>
                                 </div>
-                            </if>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">项目保证金：</label>
                                     <div class="col-md-9">
@@ -345,6 +334,28 @@ window.onload=function()
     $('#xia').click(function()
         {
             var zt = confirm('项目是否进入下一阶段');
+            if(zt==true){
+                $.ajax({
+                    url:'{:U("Project/complete_ajaxDOWN")}',
+                    type:'post',
+                    data:{
+                        dqq:{$find['project_id']},
+                    },
+                    dataType:'json',
+                    success:function(data){
+                        if(data.m=='success'){
+                            location.href="{:U('Project/project_detail?id='.$find['project_id'])}";
+                        }
+                    },
+                    error:function(data){
+                        alert('error');
+                    }
+                });
+            }
+        });
+    $('#shang').click(function()
+        {
+            var zt = confirm('项目是否进入上一阶段');
             if(zt==true){
                 $.ajax({
                     url:'{:U("Project/complete_ajaxUP")}',

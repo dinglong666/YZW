@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<!--content 开始-->
+<div class="wodexiangmu-content">
+
+  <div class="row">
+  
+  <include file="Public/left" />
+     <div class="col-sm-9 col-md-9">
+     	<div class="wodexiangmu-header">
+        	<span class="header1"><i class="fa fa-tasks"></i>我的项目</span>
+        </div>
+        <ul class="nav nav-tabs">
+        	<li class="wodexiangmu-base active">
+            	<a href="#xiangmu" data-toggle="tab">我的项目</a>
+            </li>
+            <li class="wodexiangmu-edit">
+            	<a href="#write" id='gb' data-toggle="tab">发布项目</a>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+        <div class="tab-content">
+        
+        	<div class="tab-pane fade in active" id="xiangmu">
+              <form class="form-inline">
+               <div class="input-group col-sm-4 col-md-4">
+	            <input id="nr" type="text" class="form-control" placeholder="请输入项目名称">
+	            <span class="input-group-addon" style="background-color: #0087d2;"><button id="ss1" type="button" style="border: 1px solid #0087d2; font-size: 14px; background-color: #0087d2; color: #ffffff;">搜索</button></span>
+               </div>
+               
+               <div class="form-group" id="form-group">
+               	<label class="control-label">发布时间：</label>
+                <div class="input-group col-sm-8 col-md-8">
+                  <input id="sj" class="form-control dpd1" type="text">
+                  <span class="input-group-addon" style="background-color: #0087d2;"><button id='ss2' type="button" style="border: 1px solid #0087d2; font-size: 14px; background-color: #0087d2; color: #ffffff;">搜索</button></span>
+                </div>
+               </div>
+              </form>
+              
+              <ul class="nav nav-tabs">
+              	<li class="title">项目状态：</li>
+              	<li <if condition="($_GET['i'] neq 1) and ($_GET['i'] neq 2) and ($_GET['i'] neq 3) and ($_GET['i'] neq 4) and 
+                ($_GET['i'] neq 5) and ($_GET['i'] neq 6)" > class="active" </if> >
+                	<a href="" id="ff0" data-toggle="tab">全部</a>
+                </li>
+              	<li <if condition="$_GET['i'] eq 1" > class="active" </if>  >
+                	<a href="" id="ff1"  data-toggle="tab">{$sta[1]}</a>
+                </li>
+              	<li <if condition="$_GET['i'] eq 2" > class="active" </if>  >
+                	<a href="" id="ff2"  data-toggle="tab">{$sta[2]}</a>
+                </li>
+              	<li <if condition="$_GET['i'] eq 3" > class="active" </if>  >
+                	<a href="" id="ff3" data-toggle="tab">{$sta[3]}</a>
+                </li>
+              	<li <if condition="$_GET['i'] eq 4" > class="active" </if>  >
+                	<a href="" id="ff4"  data-toggle="tab">{$sta[4]}</a>
+                </li>
+                <li <if condition="$_GET['i'] eq 5" > class="active" </if>  >
+                  <a href="" id="ff5"  data-toggle="tab">{$sta[5]}</a>
+                </li>
+                <li <if condition="$_GET['i'] eq 6" > class="active" </if>  >
+                  <a href="" id="ff6"  data-toggle="tab">{$sta[6]}</a>
+                </li>
+              </ul>
+              <form id='tj' style="display:none;" action="{:U('User/project')}" >
+                <input type="hidden" name="i" value="" id="fz" />
+                <input type="hidden" name="xsx" value="" id="xsx" />
+                <input type="hidden" name="sxs" value="" id="sxs" />
+              </form>
+              <div class="tab-content">
+              	<!--这是全部项目-->
+                <div class="tab-pane fade in active" id="all">
+                	<table class="table table-hover">
+                    	<thead>
+                        	<tr>
+                            	<th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间{}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                        	  <tr>
+                            	<td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+				 </div>
+                 
+              	<!--这是待审核项目-->
+                <div class="tab-pane fade" id="daishen">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+				 </div>
+                 
+              	<!--这是未成交项目-->
+                <div class="tab-pane fade" id="weicheng">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+				 </div>
+                
+              	<!--这是未成交项目-->
+                <div class="tab-pane fade" id="yishen">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+				 </div>
+                 
+              	<!--这是已成交项目-->
+                <div class="tab-pane fade" id="yicheng">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+				 </div>
+
+                <!--这是已成交项目-->
+                <div class="tab-pane fade" id="yishi">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+         </div>
+
+                <!--这是已成交项目-->
+                <div class="tab-pane fade" id="yijie">
+                  <table class="table table-hover">
+                      <thead>
+                          <tr>
+                              <th>类型</th>
+                                <th>项目名称</th>
+                                <th>预计投资金额</th>
+                                <th>预计佣金</th>
+                                <th>发布时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        <volist name='pro' id='p' >
+                            <tr>
+                              <td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
+                                <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
+                                <td>{$p['project_estimate']}</td>
+                                <td></td>
+                                <td>{:date('Y-m-d',$p['project_time'])}</td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                 <!--分页-->
+              <div class="w-page w-left w-m-3 ">
+                      {$page}
+              </div>  
+                  <!--分页-->
+         </div>
+
+
+
+
+			</div>
+		</div>
+            
+            <div class="tab-pane fade" id="write"> 
+            	<div class="write-left">
+                	<div class="left">
+                    	<p><span>*</span>项目分类：</p>
+                    </div>
+                	<div class="left">
+                    	<p><span>*</span>项目名称：</p>
+                    </div>
+                	<div class="left">
+                    	<p><span>*</span>项目所在地：</p>
+                    </div>
+                	<div class="left">
+                    	<p><span>*</span>预计投资额：</p>
+                    </div>
+                	<div class="left">
+                    	<p><span>*</span>项目信息介绍：</p>
+                    </div>
+                </div>
+
+                <div class="write-right">
+                	<ul class="nav nav-tabs">
+                  <volist name='fl' id='f' key='k'>
+                    	  <li <if condition="$k eq 1" > class="active" </if> ><a href="#fenlei{$k}" data-toggle="tab" onclick="gb({$k},{$f['type_id']})">{$f['type_name']}</a></li>
+                  </volist>
+                        <span style="display:none" id='xx' >{$fl[0]['type_id']}</span>
+<!--                         <li><a href="#fenlei2" data-toggle="tab">造价咨询</a></li>
+                        <li><a href="#fenlei3" data-toggle="tab">其他</a></li> -->
+                    </ul>
+                    <div class="tab-content">
+                  <volist name='fl' id='f' key='k'>
+                      <div class="tab-pane fade in active" id="fenlei{$k}">
+                      <if condition="$k eq 1" >
+                    	<p>{$f['type_desc']}</p>
+                      <else />
+                      <p style="display: none;" id="dis{$k}">{$f['type_desc']}</p>
+                      </if>
+                      </div>
+        
+                  </volist>
+<!--                       <div class="tab-pane fade" id="fenlei2">
+                    	<p>是指面向社会接受委托、承担建设项目的全过程、动态的造价管理。</p>
+                      </div>
+                      <div class="tab-pane fade" id="fenlei3">
+                    	<p>其他更多的项目信息。</p>
+                      </div> -->
+                    </div>
+                  <form  method="post" role="form" class="form-horizontal">
+                      <div class="form-group ming">
+                    	<input type="text" id='pname' class="form-control" placeholder="请输入项目名称">
+                      </div>
+                      <div class="form-group dizhi">
+                      	<select id="pad" class="form-control">
+                        	<option value="0" >--请选择--</option>
+                          <volist name='pad' id='p' >
+                            <option value="{$p['id']}" >{$p['name']}</option>
+                          </volist>
+                        </select>
+                      	<input id='padd' type="text" class="form-control" placeholder="请输入详细地址">
+                      </div>
+                      <div class="form-group jine">
+                      	<input id="yprice" type="text" class="form-control" placeholder="请输入预计投资额">
+                      </div>
+                      <div class="form-group">
+                      	<textarea id="pdesc" rows="10" cols="59" placeholder="请输入项目详细信息"></textarea>
+                      </div>
+                </div>
+                <div class="clearfix"></div>
+                <center><a><button id="fb" type="button" class="btn btn-primary">发布</button></center>   
+                </form> 
+            </div>
+            
+        </div>                     
+     </div>
+                
+  </div>
+  <script>
+  $('#ss1').click(function(){
+      $('#xsx').val($('#nr').val());
+      $('#fz').val({$_GET['i']});
+      $('#tj').submit();
+      return false;
+  });
+  $('#ss2').click(function(){
+      $('#sxs').val($('#sj').val());
+      $('#fz').val({$_GET['i']});
+      $('#tj').submit();
+      return false;
+  });
+  $('#ff1').click(function()
+    {
+      $('#fz').val('1');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff2').click(function()
+    {
+      $('#fz').val('2');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff3').click(function()
+    {
+      $('#fz').val('3');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff4').click(function()
+    {
+      $('#fz').val('4');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff5').click(function()
+    {
+      $('#fz').val('5');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff6').click(function()
+    {
+      $('#fz').val('6');
+      $('#tj').submit();
+      return false;
+    });
+  $('#ff0').click(function()
+    {
+      $('#fz').val('0');
+      $('#tj').submit();
+      return false;
+    });
+function gb(id,f){
+  $('#dis'+id).show();
+  $('#xx').text(f);
+}
+  $('#fb').click(function()
+    {
+      var pname=$('#pname'),
+          pad=$('#pad'),
+          padd=$('#padd'),
+          yprice=$('#yprice'),
+          pdesc=$('#pdesc'),
+          pt=$('#xx');
+      if(pt.text()==''){
+        alert('请选择项目分类');
+      }else if(pname.val()==''){
+        alert('项目名称不能为空');
+      }else if(pad.val()==0){
+        alert('请选择项目所在地');
+      }else if(padd.val()==''){
+        alert('请填写项目详细地址');
+      }else if(yprice.val()==''){
+        alert('请填写项目预计投资额');
+      }else if(pdesc.val()==''){
+        alert('请填写项目详细信息');
+      }else{
+        $.ajax({
+            url:"{:U('User/release')}",
+            type:'post',
+            data:{
+              pname:pname.val(),
+              pad:pad.val(),
+              padd:padd.val(),
+              yprice:yprice.val(),
+              pdesc:pdesc.val(),
+              pt:pt.text()
+            },
+            dataType:'json',
+            success:function(data){
+              if(data.msg==1){
+                alert(data.n);
+                window.location.href="{:U('User/project')}";
+              }else{
+                alert(data.n);
+              }
+            },
+            error:function(data){
+              alert('error');
+            }
+        });
+      }
+    });
+  </script>
+</div>
+<!--content 结束-->   
+<div class="footer">
+<include file="Public/footer" />
+</div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

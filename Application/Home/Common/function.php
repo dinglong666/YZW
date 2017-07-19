@@ -28,3 +28,5 @@ function strlength($str,$num,$s=0)
    }
    return $str;
 }
+
+

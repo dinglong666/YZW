@@ -35,16 +35,6 @@ function user_sj(){
     return $str;
 }
 
-//获取账户余额
-function user_pr($id){
-    $find=M('user_wallet')->where('user_id='.$id)->order('timer desc')->find();
-    if($find==''){
-        return 0;
-        exit;
-    }
-    return $find['price'];
-}
-
 //获取项目类型
 function user_ty($id){
     $find=M('project_type')->where('type_id='.$id)->find();
@@ -78,11 +68,18 @@ function pro_name($id){
 }
 
 //获取项目状态
-function pro_st($id,$time){
-    $find=M('project_state')->where('id='.$id)->find();
-    $s=count(explode('|',$time))-1;
-    $f=explode('|',$find['name']);
-    return $f[$s];
+function pro_st($id,$pid,$time){
+    if($time==''){
+        return '项目未开始';
+        die;
+    }
+    $find=M('project_state')->where('id='.$pid)->find();
+    $ar=M('project')->find($id);
+    if ($ar['project_stime']) {
+        $s=count(explode('|',$time))-1;
+        $f=explode('|',$find['name']);
+        return $f[$s];
+    }
 }
 
 function useCurl($url, $params, $post = "")
@@ -156,20 +153,6 @@ function jurisdiction($role){
     return in_array($role,$s);
 }
 
-//redis存储权限
-function reqx($name,$so){
-    $redis = new \Redis();
-    $redis->connect('127.0.0.1',6379);
-    $redis->set($name,$so);
-}
-
-//redis读取权限
-function reqx2($name){
-    $redis = new \Redis();
-    $redis->connect('127.0.0.1',6379);    
-    return $redis->get($name);
-}
-
 //判断导航栏是否有权限，没有权限隐藏左侧导航栏
 function dhl_qx($id){
     $s=explode(',',reqx2(session('admin_info')['username']));
@@ -190,43 +173,3 @@ function login_tf(){
     }
 }
 
-//生成二维码
-function qrcode($id=''){
-    if($id!=''){
-        $u='?id='.$id;
-    }else{
-        $u='';
-    }
-    Vendor("phpqrcode.phpqrcode");
-    $object=new \QRcode();
-    $value="http://www.baidu.com".$u;  
-    $errorCorrectionLevel = "H"; // 纠错级别：L、M、Q、H  
-    $matrixPointSize = "10"; // 点的大小：1到10  
-    ob_clean();//，清除缓冲区  
-    $object->png($value,"Public/Admin/images/qrcode".$id.".png", $errorCorrectionLevel, $matrixPointSize);
-
-    return "/Public/Admin/images/qrcode".$id.".png";
-    // $logo = 'dinglong.png';//准备好的logo图片 
-    // $QR = 'qrcode.png';//已经生成的原始二维码图 
-      
-    // if ($logo !== FALSE) { 
-    //  $QR = imagecreatefromstring(file_get_contents($QR)); 
-    //  $logo = imagecreatefromstring(file_get_contents($logo)); 
-    //  $QR_width = imagesx($QR);//二维码图片宽度 
-    //  $QR_height = imagesy($QR);//二维码图片高度 
-    //  $logo_width = imagesx($logo);//logo图片宽度 
-    //  $logo_height = imagesy($logo);//logo图片高度 
-    //  $logo_qr_width = $QR_width / 5; 
-    //  $scale = $logo_width/$logo_qr_width; 
-    //  $logo_qr_height = $logo_height/$scale; 
-    //  $from_width = ($QR_width - $logo_qr_width) / 2; 
-    //  //重新组合图片并调整大小 
-    //  imagecopyresampled($QR, $logo, $from_width, $from_width, 0, 0, $logo_qr_width, 
-    //  $logo_qr_height, $logo_width, $logo_height); 
-    // } 
-    // $name='Public/'.time().'hello.png';
-    // //输出图片 
-    // imagepng($QR, $name); 
-    // return $name;
-    // echo '<img src="'.$name.'">';
-}

@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -87,13 +85,20 @@ window.onload=function()
                             <a href="{:U('Project/projectList_complete')}"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
                         </div>
                         <div class="panel-body" style="width:50%;margin-left:20%">
-                        <form action="{:U('Project/projectList_complete_up?id='.$id)}" method="post" class="form-horizontal ">
-                            <div style='margin-left:40px;' class="form-horizontal ">
+                        <form action="{:U('Project/projectList_complete_up?id='.$id)}" method="post" class="form-horizontal " enctype="multipart/form-data" >
+                            <div class="form-horizontal ">
+                                <div style="padding-left:100px" class="form-group">
+                                    <label class="col-md-4 control-label" for="text-input">请选择未派发项目图片：  </label>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-4 control-label" for="text-input"><img src="{$arr[0]['img_url']}" /></label>
+                                </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">阶段一：  </label>
                                     <div class="col-md-3" >
                                         <input style='width:200px;' value="{$find[0]}"  type="text" name="one" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[1]['img_url']}"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -103,6 +108,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$find[1]}"  type="text" name="two" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[2]['img_url']}"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -112,6 +119,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$find[2]}"  type="text" name="three" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[3]['img_url']}"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -121,6 +130,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$find[3]}"  type="text" name="four" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[4]['img_url']}"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -130,6 +141,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$find[4]}"  type="text" name="five" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[5]['img_url']}"  /></label>
                                 </div>
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" for="text-input"><img src='/Public/Admin/up.png' />  </label>
@@ -139,6 +152,8 @@ window.onload=function()
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="{$find[5]}"  type="text" name="six" class="form-control" >
                                     </div>
+                                    <label style="padding-left:30px;" class="col-md-3 control-label" for="text-input"><input name='upload_pic[]' type="file"></label>
+                                    <label class="col-md-3 control-label" for="text-input"><img src="{$arr[6]['img_url']}"  /></label>
                                 </div>
                                 <br>
                                    <button style="width:50%;margin-left:10%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>

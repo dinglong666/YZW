@@ -1,0 +1,37 @@
+    <div class="header">
+        <div class="ptjs-header-box">
+            <div class="ptjs-header-img1"><img src="__UPLOADS__/<?= C('STORE_LOGO')?>"></div>
+            <select>
+                <option>哈尔滨</option>
+                <option>北京</option>
+                <option>上海</option>
+            </select>
+            <ul class="ptjs-header-nav">
+                <li {$index}><a href="{:U('index/index')}">首页</a></li>
+                <li {$introduce}><a href="{:U('introduce')}">平台介绍</a></li>
+                <li {$enterprise}><a href="{:U('enterprise')}">合作企业</a></li>
+                <li {$manager}><a href="{:U('manager')}">自由经理人</a></li>
+                <li {$contact} style="color:red;"><a href="{:U('contact')}">联系我们</a></li>
+            </ul>
+        <if condition="$_SESSION['user_info']['id'] neq ''" >
+            <ul class="ptjs-header-nav2">
+            <if condition="$xs neq xs">
+                <li>欢迎来到优赚网！</li>
+            <else/>
+                <li>您好，{$_SESSION['user_info']['name']}</li>
+            </if>
+                <li><a href="{:U('User/personal')}">个人中心</a></li>
+                <li><a>|</a></li>
+                <li><a href="{:U('Login/quit')}">退出</a></li>
+            </ul>
+        <else/>
+            <ul class="ptjs-header-nav2">
+                <li><a href="{:U('Login/register')}">登陆</a></li>
+                <li><a>|</a></li>
+                <li><a href="{:U('Login/register?zcdl=zcdl')}">注册</a></li>
+            </ul>
+        </if>
+        </div>
+
+    </div>
+

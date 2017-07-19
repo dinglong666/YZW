@@ -1,0 +1,51 @@
+       <div class="footer-fu">
+       <div class="ul-fu">
+           <ul class="ptjs-footer-nav">
+               <li>平台信息</li>
+               <li>合作企业</li>
+               <li>精彩视频</li>
+               <li>自由经理人</li>
+               <li>答疑解惑</li>
+               <li>合作联系</li>
+           </ul>
+           <?php
+            $art=D('article');
+            $cat=D('article_cat');
+            $app=$art->where('cat_id=111');
+            $gz=$art->where('cat_id=112');
+            $fl=$cat->where('cat_id>200','select');
+            $ew=$art->where('cat_id>200','select');
+          ?>
+
+           <ul class="ptjs-footer-nav-1">
+               <li>
+                   <p><a href="{:U('introduce')}">平台介绍</a></p>
+                   <p><a href="{:U('introduce')}">平台优势</a></p>
+                   <p><a href="{:U('introduce')}">服务方式</a></p>
+                   <p><a href="{:U('introduce')}">运行模式</a></p>
+               </li>
+               <li><a href="{:U('enterprise')}">合作企业</a></li>
+               <li><a href="{:U('video')}">精彩视频</a></li>
+               <li>
+                    <p><a href="{:U('manager')}">项目发布流程</a></p>
+                    <p><a href="{:U('manager')}">佣金申请流程</a></p>
+               </li>
+               <li>
+                   <p><a href="{:U('help?id=1291')}">帮助中心</a></p>
+                   <p><a href="{:U('help?id=1292')}">常见问题</a></p>
+                   <p><a href="{:U('help?id=1293')}">服务声明</a></p>
+                   <volist name='fl' id='f'>
+                    <p><a href="{:U('help?pid='.$f['cat_id'])}">{$f.cat_name}</a></p>
+                   </volist>
+               </li>
+               <li><a href="{:U('contact')}">联系我们</a></li>
+           </ul>
+       </div>
+       <div class="ewm-fu">
+           <div class="ewm"><img src="__HOME__/images/ewm.png" /><center>下载优赚网APP</center></div>
+           <div class="ewm1"><img src="__HOME__/images/ewm.png" /><center>关注优赚网微信</center></div>
+       </div>
+
+
+       </div>
+       <p class="font1">版权所有：优赚网<span>黑ICP备16002370号-1</span></p>

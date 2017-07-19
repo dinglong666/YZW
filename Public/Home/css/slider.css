@@ -1,0 +1,93 @@
+@charset "utf-8";
+/* CSS Document */
+			#carousel1 {
+				width: 735px;
+				position:vrelative;
+			}
+			#carousel1 ul {
+				list-style: none;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+			#carousel1 li {
+				background: transparent url(../images/carousel_polaroid.png) no-repeat 0 0;
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				display: block;
+				width: 232px;
+				height: 178px;
+				padding: 0;
+				margin: 6px;
+				float: left;
+				position: relative;
+			}
+			#carousel1 li img {
+				width: 201px;
+				height: 127px;
+				margin-top: 14px;
+			}			
+			#carousel1 li span {
+				background: transparent url(../images/carousel_shine.png) no-repeat 0 0;
+				text-indent: -999px;
+				display: block;
+				overflow: hidden;
+				width: 201px;
+				height: 127px;
+				position: absolute;
+				z-index: 2;
+				top: 14px;
+				left: 16px;
+			}			
+			.clearfix {
+				float: none;
+				clear: both;
+			}
+			
+			
+
+			#carousel2 {
+				width: 735px;
+				position:vrelative;
+			}
+			#carousel2 ul {
+				list-style: none;
+				display: block;
+				margin: 0;
+				padding: 0;
+			}
+			#carousel2 li {
+				background: transparent url(../images/carousel_polaroid.png) no-repeat 0 0;
+				font-size: 40px;
+				color: #999;
+				text-align: center;
+				display: block;
+				width: 232px;
+				height: 178px;
+				padding: 0;
+				margin: 6px;
+				float: left;
+				position: relative;
+			}
+			#carousel2 li img {
+				width: 201px;
+				height: 127px;
+				margin-top: 14px;
+			}			
+			#carousel2 li span {
+				background: transparent url(../images/carousel_shine.png) no-repeat 0 0;
+				text-indent: -999px;
+				display: block;
+				overflow: hidden;
+				width: 201px;
+				height: 127px;
+				position: absolute;
+				z-index: 2;
+				top: 14px;
+				left: 16px;
+			}			
+			.clearfix {
+				float: none;
+				clear: both;
+			}

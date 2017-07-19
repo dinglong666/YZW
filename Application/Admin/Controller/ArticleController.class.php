@@ -56,6 +56,8 @@ class ArticleController extends BaseController {
 
 	public function type_add_go(){
 		if (!empty($_FILES['photo']['name'])) {
+			$find=$art->find($_POST['article_id']);
+			unlink('./Uploads/'.$find['img_url']);
             $photo=$this->upload($_FILES['photo']);
             $_POST['img_url']=$photo['savepath'].$photo['savename'];
             
@@ -129,6 +131,8 @@ class ArticleController extends BaseController {
 	}
 
 	public function del(){
+		$find=$art->find($_GET['id']);
+		unlink('./Uploads/'.$find['img_url']);
 		M('article')->delete($_GET['id']);
 		switch ($_GET['type']) {
 			case 'tp':

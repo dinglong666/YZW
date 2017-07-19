@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<!--content 开始-->
+<div class="bzzx-content">
+
+  <div class="row">
+  
+     <nav class="col-sm-3" id="myScrollspy">
+       <div class="container-fluid">
+            <ul class="nav nav-pills nav-stacked"  id="dong">
+               <li class="ptjs-center-img2"><img src="__HOME__/images/logo.png"></li>
+               <li <if condition="$_GET['id'] eq 1291">class="active"</if>><a class='in' aa='1291' href="">帮助中心</a></li>
+               <li <if condition="$_GET['id'] eq 1292">class="active"</if>><a class='in' aa='1292' href="">常见问题</a></li>
+               <li <if condition="$_GET['id'] eq 1293">class="active"</if>><a class='in' aa='1293' href="">服务声明</a></li>
+               <volist name='arr' id='a'>
+                <li <if condition="$_GET['pid'] eq $a['cat_id']">class="active"</if>><a class='cat' aa='{$a.cat_id}' href="">{$a.cat_name}</a></li>
+               </volist>
+
+             </ul>
+       </div>
+     </nav>
+     <div id='sss' class="col-sm-9 col-md-9">
+     <if condition="$_GET['id']">
+     {$help.content}
+     </if>
+     <if condition="$_GET['pid']">
+     <volist name='ar' id='r'>
+     <li><a href="{:U('help?id='.$r['article_id'])}">{$r.title}</a></li>
+     </volist>
+     </if>
+                                 
+     </div>
+                
+  </div>
+  
+</div>
+<!--content 结束-->   
+
+<script type="text/javascript">
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+
+$('.in').click(function(){
+  var id=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+
+  $.post("{:U('help')}",{id:id},function(data){
+
+    $('.col-md-9').html(data.content);
+  })
+  return false;
+})
+
+$('.cat').click(function(){
+  var pid=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+  str="";
+  $.post("{:U('help')}",{pid:pid},function(data){
+    $.each(data,function(k,v){
+        str+= '<li><a href="__ROOT__/Home/Index/help?id='+v.article_id+'">'+v.title+'</a></li>';
+    });
+    //  alert(str);
+    $('#sss').html(str);
+  })
+  return false;
+})
+    
+</script>
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

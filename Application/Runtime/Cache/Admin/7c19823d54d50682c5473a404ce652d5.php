@@ -130,7 +130,7 @@
 								</ul>
 							</li><?php endif; ?>
 						
-						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || (dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 								<ul class="nav sub">
 								<?php if((dhl_qx(31) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
@@ -141,6 +141,9 @@
 									</li><?php endif; ?>
 								<?php if((dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Project/projectList_complete');?>"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Project/projectList_address');?>"><i class="fa fa-columns"></i><span class="text">项目所在地</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
@@ -210,7 +213,7 @@
                     <div class="col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h2><i class="fa fa-table red"></i><span class="break"></span><strong>项目状态管理</strong> | <a href="<?php echo U('Project/projectList_complete_add');?>"><strong>添加项目状态</strong></a></h2>
+                                <h2><i class="fa fa-table red"></i><span class="break"></span><strong>项目状态管理</strong></h2>
 
 <!--                            <div class="panel-actions">  //刷新 收回 关闭按钮
                                 <a href="table.html#" class="btn-setting"><i class="fa fa-rotate-right"></i></a>
@@ -225,7 +228,6 @@
                                     <tr>
                                         <th>编号</th>
                                         <th>状态显示</th>
-                                        <th>添加时间</th>
                                         <th>修改时间</th>
                                         <th>操作</th>
                                     </tr>
@@ -234,12 +236,9 @@
                                     <?php if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><tr>
                                             <td><?php echo ($v['id']); ?></td>
                                             <td><?php echo ($v['name']); ?></td>
-                                            <td><?php echo date('Y-m-d',$v['add_time']);?></td>
                                             <td><?php echo ($v['update_time']==''?'0':date('Y-m-d',$v['update_time'])); ?></td>
                                             <td>
                                                 <a href="<?php echo U('Project/projectList_complete_up?id='.$v['id']);?>">编辑</a> &nbsp;
-                                               |&nbsp;&nbsp;
-                                                <a href="<?php echo U('Project/projectList_complete_del?id='.$v['id']);?>">删除</a> &nbsp;
                                             </td>
                                         </tr><?php endforeach; endif; else: echo "" ;endif; ?>
                                 </tbody>

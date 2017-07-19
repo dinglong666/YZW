@@ -1,162 +1,308 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/index.css" />
-    <link rel="stylesheet" href="__PUBLIC__/Home/css/swiper.min.css" />
+<html>
+<head lang="en">
+<include file="Public/head" />
 </head>
-<Include file="Public/header" />
-<body>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+ <!--content 开始-->
+<div class="index-content">
+   <div class="input-group col-sm-4 col-md-4">
+	<input type="text" class="form-control" placeholder="请输入搜索内容">
+	<span class="input-group-addon" id="input-group-addon"><i class="fa fa-search" id="fa-search"></i></span>
+   </div>
+   
+   <div class="index-scroll">
+   <marquee direction="left" loop="0">最新成交消息：总成交量7个项目<span>总成交额281818元</span></marquee>
+   </div>
+   
+   <div class="index-zhanshi">
+   	<div class="index-zhanshi-left">
+		<img src="__UPLOADS__/{$zuo}" />
+        <div class="input-group">
+        	<span class="input-group-addon" id="text">手机号：</span>
+            <input type="text" class="form-control" id="input1">
+        </div>
+        <div class="input-group">
+        	<span class="input-group-addon" id="text">验证码：</span>
+            <input type="text" class="form-control" id="input2">
+            <a href="javascript:;" class="send1 yanzheng" onclick="sends.send();">发送验证码</a>
+        </div>
+        <div class="input-group">
+        	<span class="input-group-addon" id="text">&nbsp;&nbsp;&nbsp;密码：</span>
+            <input type="password" class="form-control" id="input3" placeholder="请输入6位纯数字">
+        </div>
+        <a><button type="button" id="button">立即注册</button></a>      
+    </div>
     
-    <!-- 轮播 -->
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-        <foreach name='tupian' item='a'>
-            <div class="swiper-slide">
-                <img width="1920px" height="500px" src="__UPLOADS__/{$a.photo}" alt="" >
-            </div>
-        </foreach>
-
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Arrows -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+    <div class="index-zhanshi-center">
+     <div class="carousel slide" id="yzw-banner">
+        <ul class="carousel-indicators">
+        <li data-target="#yzw-banner" data-slide-to="0" class="active"></li>
+        <li data-target="#yzw-banner" data-slide-to="1"></li>
+        <li data-target="#yzw-banner" data-slide-to="2"></li>
+        <li data-target="#yzw-banner" data-slide-to="3"></li>
+        </ul>
+      <div class="carousel-inner">
+        <volist name='dingbu' id='d'>
+         <div <if condition="$key eq 0">class="item active"<else/>class="item"</if>>
+          <img width="720px" height="322px" src="__UPLOADS__/{$d.img_url}" alt="banner1"/>
+         </div>
+       </volist>
+      </div>
+     </div>
     </div>
-    <!-- 轮播结束 -->
-    <div class="content">
-        <div class="intro">
-            <h2>企业简介<a href="{:U('intro1')}">
-                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
-                </a></h2>
-            <p>
-                {$jianjie.content}
-            </p>
-        </div>
-        <div class="shuang">
-            <h2>
-                双曲板材
-                <a href="{:U('product')}">
-                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
-                </a>
-            </h2>
-            <div class="leftImg">
-                <div id="slideBox" class="slideBox">
-                    <div class="hd">
-                        <ul><li>1</li><li>2</li><li>3</li></ul>
-                    </div>
-                    <div class="bd">
-                        <ul>
-                            <foreach name='sq' item='q'>
-                            <li><img width='217px' height="289px" src="__UPLOADS__/{$q.photo}" /></li>
-                            </foreach>
-                        </ul>
-                    </div>
-
-                    <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-                    <a class="prev" href="javascript:void(0)"></a>
-                    <a class="next" href="javascript:void(0)"></a>
-
-                </div>
-            </div>
-            <div class="rightCon">
-                <ul>
-                <foreach name='shuangqu' item='s'>
-                    <li>
-                        <a href="{:U('product_details?id='.$s['type_id'])}">
-                            {$s.title}
-                            <span>{$s.update_time|date="Y-m-d",###}</span>
-                        </a>
-                    </li>
-                </foreach>
-                </ul>
-            </div>
-        </div>
-        <div class="shuang shuang2">
-            <h2>
-                业务范围
-                <a href="{:U('business')}">
-                    <img src="__PUBLIC__/Home/images/more.png" alt="" />
-                </a>
-            </h2>
-            <div class="leftImg">
-                <div id="slideBox" class="slideBox">
-            <div class="hd">
-                <ul><li>1</li><li>2</li><li>3</li></ul>
-            </div>
-            <div class="bd">
-                <ul>
-                    <foreach name='ywu' item='y'>
-                    <li><img  width='344px' height="284px" src="__UPLOADS__/{$y.photo}" /></li>
-                    </foreach>
-                </ul>
-            </div>
-
-            <!-- 下面是前/后按钮代码，如果不需要删除即可 -->
-            <a class="prev" href="javascript:void(0)"></a>
-            <a class="next" href="javascript:void(0)"></a>
-
-        </div>
-            </div>
-            <div class="rightCon">
-                <ul>
-                <foreach name='yewu' item='y'>
-                    <li>
-                        <a href="{:U('business?id='.$y['type_id'])}">
-                            {$y.title}
-                            <span>{$y.update_time|date="Y-m-d",###}</span>
-                        </a>
-                    </li>
-                </foreach>
-                </ul>
-            </div>
-        </div>
-        <div class="touch">
-            <h2>联系方式</h2>
-            <Include file="Public/lianxi" />
-        </div>
+    
+    <div class="index-zhanshi-right">
+    	<img src="__UPLOADS__/{$you}" />
     </div>
-    <!-- 底部 -->
-<Include file="Public/footer" />
+    <div class="clearfix"></div>
+   </div>
+   
+   <div class="index-ptjs">
+ 	<center class="ptjs-center-img3">
+		<img src="__HOME__/images/titile.png">
+ 		<h3 class="ptjs-center-font1">平台介绍</h3>
+		<h4 class="ptjs-center-font2">platform introduction</h4>
+	</center>
+    <div class="index-ptjs-img">
+      <div class="index-ptjs-black">
+         <h3 class="ptjs-center-font4">{$js.content_title}</h3>
+             {$js.content}
+      </div>
+    </div>
+   </div>
+   
+   <div class="index-ptys">
+ 	<center class="ptjs-center-img3">
+		<img src="__HOME__/images/titile.png">
+ 		<h3 class="ptjs-center-font1">平台优势</h3>
+		<h4 class="ptjs-center-font2">platform advantage</h4>
+	</center>
+   </div>
+   <div class="ptjs-center-ku1" id="you">
+        <div class="ptjs-center-ku2" id="you-1">
+           <p class="you-img1"><img src="__HOME__/images/hyys_1.png"></p>
+           <p class="you-font1">领先</p>
+         <div id="black1">
+         	<p>{$ys.0}</p>
+         </div>
+         </div>
+         <div class="ptjs-center-ku2" id="you-2">
+            <p class="you-img1"><img src="__HOME__/images/hyys_2.png"></p>
+            <p class="you-font1">便捷</p>
+         <div id="black2">
+         	<p>{$ys.1}</p>
+         </div>
+          </div>
+          <div class="ptjs-center-ku2" id="you-3">
+             <p class="you-img1"><img src="__HOME__/images/hyys_3.png"></p>
+             <p class="you-font1">收益</p>
+         <div id="black3">
+         	<p>{$ys.2}</p>
+         </div>
+          </div>
+     </div>
+     
+   <div class="index-zyjlr">
+ 	<center class="zyjlr-center-img3">
+		<img src="__HOME__/images/titile.png">
+ 		<h3 class="zyjlr-center-font1">自由经理人</h3>
+		<h4 class="zyjlr-center-font2">product manager</h4>
+	</center>
+    <div class="index-zyjlr-img">
+      <div class="index-zyjlr-black">
+         <h3 class="zyjlr-center-font4">{$zy.content_title}</h3>
+         {$zy.content}
+      </div>
+    </div>
+   </div>
+   
+   <div class="index-ptys">
+ 	<center class="ptjs-center-img3">
+		<img src="__HOME__/images/titile.png">
+ 		<h3 class="ptjs-center-font1">流程介绍</h3>
+		<h4 class="ptjs-center-font2">process introduction</h4>
+	</center>
+   </div>
+   <div class="lcjs-img">
+   		<img src="__UPLOADS__/{$lc.img_url}" /> 
+   </div>  
+   
+   
+</div>
+ 
+ <!--content 结束-->
 
-</body>
-    <script src="__PUBLIC__/Home/js/jquery-2.1.4.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Home/js/nav.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Home/js/swiper.min.js"></script>
-    <script type="text/javascript" src="__PUBLIC__/Home/js/jquery.SuperSlide.2.1.1.js"></script>
 
-    <script>
-         var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: true,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false
-         });
-    </script>
-    <!-- // 悬浮窗口 -->
-    <script>
-$(function() {
+ <!--app开始-->
 
-    $(".yb_conct").hover(function() {
-        $(".yb_conct").css("right", "5px");
-        $(".yb_bar .yb_ercode").css('height', '200px');
-    }, function() {
-        $(".yb_conct").css("right", "-127px");
-        $(".yb_bar .yb_ercode").css('height', '53px');
-    });
-    // 返回顶部
-    $(".yb_top").click(function() {
-        $("html,body").animate({
-            'scrollTop': '0px'
-        }, 300)
-    });
-});
-// jQuery(".slideBox").slide({mainCell:".bd ul",autoPlay:true});
-jQuery(".slideBox").slide( { mainCell:".bd ul",effect:"left",autoPlay:true} );
+ <div class="index-app">
+  <img src="__UPLOADS__/{$db.img_url}" />
+ </div>
+
+ <!--app结束-->   
+
+<script>
+  $('#button').click(function()
+  {
+      var phone=$('#input1'),
+      yzm=$('#input2'),
+      pwd=$('#input3');
+      if(phone.val()==''){
+        alert('请填写手机号');
+      }else if(yzm.val()==''){
+        alert('请填写验证码');
+      }else if(pwd.val()==''){
+        alert('请填写密码');
+      }else if(isNaN(pwd.val())){
+        alert('密码必须为纯数字');
+      }else if(pwd.val().length!=6){
+        alert('密码必须为六位数字');        
+      }else{
+        $.ajax({
+          url:"{:U('Login/syzc')}",
+          type:'post',
+          data:{
+            phone:phone.val(),
+            yzm:yzm.val(),
+            pwd:pwd.val()
+          },
+          dataType:'json',
+          success:function(data){
+            alert(data.ar);
+            if(data.n==1){
+              window.location.href="{:U('index/index')}";
+            }else{
+              window.location.href="{:U('index/index')}";
+            }
+          },
+          error:function(data){
+            alert('error');
+          }
+        });        
+      }
+  });
+
+
 </script>
+
+
+
+<script type="text/javascript">
+
+var setFixed = {
+	init:function(){
+		setFixed.set();
+		$(window).bind('scroll',function(){
+			setFixed.set();
+		});		
+	},
+	set:function(){
+		var top = $(window).scrollTop();
+		if(top>=50)
+			$('.header').addClass('fixed');		
+		else
+			$('.header').removeClass('fixed');		
+	}
+}
+$(function(){
+	setFixed.init();
+})
+
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
+
+$("#black1").hide()
+$("#you-1").mouseenter(function(){
+	$("#black1").stop().slideDown(1000)	
+}).mouseleave(function(){
+	$("#black1").stop().slideUp(1000)	
+})
+
+$("#black2").hide()
+$("#you-2").mouseenter(function(){
+	$("#black2").stop().slideDown(1000)	
+}).mouseleave(function(){
+	$("#black2").stop().slideUp(1000)	
+})
+
+$("#black3").hide()
+$("#you-3").mouseenter(function(){
+	$("#black3").stop().slideDown(1000)	
+}).mouseleave(function(){
+	$("#black3").stop().slideUp(1000)	
+})
+var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
+</script>
+
+
+<script type="text/javascript">
+function syyz(){
+  var phone=$('#input1');
+  var result;
+    $.ajax({
+      url:"{:U('Login/set_msg_yzm')}",
+      type:'post',
+      async:false,
+      data:{
+        phone:phone.val()
+      },
+      dataType:'json',
+      success:function(data){
+        if(data.msg==1){
+          alert(data.state);
+          result=true;
+        }else{
+          alert(data.state);
+          result=false;
+        }
+      },
+      error:function(data){
+        alert('error');
+        result=false;
+      }
+    });    
+    return result;  
+}
+$(function  () {
+  //获取短信验证码
+  var validCode=true;
+  $(".send1").click (function  () {
+    var time=30;
+    var code=$(this);
+  if(syyz()){
+    if (validCode) {
+      validCode=false;
+      code.addClass("send0");
+    var t=setInterval(function  () {
+      time--;
+      code.html(time+"秒");
+      if (time==0) {
+        clearInterval(t);
+      code.html("重新获取");
+        validCode=true;
+      code.removeClass("msgs1");
+      }
+    },1000)
+    }
+  }
+  })
+})
+</script>
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
 </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+<include file="Public/head" />
+</head>
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="20">
+<div class="wrap">
+<include file="Public/header" />
+</div>   
+ 
+<!--content 开始-->
+<div class="grzl-content">
+
+  <div class="row">
+  
+  <include file="Public/left" />
+     <div class="col-sm-9 col-md-9">
+     	<div class="grzl-header">
+        	<span class="header1"><i class="fa fa-user"></i>个人资料</span>
+            <a href="" data-toggle="modal" data-target="#myModal"><span><i class="fa fa-edit"></i>编辑个人信息</span></a>
+            <!--编辑个人资料start-->
+           <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	         <div class="modal-dialog" id="modal-dialog">
+		       <div class="modal-content">
+			    <div class="modal-header">
+				   <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+					&times;
+				   </button>
+				   <h4 class="modal-title" id="myModalLabel">
+					编辑个人信息
+				   </h4>
+			    </div>
+			    <div class="modal-body">
+                 <form class="form-horizontal" role="form">
+                   <div class="form-group">
+                     <label class="col-sm-3 col-md-3 control-label">用户名：</label>
+                     <div class="co-sm-6 col-md-6">
+                       <input id="yhm" value="{$_SESSION['user_info']['name']}" type="text" class="form-control">
+                     </div>
+                   </div>
+                
+                   <div class="form-group">
+                    <label class="col-sm-3 col-md-3 control-label">注册手机号：</label>
+                     <div class="co-sm-6 col-md-6">
+                      <input type="text" class="form-control" placeholder="{:substr_replace($_SESSION['user_info']['mobile'],'****',3,4)}" disabled>
+                     </div>
+                  </div>
+                 </form>               
+			    </div>
+			    <div class="modal-footer">
+				  <button id="qr" type="button" class="btn btn-primary pull-right" data-dismiss="modal">确定</button>
+			   </div>
+		      </div><!-- /.modal-content -->
+	         </div><!-- /.modal -->
+          </div>
+          <!--编辑个人资料end-->
+        </div>
+        <div class="grzl-body">
+        	<p>
+            	<span><strong>用户名：</strong>{$_SESSION['user_info']['name']}</span>
+                <span><strong>手机号：</strong>{:substr_replace($_SESSION['user_info']['mobile'],'****',3,4)}</span>
+            </p>
+            <p><strong>账户余额：</strong><span class="money">¥{$_SESSION['user_info']['id']|user_pr}</span></p>
+        </div>
+        <ul class="nav nav-tabs">
+        	<li class="grzl-base active">
+            	<a href="#base" data-toggle="tab">基本信息</a>
+            </li>
+            <li class="grzl-edit">
+            	<a href="#edit" data-toggle="tab">修改密码</a>
+            </li>
+            <div class="clearfix"></div>
+        </ul>
+        <div class="tab-content">
+        
+        	<div class="tab-pane fade in active" id="base">
+        	  <div class="foot1">
+            	<p>用户名：</p><br>
+                <p>注册手机号：</p>
+              </div>
+              <div class="foot2">
+            	<p>{$_SESSION['user_info']['name']}</p><br>
+                <p>{:substr_replace($_SESSION['user_info']['mobile'],'****',3,4)}</p>
+              </div>
+              <div class="clearfix"></div>
+            </div>
+            
+            <div class="tab-pane fade" id="edit">
+              <form action="{:U('User/upPwd')}" method="post" class="form-horizontal" role="form">
+                <div class="form-group">
+                  <label class="col-sm-2 col-md-2 control-label">输入旧密码：</label>
+                  <div class="co-sm-3 col-md-3">
+                    <input name="upwd" type="password" class="form-control">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 col-md-2 control-label">设置新密码：</label>
+                  <div class="co-sm-3 col-md-3">
+                    <input name="pwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                  </div>
+                </div>
+                
+                <div class="form-group">
+                  <label class="col-sm-2 col-md-2 control-label">确认新密码：</label>
+                  <div class="co-sm-3 col-md-3">
+                    <input name="rpwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-primary">保存</button>
+              </form>
+            </div>
+        </div>                     
+     </div>
+                
+  </div>
+<script>
+  $('#qr').click(function(){
+      var yhm=$('#yhm').val();   
+    $.ajax({
+      url:"{:U('User/upUser')}",
+      type:'post',
+      data:{
+        yhm:yhm
+      },
+      dataType:'json',
+      success:function(data){
+        if(data.msg==1){
+          alert(data.n);
+           location.reload();
+        }else{
+          alert(data.n);
+        }
+      }
+    });
+  });
+</script>
+</div>
+<!--content 结束-->   
+
+
+<div class="footer">
+<include file='Public/footer' />
+   </div>
+
+<!--这是客服-->
+<include file="Public/right" />
+</body>
+</html>

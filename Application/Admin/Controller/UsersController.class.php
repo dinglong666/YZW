@@ -75,6 +75,14 @@ class UsersController extends BaseController {
                 $this->error('两次密码输入不一致');
                 die;                
             }
+            if(!is_numeric($pwd) || !is_numeric($rpwd)){
+                $this->error('密码只能为纯数字');
+                die;            
+            }
+            if(strlen($pwd)!=6 || strlen($rpwd)!=6){
+                $this->error('密码只能为六位数字');
+                die;                   
+            }
             for($s=1;$s<=$num;$s++){
                 $arr=array('mobile'=>user_sj(),'password'=>md5($pwd),'reg_time'=>time(),'stateid'=>1,'user_name'=>'default');
                 $user=M('users')->add($arr);

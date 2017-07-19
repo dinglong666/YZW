@@ -130,7 +130,7 @@
 								</ul>
 							</li><?php endif; ?>
 						
-						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || (dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 								<ul class="nav sub">
 								<?php if((dhl_qx(31) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
@@ -141,6 +141,9 @@
 									</li><?php endif; ?>
 								<?php if((dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Project/projectList_complete');?>"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Project/projectList_address');?>"><i class="fa fa-columns"></i><span class="text">项目所在地</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
@@ -220,13 +223,17 @@
 
 							</div>
 						<div class="panel-body">
-						<form action="<?php echo U('project/projectList');?>" method='post'>
-							<input  type='text' placeholder="请输入项目名称" name="pro" />
+						<form action="<?php echo U('project/projectList');?>" method='get'>
+							<input  type='text' placeholder="请输入项目名称" name="pro" value='<?php echo ($name); ?>' />
 						<select name='typ' style='width:150px;height:27px;'>
-								<option value="0">--查看所有--</option>
-							<?php if(is_array($tp)): $i = 0; $__LIST__ = $tp;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$t): $mod = ($i % 2 );++$i;?><option value="<?php echo ($t['type_id']); ?>"><?php echo ($t['type_name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+								<option value="0">--项目分类--</option>
+							<?php if(is_array($tp)): $i = 0; $__LIST__ = $tp;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$t): $mod = ($i % 2 );++$i;?><option <?php if($type == $t['type_id']): ?>selected<?php endif; ?> value="<?php echo ($t['type_id']); ?>"><?php echo ($t['type_name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
 						</select>	
-							<button>搜索</button>
+						<select name='type' style='width:150px;height:27px;'>
+								<option value="">--项目状态--</option>
+							<?php if(is_array($arr)): $i = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><option <?php if($ttype == $key and $ttype != null): ?>selected<?php endif; ?> value="<?php echo ($key); ?>"><?php echo ($a); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+						</select>	
+							<button type='submit'>搜索</button>
 						</form>
 							<table  class="table table-striped table-bordered bootstrap-datatable datatable">
 								<thead>
@@ -245,13 +252,17 @@
 											<td><?php echo ($v['project_id']); ?></td>
 											<td><?php echo ($v['project_name']); ?></td>
 											<td><?php echo ($tp[$v['type_id']]['type_name']); ?></td>
-											<td><?php echo ($v['project_state']==0?'未选择状态类型':pro_st($v['project_state'],$v['project_stime'])); ?></td>
+											<td><?php echo (pro_st($v['project_id'],$v['project_state'],$v['project_stime'])); ?></td>
 											<td><?php echo ($v['project_estimate']); ?></td>
 											<td><?php echo date('Y-d-m',$v['project_time']);?></td>
 											<td>
 												<a href="<?php echo U('Project/project_detail?id='.$v['project_id']);?>">详细信息</a> &nbsp;
 												|&nbsp;&nbsp;
 												<a href="<?php echo U('Project/complete_customized?id='.$v['project_id']);?>">定制客服</a> &nbsp;
+												<?php if(count(explode('|',$v['project_stime'])) == 6): ?>|&nbsp;&nbsp;
+													<?php if($v['distribute'] == 1): ?>已派发
+													<?php else: ?>
+													<a onclick="return confirm('确认派发?')" href="<?php echo U('Project/yongjin?id='.$v['project_id']);?>">派发佣金</a><?php endif; endif; ?>
 											</td>
 										</tr><?php endforeach; endif; else: echo "" ;endif; ?>
 								</tbody>

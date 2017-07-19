@@ -1,0 +1,1368 @@
+[ 2017-07-17T17:09:33+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.068004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.068004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-17T17:09:39+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-17T17:09:43+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.094005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.094005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:09:47+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.299017s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.299017s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.003001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003001s ]
+
+[ 2017-07-17T17:10:04+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.144008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:10:08+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.067003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.067003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:10:25+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.079005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:10:52+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140008s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140008s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:10:53+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.081004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.081004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-07-17T17:11:16+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: error E:\UPUPW\htdocs\Application\Admin\Controller\ProjectController.class.php 第 291 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given E:\UPUPW\htdocs\ThinkPHP\Library\Think\Upload.class.php 第 170 行.
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0020s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f3476804.png','/Uploads/Admin/2017-07-17/596c7f3476804.png','广告') [ RunTime:0.0360s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f3477f75.png','/Uploads/Admin/2017-07-17/596c7f3477f75.png','广告') [ RunTime:0.0270s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f3479acd.png','/Uploads/Admin/2017-07-17/596c7f3479acd.png','广告') [ RunTime:0.0370s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f347b23d.png','/Uploads/Admin/2017-07-17/596c7f347b23d.png','广告') [ RunTime:0.0660s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f347cd96.png','/Uploads/Admin/2017-07-17/596c7f347cd96.png','广告') [ RunTime:0.0160s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f347e506.png','/Uploads/Admin/2017-07-17/596c7f347e506.png','广告') [ RunTime:0.0160s ]
+SQL: INSERT INTO `yzw_img` (`img_name`,`img_url`,`img_desc`) VALUES ('596c7f348005f.png','/Uploads/Admin/2017-07-17/596c7f348005f.png','广告') [ RunTime:0.0170s ]
+SQL: UPDATE `yzw_project_state` SET `name`='发布项目|项目审核|选择服务商,签合同|服务商工作|验收|佣金下发',`img_id`='54|55|56|57|58|59|60',`update_time`='1500282676' WHERE `id` = 1 [ RunTime:0.0200s ]
+SQL: SHOW COLUMNS FROM `yzw_admin_log` [ RunTime:0.0040s ]
+SQL: INSERT INTO `yzw_admin_log` (`log_ip`,`admin_id`,`log_time`,`log_info`,`admin_username`) VALUES ('2130706433','1','1500282676','管理员修改编号为1的项目状态','admin') [ RunTime:0.0000s ]
+
+[ 2017-07-17T17:11:16+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 106 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 109 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 112 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 115 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 121 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 121 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 124 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 127 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 136 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 139 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 142 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 145 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 154 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 157 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 160 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 169 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 172 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 175 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 178 行.
+NOTIC: [8] Undefined variable: page E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:13:23+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 103 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 106 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 109 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 112 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 115 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 121 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 121 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 124 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 127 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 133 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 136 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 139 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 142 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 145 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 151 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 154 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 157 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 160 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 166 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 169 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 172 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 175 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 178 行.
+NOTIC: [8] Undefined variable: page E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\7c19823d54d50682c5473a404ce652d5.php 第 247 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.062004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:13:25+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+
+[ 2017-07-17T17:16:13+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:16:16+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-17T17:16:17+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.059003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.059003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:17:03+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+NOTIC: [8] Array to string conversion E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.103006s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.103006s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:17:03+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/Array
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+
+[ 2017-07-17T17:17:05+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+NOTIC: [8] Array to string conversion E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 263 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.248014s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.248014s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:17:05+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/Array
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.004001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+
+[ 2017-07-17T17:17:32+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+
+[ 2017-07-17T17:17:53+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.072004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.072004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-17T17:17:54+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.211012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.211012s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.004000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.005001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005001s ]
+
+[ 2017-07-17T17:17:55+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:18:39+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:19:28+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.078005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.079005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2017-07-17T17:19:31+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+
+[ 2017-07-17T17:19:32+08:00 ] 127.0.0.1 /index.php/Admin/Project/projectList_complete_up/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `yzw_project_state` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_project_state` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `yzw_img` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=54 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=55 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=56 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=57 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=58 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=59 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `yzw_img` WHERE ( img_id=60 ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 141 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 144 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 147 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 150 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 153 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 159 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 162 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 165 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 171 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 174 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 177 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 180 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 183 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 189 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 192 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 195 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 198 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 204 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 207 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 210 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 213 行.
+NOTIC: [8] Use of undefined constant success - assumed 'success' E:\UPUPW\htdocs\Application\Runtime\Cache\Admin\694301d35c8a4c6a3699c7300c18f5be.php 第 216 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.061003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.061003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

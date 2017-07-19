@@ -170,7 +170,7 @@ window.onload=function()
 								</ul>
 							</li><?php endif; ?>
 						
-						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || (dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 								<ul class="nav sub">
 								<?php if((dhl_qx(31) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
@@ -181,6 +181,9 @@ window.onload=function()
 									</li><?php endif; ?>
 								<?php if((dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Project/projectList_complete');?>"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Project/projectList_address');?>"><i class="fa fa-columns"></i><span class="text">项目所在地</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
@@ -302,22 +305,15 @@ window.onload=function()
                                 <div class="form-group">
                                     <label class="col-md-5 control-label" style='font-size:20px' for="text-input">可填写信息：</label>
                                 </div>
-                            <?php if($find['pd'] == 0): ?><div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">选择项目完成度类型：</label>
-                                    <div class="col-md-3">
-                                        <select id="xz" style='width:200px;height:30px'>
-                                          <?php if(is_array($find['project_state'])): $i = 0; $__LIST__ = $find['project_state'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$f): $mod = ($i % 2 );++$i;?><option  value="<?php echo ($f['id']); ?>"><?php echo ($f['name']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
-                                        </select>
-                                    </div>
-                                    <label class="col-md-1 control-label" for="text-input"><input id='zt' style='margin-left:18px;margin-top:-4px' value='确认此类型' type="button"></label>
-                                </div><?php endif; ?>
-                            <?php if($find['pd'] == 1): ?><div class="form-group">
+                                <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">项目完成度：</label>
                                     <div class="col-md-3">
                                         <input style='width:200px;'  value="<?php echo ($state); ?>" type="text" class="form-control" readonly >
                                     </div>
-                                <?php if($find['num'] == 0): ?><label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:18px;margin-top:-4px' value='下一阶段' type="button"></label><?php endif; ?>
-                                </div><?php endif; ?>
+
+                                <?php if($find['num'] == 1): ?><label class="col-md-1 control-label" for="text-input"><input id='shang' style='margin-left:10px;margin-top:-4px' value='上一阶段' type="button"></label><?php endif; ?>
+                                <?php if($find['num'] != 2): ?><label class="col-md-1 control-label" for="text-input"><input id='xia' style='margin-left:25px;margin-top:-4px' value='下一阶段' type="button"></label><?php endif; ?>
+                                </div>
                                 <div class="form-group">
                                     <label class="col-md-3 control-label" for="text-input">项目保证金：</label>
                                     <div class="col-md-9">
@@ -504,6 +500,28 @@ window.onload=function()
     $('#xia').click(function()
         {
             var zt = confirm('项目是否进入下一阶段');
+            if(zt==true){
+                $.ajax({
+                    url:'<?php echo U("Project/complete_ajaxDOWN");?>',
+                    type:'post',
+                    data:{
+                        dqq:<?php echo ($find['project_id']); ?>,
+                    },
+                    dataType:'json',
+                    success:function(data){
+                        if(data.m=='success'){
+                            location.href="<?php echo U('Project/project_detail?id='.$find['project_id']);?>";
+                        }
+                    },
+                    error:function(data){
+                        alert('error');
+                    }
+                });
+            }
+        });
+    $('#shang').click(function()
+        {
+            var zt = confirm('项目是否进入上一阶段');
             if(zt==true){
                 $.ajax({
                     url:'<?php echo U("Project/complete_ajaxUP");?>',
