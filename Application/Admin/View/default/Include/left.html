@@ -48,15 +48,26 @@
 								</if>
 								<if condition="(dhl_qx(12) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
 									<li>
-										<a href="{:U('Article/type_list')}"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
+										<a href="{:U('Article/type_list')}"><i class="fa fa-align-left"></i><span class="text">信息列表</span></a>
 									</li>
 								</if>
 								<if condition="(dhl_qx(13) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
 									<li>
-										<a href="{:U('Article/video')}"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+										<a href="{:U('Article/article_list')}"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
 									</li>
 								</if>
 								<if condition="(dhl_qx(14) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/article_type')}"><i class="fa fa-align-left"></i><span class="text">文章分类</span></a>
+									</li>
+								</if>
+
+								<if condition="(dhl_qx(15) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
+									<li>
+										<a href="{:U('Article/video')}"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+									</li>
+								</if>
+								<if condition="(dhl_qx(16) eq success) || ($_SESSION['admin_info']['id'] eq 1)" >
 									<li>
 										<a href="{:U('Article/cooperation_list')}"><i class="fa fa-outdent"></i><span class="text">合作企业</span></a>
 									</li>

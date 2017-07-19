@@ -38,10 +38,10 @@
             </select>
             <ul class="ptjs-header-nav">
                 <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>
-                <li <?php echo ($introduce); ?>><a href="<?php echo U('introduce');?>">平台介绍</a></li>
-                <li <?php echo ($enterprise); ?>><a href="<?php echo U('enterprise');?>">合作企业</a></li>
-                <li <?php echo ($manager); ?>><a href="<?php echo U('manager');?>">自由经理人</a></li>
-                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('contact');?>">联系我们</a></li>
+                <li <?php echo ($introduce); ?>><a href="<?php echo U('index/introduce');?>">平台介绍</a></li>
+                <li <?php echo ($enterprise); ?>><a href="<?php echo U('index/enterprise');?>">合作企业</a></li>
+                <li <?php echo ($manager); ?>><a href="<?php echo U('index/manager');?>">自由经理人</a></li>
+                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('index/contact');?>">联系我们</a></li>
             </ul>
         <?php if($_SESSION['user_info']['id'] != ''): ?><ul class="ptjs-header-nav2">
             <?php if($xs != xs): ?><li>欢迎来到优赚网！</li>
@@ -176,28 +176,28 @@
             </div>
             
             <div class="tab-pane fade" id="edit">
-              <form action="<?php echo U('User/upPwd');?>" method="post" class="form-horizontal" role="form">
+              <form class="form-horizontal" role="form">
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">输入旧密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="upwd" type="password" class="form-control">
+                    <input id="upwd" type="password" class="form-control">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">设置新密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="pwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                    <input id="pwd" type="password" class="form-control" placeholder="密码只能为6位数字">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">确认新密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="rpwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                    <input id="rpwd" type="password" class="form-control" placeholder="密码只能为6位数字">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">保存</button>
+                <button id='bc' type="button" class="btn btn-primary">保存</button>
               </form>
             </div>
         </div>                     
@@ -205,6 +205,44 @@
                 
   </div>
 <script>
+  $('#bc').click(function(){
+      var upwd=$('#upwd').val(),
+          pwd=$('#pwd').val(),
+          rpwd=$('#rpwd').val();
+      if(upwd=='' || pwd=='' || rpwd==''){
+        alert('请填写信息');
+      }else if(isNaN(pwd) || isNaN(rpwd)){
+        alert('密码必须为纯数字');
+      }else if(pwd.length!=6 || rpwd.length!=6){
+        alert('密码只能为6位数字');
+      }else if(pwd!=rpwd){
+        alert('两次新密码输入不一致');
+      }else if(upwd==pwd){
+        alert('新密码与旧密码一致，并未改变');
+      }else{
+        $.ajax({
+            url:"<?php echo U('User/upPwd');?>",
+            type:'post',
+            data:{
+              upwd:upwd,
+              pwd:pwd,
+              rpwd:rpwd
+            },
+            dataType:'json',
+            success:function(data){
+              if(data.msg=1){
+                alert(data.n);
+                history.go(0);
+              }else{
+                alert(data.n);
+              }
+            },
+            error:function(data){
+              alert('error');
+            }
+        });
+      }
+  });
   $('#qr').click(function(){
       var yhm=$('#yhm').val();   
     $.ajax({
@@ -287,12 +325,12 @@
 				<li class="hover">
 				<dl>
 					<dd>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ1');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ1');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ2');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ2');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ3');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ3');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
 					</dd>
 				</dl>
 				</li>

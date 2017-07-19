@@ -39,10 +39,10 @@
             </select>
             <ul class="ptjs-header-nav">
                 <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>
-                <li <?php echo ($introduce); ?>><a href="<?php echo U('introduce');?>">平台介绍</a></li>
-                <li <?php echo ($enterprise); ?>><a href="<?php echo U('enterprise');?>">合作企业</a></li>
-                <li <?php echo ($manager); ?>><a href="<?php echo U('manager');?>">自由经理人</a></li>
-                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('contact');?>">联系我们</a></li>
+                <li <?php echo ($introduce); ?>><a href="<?php echo U('index/introduce');?>">平台介绍</a></li>
+                <li <?php echo ($enterprise); ?>><a href="<?php echo U('index/enterprise');?>">合作企业</a></li>
+                <li <?php echo ($manager); ?>><a href="<?php echo U('index/manager');?>">自由经理人</a></li>
+                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('index/contact');?>">联系我们</a></li>
             </ul>
         <?php if($_SESSION['user_info']['id'] != ''): ?><ul class="ptjs-header-nav2">
             <?php if($xs != xs): ?><li>欢迎来到优赚网！</li>
@@ -68,12 +68,14 @@
  <!--content 开始-->
 <div class="index-content">
    <div class="input-group col-sm-4 col-md-4">
-	<input type="text" class="form-control" placeholder="请输入搜索内容">
-	<span class="input-group-addon" id="input-group-addon"><i class="fa fa-search" id="fa-search"></i></span>
+  <form id="fo" action="<?php echo U('index/search');?>" method="post">
+	 <input type="text" class="form-control" name="con" placeholder="请输入搜索内容">
+	</form>
+  <span class="input-group-addon" id="input-group-addon"><a id="ss" href=""><i class="fa fa-search" id="fa-search"></i></a></span>
    </div>
    
    <div class="index-scroll">
-   <marquee direction="left" loop="0">最新成交消息：总成交量7个项目<span>总成交额281818元</span></marquee>
+   <marquee direction="left" loop="0"><?php echo ($zxxx['content']); ?></marquee>
    </div>
    
    <div class="index-zhanshi">
@@ -202,6 +204,15 @@
  <!--app结束-->   
 
 <script>
+  $('#ss').click(function(){
+    if($('[name=con]').val()==''){
+      alert('请填写搜索内容');
+      return false;
+    }
+    $('#fo').submit();
+    return false;
+  });
+
   $('#button').click(function()
   {
       var phone=$('#input1'),
@@ -410,12 +421,12 @@ $(function  () {
 				<li class="hover">
 				<dl>
 					<dd>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ1');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ1');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ2');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ2');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ3');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ3');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
 					</dd>
 				</dl>
 				</li>

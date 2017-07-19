@@ -38,10 +38,10 @@
             </select>
             <ul class="ptjs-header-nav">
                 <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>
-                <li <?php echo ($introduce); ?>><a href="<?php echo U('index/introduce');?>">平台介绍</a></li>
-                <li <?php echo ($enterprise); ?>><a href="<?php echo U('index/enterprise');?>">合作企业</a></li>
-                <li <?php echo ($manager); ?>><a href="<?php echo U('index/manager');?>">自由经理人</a></li>
-                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('index/contact');?>">联系我们</a></li>
+                <li <?php echo ($introduce); ?>><a href="<?php echo U('introduce');?>">平台介绍</a></li>
+                <li <?php echo ($enterprise); ?>><a href="<?php echo U('enterprise');?>">合作企业</a></li>
+                <li <?php echo ($manager); ?>><a href="<?php echo U('manager');?>">自由经理人</a></li>
+                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('contact');?>">联系我们</a></li>
             </ul>
         <?php if($_SESSION['user_info']['id'] != ''): ?><ul class="ptjs-header-nav2">
             <?php if($xs != xs): ?><li>欢迎来到优赚网！</li>
@@ -64,85 +64,27 @@
 
 </div>   
  
+<!--content 开始-->
+<div class="bzzx-content">
+
+  <div class="row">
+     <nav class="col-sm-3" id="myScrollspy">
+       <div class="container-fluid">
+            <ul class="nav nav-pills nav-stacked"  id="dong">
+             </ul>
+       </div>
+     </nav>
+     <div id='sss' class="col-sm-9 col-md-9">
+  <?php if($sel != null): if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$s): $mod = ($i % 2 );++$i;?><li><a href="<?php echo U('help?id='.$s['article_id']);?>"><?php echo ($s["title"]); ?></a></li><?php endforeach; endif; else: echo "" ;endif; ?>
+  <?php else: ?>
+      <h1 style="color:#0066FF">没有该搜索有关的文章</h1><?php endif; ?>
+                                 
+     </div>
+                
+  </div>
   
-    <div class="center">
-        <div class="zyjlr-center-box" >
-
-            <div  class="center-body">
-
-            <div class="container">
-                <div class="row">
-                    <nav class="col-sm-3" id="myScrollspy">
-                        <div class="container-fluid">
-                            <div class="container-fluid">
-                                <ul class="nav nav-pills nav-stacked"  id="dong">
-                                    <li class="ptjs-center-img2"><img src="/Uploads/<?= C('STORE_LOGO')?>"></li>
-                                    <li class="active"><a href="#ren1">自由经理人</a></li>
-                                    <li><a href="#ren2">项目发布流程</a></li>
-                                    <li><a href="#ren3">佣金申请流程</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
-                    <div class="col-sm-9">
-
-                        <div id="ren1">
-                          <center class="zyjlrr-center-img3">
-                            <img src="/Public/Home/images/titile.png">
-                            <h3 class="zyjlrr-center-font1">自由经理人</h3>
-                            <h4 class="zyjlrr-center-font2">product manager</h4>
-                          </center>
-                          <div class="ziyoujingliren-ptjs-img">
-                            <div class="ziyoujingliren-ptjs-black">
-                              <h3 class="ziyoujingliren-center-font4"><?php echo ($zy["content_title"]); ?></h3>
-                              <?php echo ($zy["content"]); ?>
-                            </div>
-                          </div>
-                        </div>
-
-
-                      <div id="ren2">
-                        <center class="zyjlrr-center-img3">
-                          <img src="/Public/Home/images/titile.png">
-                          <h3 class="zyjlrr-center-font1">项目发布流程</h3>
-                          <h4 class="zyjlrr-center-font2">contact process</h4>
-                        </center>
-                        <div class="col-xs-6 col-sm-6 col-md-6 zyjlr-left">
-                          <img src="/Uploads/<?php echo ($lc["img_url"]); ?>" />
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-6 zyjlr-right">
-                          <?php echo ($lc["content"]); ?>
-                        </div>                      
-                      </div>
-
-
-                        <div id="ren3">
-                            <center class="zyjlrr-center-img3">
-                                <img src="/Public/Home/images/titile.png">
-                                <h3 class="zyjlrr-center-font1">佣金申请流程</h3>
-                                <h4 class="zyjlrr-center-font2">commision process</h4>
-                            </center>
-                            <div class="yun">
-                                <p class="yun-1"><img src="/Uploads/<?php echo ($sq["img_url"]); ?>"></p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    </div>
-                </div>
-            </div>
-
-            </div>
-
-
-
-
-
-        </div>
-    </div>
-
-
+</div>
+<!--content 结束-->   
 
 <script type="text/javascript">
 var setFixed = {
@@ -164,9 +106,41 @@ $(function(){
 	setFixed.init();
 })
 
+$(function(){
+	$("#yzw-banner").carousel({
+		interval:3000	
+	});
+})
 
 var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
 
+$('.in').click(function(){
+  var id=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+
+  $.post("<?php echo U('help');?>",{id:id},function(data){
+
+    $('.col-md-9').html(data.content);
+  })
+  return false;
+})
+
+$('.cat').click(function(){
+  var pid=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+  str="";
+  $.post("<?php echo U('help');?>",{pid:pid},function(data){
+    $.each(data,function(k,v){
+        str+= '<li><a href="/Home/Index/help?id='+v.article_id+'">'+v.title+'</a></li>';
+    });
+    //  alert(str);
+    $('#sss').html(str);
+  })
+  return false;
+})
+    
 </script>
 
 <div class="footer">

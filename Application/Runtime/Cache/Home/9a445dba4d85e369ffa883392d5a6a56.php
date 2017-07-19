@@ -69,12 +69,15 @@
 
   <div class="row">
   
-     <nav class="col-sm-3" id="myScrollspy">
+       <nav class="col-sm-3" id="myScrollspy">
        <div class="container-fluid">
             <ul class="nav nav-stacked nav-pills">
                <li class="user-info">
-                <div class="photo">
-                  <center><img src="/Public/Home/images/users.jpg" /></center>
+                <div class="photo">                  
+                  <form action="<?php echo U('User/User_portrait');?>" id="form" ENCTYPE="multipart/form-data" method="post">
+                  <center><a><img src="<?php echo hed();?>" onclick="F_Open_dialog()" ></a></center>
+                    <input type="file" name="f" style="display:none" id="g" onchange="F_sub()">
+                  </form>
                 </div>
                 <div class="info">
                   <center><h5><span><?php echo ($_SESSION['user_info']['name']); ?></span>，欢迎你！</h5>
@@ -82,14 +85,25 @@
                     <h5>余额：<span>¥<?php echo (user_pr($_SESSION['user_info']['id'])); ?></span></h5></center>
                 </div>               
                </li>
-               <li><a href="<?php echo U('User/personal');?>"><i class="fa fa-user"></i>个人资料</a></li>
-               <li class="active"><a href="<?php echo U('User/project');?>"><i class="fa fa-tasks"></i>我的项目</a></li>
-               <li><a href="<?php echo U('User/free');?>"><i class="fa fa-home"></i>我的自由经理人</a></li>
-               <li><a href="<?php echo U('User/UserWallet');?>"><i class="fa fa-jpy"></i>我的钱包</a></li>
-               <li><a href="<?php echo U('User/information');?>"><i class="fa fa-bell"></i>我的消息</a></li>
+               <li <?php if($str == '/personal'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/personal');?>"><i class="fa fa-user"></i>个人资料</a></li>
+               <li <?php if($str == '/project'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/project');?>"><i class="fa fa-tasks"></i>我的项目</a></li>
+               <li <?php if($str == '/free'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/free');?>"><i class="fa fa-home"></i>我的自由经理人</a></li>
+               <li <?php if($str == '/UserWallet'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/UserWallet');?>"><i class="fa fa-jpy"></i>我的钱包</a></li>
+               <li <?php if($str == '/information'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/information');?>"><i class="fa fa-bell"></i>我的消息</a></li>
              </ul>
        </div>
      </nav>
+<script type="text/javascript">
+    function F_Open_dialog() 
+    { 
+      document.getElementById("g").click();       
+    } 
+    function F_sub(){
+         var v=document.getElementById("g").value;
+       if(v=="")return;
+       else document.getElementById("form").submit(); 
+    }
+ </script>
      <div class="col-sm-9 col-md-9">
      	<div class="daishenhe-header">
         	<span class="header1"><i class="fa fa-tasks"></i>我的项目</span>

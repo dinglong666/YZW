@@ -26,6 +26,14 @@ class FenxiaoLogic
                 case '2':
                     $price=$arr['project_actual']*C('PROFIT2')*0.01;///////////二级利润
                     break;
+                case '3':
+                    if (!empty($arr['project_yj'])) {///////////发布人利润
+                        $price=$arr['project_actual']*$arr['project_yj'];///////自己设定
+                    }else{
+                        $price=$arr['project_actual']*C('PROFIT3')*0.01;/////////后台设定
+                    }
+                    break;
+
                 default:
                     $this->error('最多二级分销');
                 break;

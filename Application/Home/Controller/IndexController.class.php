@@ -29,6 +29,10 @@ class IndexController extends BaseController {
 		$dibu=$art->where('cat_id=109');////////////////////////////底部
 		$this->assign('db',$dibu);
 
+		//当天时间段最新消息
+		$zxxx=M('article')->where('cat_id=116')->find();
+		$this->assign('zxxx',$zxxx);
+
 		$this->assign('index','class="current"');//////////////////头部class
 
 		$this->display();
@@ -152,6 +156,14 @@ class IndexController extends BaseController {
 		$this->assign('arr',$arr);
 
 
+		$this->display();
+	}
+
+	//首页搜索
+	public function search(){
+		$con=I('post.con','','trim');
+		$sel=M('article')->where("title like '%{$con}%' ")->select();
+		$this->assign('sel',$sel);
 		$this->display();
 	}
 

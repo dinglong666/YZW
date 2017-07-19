@@ -8,10 +8,10 @@
             </select>
             <ul class="ptjs-header-nav">
                 <li {$index}><a href="{:U('index/index')}">首页</a></li>
-                <li {$introduce}><a href="{:U('introduce')}">平台介绍</a></li>
-                <li {$enterprise}><a href="{:U('enterprise')}">合作企业</a></li>
-                <li {$manager}><a href="{:U('manager')}">自由经理人</a></li>
-                <li {$contact} style="color:red;"><a href="{:U('contact')}">联系我们</a></li>
+                <li {$introduce}><a href="{:U('index/introduce')}">平台介绍</a></li>
+                <li {$enterprise}><a href="{:U('index/enterprise')}">合作企业</a></li>
+                <li {$manager}><a href="{:U('index/manager')}">自由经理人</a></li>
+                <li {$contact} style="color:red;"><a href="{:U('index/contact')}">联系我们</a></li>
             </ul>
         <if condition="$_SESSION['user_info']['id'] neq ''" >
             <ul class="ptjs-header-nav2">

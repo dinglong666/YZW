@@ -34,6 +34,7 @@ return array(
     'CONTACT_EMAIL'     => S('FIND')['contact_email'],////  联系邮箱
     'PROFIT1'           => S('FIND')['profit1'],//////////  一级分销利润
     'PROFIT2'           => S('FIND')['profit2'],//////////  二级分销利润
+    'profit3'           => S('FIND')['profit3'],//////////  发布人提成
     'ALIPAY'            => S('FIND')['alipay'],///////////  支付宝账号
     'WECHAT'            => S('FIND')['wechat'],///////////  微信账号
     'STORE_LOGO'        => S('FIND')['store_logo'],///////  网站logo

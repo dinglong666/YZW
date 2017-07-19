@@ -152,6 +152,9 @@ class ProjectController extends BaseController {
         $find=$a->fenxiao($pro['user_id']);   ///////////获取一级二级分销id
 
         $p->save($_GET['id'],$find['one']['user_id'],$find['two']['user_id']);      ///////////更改项目一级二级字段
+        $user=$a->fenxiao($pro['user_id'],$_GET['id'],3);
+        $w->paifa($pro['user_id'],$user['price']);
+
 
         if ($find['one']['user_id']) {   
             $one=$a->fenxiao($find['one']['user_id'],$_GET['id'],1);//////////获得变动钱数
@@ -162,7 +165,12 @@ class ProjectController extends BaseController {
             $two=$a->fenxiao($find['two']['user_id'],$_GET['id'],2);
             $w->paifa($find['two']['user_id'],$two['price']);
         }
-
+        $arr=array('user_id'=>$pro['user_id'],
+            'project_id'=>$pro['project_id'],
+            'information_type'=>2,
+            'information_content'=>'您的"'.$pro['project_name'].'"项目佣金已发放，请注意查收',
+            'add_time'=>time());
+        M('information')->add($arr);        
         $this->success('派发成功');
     }
 
@@ -216,7 +224,7 @@ class ProjectController extends BaseController {
                 $arr=array('user_id'=>$find['user_id'],
                     'project_id'=>$find['project_id'],
                     'information_type'=>1,
-                    'information_content'=>'您的'.$find['project_name'].'项目已被指派客服，如有问题可咨询客服解决！',
+                    'information_content'=>'您的"'.$find['project_name'].'"项目已被指派客服，如有问题可咨询客服解决！',
                     'add_time'=>time());
                 M('information')->add($arr);
                 M('project')->where('project_id='.$id)->save(array('project_service'=>$admin));                
@@ -225,7 +233,7 @@ class ProjectController extends BaseController {
                     $arr=array('user_id'=>$find['user_id'],
                         'project_id'=>$find['project_id'],
                         'information_type'=>1,
-                        'information_content'=>'您的'.$find['project_name'].'项目客服已变更，请留意。有问题可咨询客服解决！',
+                        'information_content'=>'您的"'.$find['project_name'].'"项目客服已变更，请留意。有问题可咨询客服解决！',
                         'add_time'=>time());
                     M('information')->add($arr);
                     M('project')->where('project_id='.$id)->save(array('project_service'=>$admin)); 

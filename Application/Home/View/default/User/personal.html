@@ -86,28 +86,28 @@
             </div>
             
             <div class="tab-pane fade" id="edit">
-              <form action="{:U('User/upPwd')}" method="post" class="form-horizontal" role="form">
+              <form class="form-horizontal" role="form">
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">输入旧密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="upwd" type="password" class="form-control">
+                    <input id="upwd" type="password" class="form-control">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">设置新密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="pwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                    <input id="pwd" type="password" class="form-control" placeholder="密码只能为6位数字">
                   </div>
                 </div>
                 
                 <div class="form-group">
                   <label class="col-sm-2 col-md-2 control-label">确认新密码：</label>
                   <div class="co-sm-3 col-md-3">
-                    <input name="rpwd" type="password" class="form-control" placeholder="密码只能为6位数字">
+                    <input id="rpwd" type="password" class="form-control" placeholder="密码只能为6位数字">
                   </div>
                 </div>
-                <button type="submit" class="btn btn-primary">保存</button>
+                <button id='bc' type="button" class="btn btn-primary">保存</button>
               </form>
             </div>
         </div>                     
@@ -115,6 +115,44 @@
                 
   </div>
 <script>
+  $('#bc').click(function(){
+      var upwd=$('#upwd').val(),
+          pwd=$('#pwd').val(),
+          rpwd=$('#rpwd').val();
+      if(upwd=='' || pwd=='' || rpwd==''){
+        alert('请填写信息');
+      }else if(isNaN(pwd) || isNaN(rpwd)){
+        alert('密码必须为纯数字');
+      }else if(pwd.length!=6 || rpwd.length!=6){
+        alert('密码只能为6位数字');
+      }else if(pwd!=rpwd){
+        alert('两次新密码输入不一致');
+      }else if(upwd==pwd){
+        alert('新密码与旧密码一致，并未改变');
+      }else{
+        $.ajax({
+            url:"{:U('User/upPwd')}",
+            type:'post',
+            data:{
+              upwd:upwd,
+              pwd:pwd,
+              rpwd:rpwd
+            },
+            dataType:'json',
+            success:function(data){
+              if(data.msg=1){
+                alert(data.n);
+                history.go(0);
+              }else{
+                alert(data.n);
+              }
+            },
+            error:function(data){
+              alert('error');
+            }
+        });
+      }
+  });
   $('#qr').click(function(){
       var yhm=$('#yhm').val();   
     $.ajax({

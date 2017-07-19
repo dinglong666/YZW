@@ -207,12 +207,12 @@ $('.cat').click(function(){
 				<li class="hover">
 				<dl>
 					<dd>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ1');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ1');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ2');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ2');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ3');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ3');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
 					</dd>
 				</dl>
 				</li>

@@ -36,36 +36,37 @@ class UserController extends Controller
 		$pwd=I('post.pwd',0,'intval');
 		$rpwd=I('post.rpwd',0,'intval');
 		if($upwd=='' || $pwd=='' || $rpwd==''){
-			$this->error('密码不能为空');
+			echo '{"msg":0,"n":"请填写信息"}';
 			die;
 		}
 		$user=M('users')->where('user_id='.$_SESSION['user_info']['id'])->find();
 		if($user['password']!=md5($upwd)){
-			$this->error('旧密码输入错误');
+			echo '{"msg":0,"n":"旧密码输入错误"}';
 			die;			
 		}
 		if(!is_numeric($pwd) || !is_numeric($rpwd)){
-			$this->error('密码只能为纯数字');
+			echo '{"msg":0,"n":"密码只能为纯数字"}';
 			die;			
 		}
 		if($upwd==$pwd){
-			$this->error('新密码与老密码一致，并未改变');
+			echo '{"msg":0,"n":"新密码与老密码一致，并未改变"}';
 			die;			
 		}
 		if(strlen($pwd)!=6 ||strlen($rpwd)!=6){
-			$this->error('密码只能为六位数字');
+			echo '{"msg":0,"n":"密码只能为六位数字"}';
 			die;			
 		}
 		if($pwd!=$rpwd){
-			$this->error('两次新密码输入不一致');
-			die;			
+			echo '{"msg":0,"n":"两次新密码输入不一致"}';
+			die;				
 		}
 		$u=M('users')->where('user_id='.$_SESSION['user_info']['id'])->save(array('password'=>md5($pwd)));
 		if($u){
-			$this->success('修改成功');			
+			echo '{"msg":1,"n":"修改成功"}';
+			die;		
 		}else{
-			$this->error('两次新密码输入不一致');
-			die;			
+			echo '{"msg":0,"n":"修改失败"}';
+			die;		
 		}
 	}
 
@@ -219,12 +220,19 @@ class UserController extends Controller
                 }
             }                
         }
+        // dump(unlink('Uploads/Home/2017-07-19/596eb0990c865.png'));
+        $u=M('users')->where('user_id='.$_SESSION['user_info']['id'])->find();
+        if($u['head_pic']!=''){
+        	unlink(trim($u['head_pic'],'/'));
+        }
+    	$m=M('qrcode')->where('qrcode_id='.$u['qrcode_id'])->find();
+    	if($m['qrcode_path']!=''){
+    		unlink(trim($m['qrcode_path'],'/'));
+    	}
+        $hed=hqrcode($_SESSION['user_info']['id'],trim($f,'/'));
+        M('qrcode')->where('qrcode_id='.$u['qrcode_id'])->save(array('qrcode_path'=>$hed));
         $m=M('users')->where('user_id='.$_SESSION['user_info']['id'])->save(array('head_pic'=>$f));
-        if($m){
-        	$this->success('修改头像成功');
-		}else{
-        	$this->error('修改头像失败');			
-		}
+        $this->redirect('User/personal');
 	}
 
 

@@ -1,5 +1,4 @@
 <?php if (!defined('THINK_PATH')) exit();?>
-
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -37,7 +36,7 @@
 			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 	    <![endif]-->
-
+ 
 
 <style type="text/css">
     div{
@@ -147,12 +146,19 @@ window.onload=function()
 										<a href="<?php echo U('Article/shouye');?>"><i class="fa fa-align-left"></i><span class="text">首页图片</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(12) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
+										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">信息列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(13) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+										<a href="<?php echo U('Article/article_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(14) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/article_type');?>"><i class="fa fa-align-left"></i><span class="text">文章分类</span></a>
+									</li><?php endif; ?>
+
+								<?php if((dhl_qx(15) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(16) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Article/cooperation_list');?>"><i class="fa fa-outdent"></i><span class="text">合作企业</span></a>
 									</li><?php endif; ?>
 								</ul>
@@ -247,45 +253,54 @@ window.onload=function()
 			<!-- end: Main Menu -->
 						
 		<!-- start: Content -->
-		<div class="main ">
-		
-
-			
+		<div class="main ">	
 			<div class="row">
-			
-			      
-			            <div class="panel-heading">
-			                <a href="<?php echo U('News/changeList');?>"><h2><i class="fa fa-indent red"></i><strong>返回列表</strong></h2></a>
-			            </div>
 						<div class="panel-body" style="width:50%;margin-left:20%">
-							<form action="<?php echo U('News/newsList_add');?>" method="post" enctype="multipart/form-data" class="form-horizontal ">
-                                <div style='margin-top: 50px;' class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">会员账号：</label>
-                                    <div class="col-md-9">
-                                        <input type="text" style="width:200px" value="<?php echo (user_ad($find['user_id'])); ?>" name="aposition" readonly class="form-control" >
-                                    </div>
-                                </div>                                
+							<form action="<?php echo U('Article/type_add_go');?>" method="post" class="form-horizontal" enctype="multipart/form-data" >
+                                <input type='hidden' name='article_id' value='<?php echo ($find["article_id"]); ?>'>
+                                <input type='hidden' name='ttype' value='article_list'>
+                                <input type='hidden' name='ltype' value='sp'>
                                 <div class="form-group">
-                                    <label class="col-md-3 control-label" for="text-input">项目名称：</label>
+                                    <label class="col-md-3 control-label" for="text-input">文章分类:</label>
                                     <div class="col-md-9">
-                                        <input type="text" style="width:200px" value="<?php echo (pro_name($find['project_id'])); ?>" name="aposition" readonly class="form-control" >
+                                        <select name="cat_id">
+                                            <option value="">请选择</option>
+                                            <?php if(is_array($arr)): $i = 0; $__LIST__ = $arr;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$a): $mod = ($i % 2 );++$i;?><option <?php if($a['cat_id'] == $find['cat_id']): ?>selected<?php endif; ?> value="<?php echo ($a["cat_id"]); ?>"><?php echo ($a["cat_name"]); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                        </select>
+                                    </div>
+                                </div>  
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">文章标题:</label>
+                                    <div class="col-md-9">
+                                        <input type="rext" name="title"  class="form-control" value='<?php echo ($find["title"]); ?>'>
                                     </div>
                                 </div>
-								<div class="form-group">
-				                    <label class="col-md-3 control-label" for="text-input">变更消息：</label>
-				                    <div class="col-md-9">
-                                        <textarea style='resize:none;' readonly cols="36" rows="8" name='ntext' id="content" style="border: 1 solid #888888;LINE-HEIGHT:18px;padding: 3px;"><?php echo ($find['information_content']); ?></textarea>
-				                    </div>
-				                </div>
+
+                                <div class="form-group">
+                                    <label class="col-md-3 control-label" for="text-input">是否显示:</label>
+                                    <div class="col-md-9">
+                                    <?php if($_GET['id']): ?><input type="radio" name="is_open" <?php if($find['is_open'] == 1): ?>checked<?php endif; ?> value='1'>是
+                                        <input type="radio" name="is_open" <?php if($find['is_open'] == 0): ?>checked<?php endif; ?> value='0'>否
+                                    <?php else: ?>
+                                        <input type="radio" name="is_open" checked value='1'>是
+                                        <input type="radio" name="is_open" value='0'>否<?php endif; ?>
+                                    </div>
+                                </div> 
+
+                                    <div class="form-group">
+                                        <label class="col-md-3 control-label" for="text-input">文章信息:</label>
+                                        <div class="col-md-9">
+                                            <textarea id="editor" name="content" style="width:860px;height:500px;"><?php echo ($find["content"]); ?></textarea>
+                                        </div>
+                                    </div>
+                                
+								<br>
+									<!-- <input type="hidden" name="old_id" value="<?php echo ($row["id"]); ?>"> -->
+								   <button style="width:50%;margin-left:38%" type="submit" class="btn btn-sm btn-success"><i class="fa fa-dot-circle-o"></i>保存</button>
 				            </form>
 				         
 	
 						</div>
-
-	
-
-				
-		
 			</div><!--/.row-->
 
 		</div>
@@ -298,21 +313,10 @@ window.onload=function()
 	<!--[if !IE]>-->
 
 			<script src="/Public/Admin/assets/js/jquery-2.1.1.min.js"></script>
-
-	<!--<![endif]-->
-
-	<!--[if IE]>
-	
-		<script src="/Public/Admin/assets/js/jquery-1.11.1.min.js"></script>
-	
-	<![endif]-->
-
-	<!--[if !IE]>-->
-
-		<script type="text/javascript">
-			window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
-		</script>
-		<script type="text/javascript">
+<script type="text/javascript">
+            window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-2.1.1.min.js'>"+"<"+"/script>");
+        </script>
+        <script type="text/javascript">
 
     //实例化编辑器          
     //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
@@ -429,13 +433,24 @@ window.onload=function()
 
 	<!--[if IE]>
 	
+		<script src="/Public/Admin/assets/js/jquery-1.11.1.min.js"></script>
+	
+	<![endif]-->
+
+	<!--[if !IE]>-->
+
+
+	<!--<![endif]-->
+
+	<!--[if IE]>
+	
 		<script type="text/javascript">
 	 	window.jQuery || document.write("<script src='/Public/Admin/assets/js/jquery-1.11.1.min.js'>"+"<"+"/script>");
 		</script>
 		
 	<![endif]-->
 	<script src="/Public/Admin/assets/js/jquery-migrate-1.2.1.min.js"></script>
-	<script src="/Public/Admin/assets/js/bootstrap.min.js"></script>	
+	<!-- <script src="/Public/Admin/assets/js/bootstrap.min.js"></script>	 -->
 	
 	
 	<!-- page scripts -->
@@ -444,14 +459,14 @@ window.onload=function()
 	<script src="/Public/Admin/assets/plugins/autosize/jquery.autosize.min.js"></script>
 	<script src="/Public/Admin/assets/plugins/placeholder/jquery.placeholder.min.js"></script>
 	<script src="/Public/Admin/assets/plugins/maskedinput/jquery.maskedinput.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script>
+	<!-- <script src="/Public/Admin/assets/plugins/inputlimiter/js/jquery.inputlimiter.1.3.1.min.js"></script> -->
+	<!-- <script src="/Public/Admin/assets/plugins/datepicker/js/bootstrap-datepicker.min.js"></script> -->
+	<!-- <script src="/Public/Admin/assets/plugins/timepicker/js/bootstrap-timepicker.min.js"></script> -->
 	<script src="/Public/Admin/assets/plugins/moment/moment.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script>
-	<script src="/Public/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script>
+	<!-- <script src="/Public/Admin/assets/plugins/daterangepicker/js/daterangepicker.min.js"></script> -->
+	<!-- <script src="/Public/Admin/assets/plugins/hotkeys/jquery.hotkeys.min.js"></script> -->
+	<!-- <script src="/Public/Admin/assets/plugins/wysiwyg/bootstrap-wysiwyg.min.js"></script> -->
+	<!-- <script src="/Public/Admin/assets/plugins/colorpicker/js/bootstrap-colorpicker.min.js"></script> -->
 	
 	<!-- theme scripts -->
 	<script src="/Public/Admin/assets/js/SmoothScroll.js"></script>
@@ -459,10 +474,30 @@ window.onload=function()
 	<script src="/Public/Admin/assets/js/core.min.js"></script>
 	
 	<!-- inline scripts related to this page -->
-	<script src="/Public/Admin/assets/js/pages/form-elements.js"></script>
-	<script language="javascript" type="text/javascript" src="/Public/admin/timepicker/WdatePicker.js"></script>
+	<!-- <script src="/Public/Admin/assets/js/pages/form-elements.js"></script> -->
+	<!-- <script language="javascript" type="text/javascript" src="/Public/admin/timepicker/WdatePicker.js"></script> -->
 
 	<!-- end: JavaScript-->
-	
+	<script>
+     $("#file0").change(function(){
+        var objUrl = getObjectURL(this.files[0]) ;
+        console.log("objUrl = "+objUrl) ;
+        if (objUrl) {
+            $("#img0").attr("src", objUrl) ;
+        }
+    }) ; 
+
+    function getObjectURL(file) {
+        var url = null ; 
+        if (window.createObjectURL!=undefined) { // basic
+            url = window.createObjectURL(file) ;
+        } else if (window.URL!=undefined) { // mozilla(firefox)
+            url = window.URL.createObjectURL(file) ;
+        } else if (window.webkitURL!=undefined) { // webkit or chrome
+            url = window.webkitURL.createObjectURL(file) ;
+        }
+        return url ;
+    }  
+    </script>
 </body>
 </html>

@@ -11,16 +11,17 @@
     <link href="/Public/Home/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="/Public/Home/css/common-login.css" rel="stylesheet" type="text/css">
     <link href="/Public/Home/css/qq.css" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="http://www.hot80.com/demo/css/wxs.page.css">
 
-    <link href="css/datepicker-custom.css" type="text/css" rel="stylesheet">
-    <link href="css/colorpicker.css" type="text/css" rel="stylesheet">
+    <link href="/Public/Home/css/datepicker-custom.css" type="text/css" rel="stylesheet">
+    <link href="/Public/Home/css/colorpicker.css" type="text/css" rel="stylesheet">
 
     <script src="/Public/Home/js/jquery-3.1.1.min.js"></script>
     <script src="/Public/Home/js/bootstrap.min.js"></script>
     <script src="/Public/Home/js/script.js"></script>
 
-    <script src="js/bootstrap-datepicker.js"></script>
-    <script src="js/pickers-init.js"></script>
+    <script src="/Public/Home/js/bootstrap-datepicker.js"></script>
+    <script src="/Public/Home/js/pickers-init.js"></script>
 
 
 
@@ -36,7 +37,7 @@
                 <option>上海</option>
             </select>
             <ul class="ptjs-header-nav">
-                <li <?php echo ($index); ?>><a href="<?php echo U('index');?>">首页</a></li>
+                <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>
                 <li <?php echo ($introduce); ?>><a href="<?php echo U('introduce');?>">平台介绍</a></li>
                 <li <?php echo ($enterprise); ?>><a href="<?php echo U('enterprise');?>">合作企业</a></li>
                 <li <?php echo ($manager); ?>><a href="<?php echo U('manager');?>">自由经理人</a></li>
@@ -54,7 +55,7 @@
             <ul class="ptjs-header-nav2">
                 <li><a href="<?php echo U('Login/register');?>">登陆</a></li>
                 <li><a>|</a></li>
-                <li><a href="<?php echo U('Login/register');?>">注册</a></li>
+                <li><a href="<?php echo U('Login/register?zcdl=zcdl');?>">注册</a></li>
             </ul><?php endif; ?>
         </div>
 
@@ -72,7 +73,7 @@
        <div class="container-fluid">
             <ul class="nav nav-pills nav-stacked"  id="dong">
                <li class="ptjs-center-img2"><img src="/Public/Home/images/logo.png"></li>
-               <li class="active"><a href="jingcaishipin.html">精彩视频</a></li>
+               <li class="active"><a href="">精彩视频</a></li>
              </ul>
        </div>
      </nav>
@@ -178,12 +179,12 @@ var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看�
 				<li class="hover">
 				<dl>
 					<dd>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
-					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=2447402004&site=qq&menu=yes">
-					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:2447402004:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ1');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ1');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ2');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ2');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
+					<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo C('CONTACT_QQ3');?>&site=qq&menu=yes">
+					<img width="74" height="22" border="0" src="http://wpa.qq.com/pa?p=2:<?php echo C('CONTACT_QQ3');?>:41" alt="站长素材QQ在线客服" title="站长素材QQ在线客服" /></a>
 					</dd>
 				</dl>
 				</li>

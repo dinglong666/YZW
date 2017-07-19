@@ -15,6 +15,9 @@ class ArticleController extends BaseController {
 	 	foreach ($arr as $key => $value) {
 	 		$arr[$key]['list']=$cat->where('cat_id='.$value['cat_id'])->find();
 	 	}
+	 	$c=$cat->where($where)->select();
+	 	$this->assign('cat',$c);
+	 	// dump($arr);
 	 	$this->assign('weizhi',$weizhi);
 		$this->assign('xianshi',$xianshi);
 		$this->assign('page',$page->show());
@@ -26,7 +29,10 @@ class ArticleController extends BaseController {
 		if($_GET['id']){
 			$find=M('article')->where('article_id='.$_GET['id'])->find();
 			$find['list']=M('article_cat')->where('cat_id='.$find['cat_id'])->field('cat_name')->find();
-			
+			if ($_GET['id']==1285) {
+				$find['con']=explode(',',$find['content']);
+			}
+			// dump($find);description
 			$this->assign('find',$find);
 		}
 		$arr=M('article_cat')->where($where)->select();
@@ -45,7 +51,7 @@ class ArticleController extends BaseController {
 	}
 
 	public function type_list(){///////////////////////文章列表
-	 	$where='cat_id in (102,104,105)';
+	 	$where='cat_id in (102,104,105,116)';
 	 	$this->where($where,15);
 	}
 
@@ -54,7 +60,51 @@ class ArticleController extends BaseController {
 		$this->find();
 	}
 
+	public function article_list(){
+		$where='cat_id > 200';
+		$this->where($where);
+	}
+
+	public function article_add(){
+		$where='cat_id > 200';
+		$this->find($where);
+	}
+
+	public function article_type(){
+		$where='cat_id > 200';
+		$this->where($where);
+	}
+
+	public function article_type_add(){
+		if ($_GET['id']) {
+			$find=M('article_cat')->where('cat_id='.$_GET['id'])->find();
+			$this->assign('find',$find);
+		}
+		$this->display();
+
+	}
+
+	public function article_type_go(){
+		if ($_POST['cat_id']) {
+			$go=M('article_cat')->where('cat_id='.$_POST['cat_id'])->data($_POST)->save();
+		}else{
+			$go=M('article_cat')->add($_POST);
+		}
+		if ($go) {
+			$this->success('保存成功','article_type');
+		}else{
+			$this->error('保存失败');
+		}
+	}
+
+	public function cat_del(){
+		M('article')->where('cat_id='.$_GET['id'])->delete();
+		M('article_cat')->where('cat_id='.$_GET['id'])->delete();
+		$this->success('删除成功');
+	}
+
 	public function type_add_go(){
+		$art=M('article');
 		if (!empty($_FILES['photo']['name'])) {
 			$find=$art->find($_POST['article_id']);
 			unlink('./Uploads/'.$find['img_url']);
@@ -63,10 +113,16 @@ class ArticleController extends BaseController {
             
         }
         $artic=D('Article');
-
+        if ($_POST['con']) {
+        	$_POST['content']='';
+        	foreach ($_POST['con'] as $key => $value) {
+        		$_POST['content'].=$value.',';
+        	}
+        	$_POST['content']=trim($_POST['content'],',');
+        }
 		if (!empty($_POST['article_id'])) {
 			$_POST['publish_time']=time();
-        	$a=M('article')->where('article_id='.$_POST['article_id'])->data($_POST)->save();
+        	$a=$art->where('article_id='.$_POST['article_id'])->data($_POST)->save();
 			switch ($_POST['ltype']) {
 				case 'sp':
 					admin_log('管理员修改视频');
@@ -87,7 +143,7 @@ class ArticleController extends BaseController {
         	}
         	if($artic->create()){
 	        	$_POST['add_time']=time();
-	        	$a=M('article')->data($_POST)->add();
+	        	$a=$art->data($_POST)->add();
 			switch ($_POST['ltype']) {
 				case 'sp':
 					admin_log('管理员添加视频');
@@ -131,9 +187,10 @@ class ArticleController extends BaseController {
 	}
 
 	public function del(){
+		$art=M('article');
 		$find=$art->find($_GET['id']);
 		unlink('./Uploads/'.$find['img_url']);
-		M('article')->delete($_GET['id']);
+		$art->delete($_GET['id']);
 		switch ($_GET['type']) {
 			case 'tp':
 				admin_log('管理员删除编号为'.$_GET['id'].'的首页图片');

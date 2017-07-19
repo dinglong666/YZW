@@ -203,7 +203,7 @@ function sr($phone)
 }
 
 
-//生成二维码
+//注册生成二维码
 function qrcode($id=''){
     if($id!=''){
         $u='?id='.$id;
@@ -242,6 +242,46 @@ function qrcode($id=''){
     // imagepng($QR, $name); 
     // return $name;
     // echo '<img src="'.$name.'">';
+}
+
+//修改头像生成二维码
+function hqrcode($id='',$head=''){
+    if($id!=''){
+        $u='?id='.$id;
+    }else{
+        $u='';
+    }
+    Vendor("phpqrcode.phpqrcode");
+    $object=new \QRcode();
+    $value="http://www.baidu.com".$u;  
+    $errorCorrectionLevel = "H"; // 纠错级别：L、M、Q、H  
+    $matrixPointSize = "10"; // 点的大小：1到10  
+    ob_clean();//，清除缓冲区  
+    $object->png($value,"Public/Admin/images/qrcode".$id.".png", $errorCorrectionLevel, $matrixPointSize);
+
+    $logo = $head;//准备好的logo图片 
+    $QR = "Public/Admin/images/qrcode".$id.".png";//已经生成的原始二维码图 
+      // return $QR;die;
+    if ($logo !== FALSE) { 
+     $QR = imagecreatefromstring(file_get_contents($QR)); 
+     $logo = imagecreatefromstring(file_get_contents($logo)); 
+     $QR_width = imagesx($QR);//二维码图片宽度 
+     $QR_height = imagesy($QR);//二维码图片高度 
+     $logo_width = imagesx($logo);//logo图片宽度 
+     $logo_height = imagesy($logo);//logo图片高度 
+     $logo_qr_width = $QR_width / 5; 
+     $scale = $logo_width/$logo_qr_width; 
+     $logo_qr_height = $logo_height/$scale; 
+     $from_width = ($QR_width - $logo_qr_width) / 2; 
+     //重新组合图片并调整大小 
+     imagecopyresampled($QR, $logo, $from_width, $from_width, 0, 0, $logo_qr_width, 
+     $logo_qr_height, $logo_width, $logo_height); 
+    } 
+    $name='Public/Home/qrcode/qrcode'.time().'.png';
+    //输出图片 
+    imagepng($QR, $name); 
+    return '/'.$name;
+    echo '<img src="'.$name.'">';
 }
 
 //redis存储权限

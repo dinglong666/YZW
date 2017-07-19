@@ -9,38 +9,30 @@
 </div>   
  
 <!--content 开始-->
-<div class="xq-content">
+<div class="bzzx-content">
 
   <div class="row">
-  
      <nav class="col-sm-3" id="myScrollspy">
        <div class="container-fluid">
             <ul class="nav nav-pills nav-stacked"  id="dong">
-               <li class="ptjs-center-img2"><img src="__HOME__/images/logo.png"></li>
-               <li class="active"><a href="">精彩视频</a></li>
              </ul>
        </div>
      </nav>
-     <div class="col-sm-9 col-md-9">
-       <h5>您当前所在位置：精彩视频><span>视频详情</span></h5>
-       <div class="xq-img">
-       <if condition="$find['img_chain']">
-        {$info.img_chain}
-
-        <else/>
-        <video src="__VIDEO__/{$find.video_name}" width="100%" height="100%"  controls="controls">
-          
-        </video>
-        </if> 
-       </div>
-                    
+     <div id='sss' class="col-sm-9 col-md-9">
+  <if condition="$sel neq null" >
+     <volist name='sel' id='s'>
+     <li><a href="{:U('help?id='.$s['article_id'])}">{$s.title}</a></li>
+     </volist>
+  <else/>
+      <h1 style="color:#0066FF">没有该搜索有关的文章</h1>
+  </if>
+                                 
      </div>
-                     
+                
   </div>
   
 </div>
 <!--content 结束-->   
-
 
 <script type="text/javascript">
 var setFixed = {
@@ -68,19 +60,35 @@ $(function(){
 	});
 })
 
-$(function() {
-    $('#carousel1 ul').carouFredSel({
-		scroll: 1000
-	});
-});
-
-$(function() {
-    $('#carousel2 ul').carouFredSel({
-		scroll: 2000
-	});
-});
 var default_view = 0; <!--1是默认展开，0是默认关闭，新开窗口看效果，别在原页面刷新-->
 
+$('.in').click(function(){
+  var id=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+
+  $.post("{:U('help')}",{id:id},function(data){
+
+    $('.col-md-9').html(data.content);
+  })
+  return false;
+})
+
+$('.cat').click(function(){
+  var pid=$(this).attr('aa');
+  $('.active').removeClass('active');
+  $(this).parent().addClass('active');
+  str="";
+  $.post("{:U('help')}",{pid:pid},function(data){
+    $.each(data,function(k,v){
+        str+= '<li><a href="__ROOT__/Home/Index/help?id='+v.article_id+'">'+v.title+'</a></li>';
+    });
+    //  alert(str);
+    $('#sss').html(str);
+  })
+  return false;
+})
+    
 </script>
 
 <div class="footer">

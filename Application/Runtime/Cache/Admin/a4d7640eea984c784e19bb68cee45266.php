@@ -110,12 +110,19 @@
 										<a href="<?php echo U('Article/shouye');?>"><i class="fa fa-align-left"></i><span class="text">首页图片</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(12) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
+										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">信息列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(13) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+										<a href="<?php echo U('Article/article_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(14) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/article_type');?>"><i class="fa fa-align-left"></i><span class="text">文章分类</span></a>
+									</li><?php endif; ?>
+
+								<?php if((dhl_qx(15) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(16) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Article/cooperation_list');?>"><i class="fa fa-outdent"></i><span class="text">合作企业</span></a>
 									</li><?php endif; ?>
 								</ul>
@@ -133,7 +140,7 @@
 								</ul>
 							</li><?php endif; ?>
 						
-						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+						<?php if((dhl_qx(31) == success) || (dhl_qx(32) == success) || (dhl_qx(33) == success) || (dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 								<a href="#"><i class="fa fa-columns"></i><span class="text">项目管理</span> <span class="fa fa-angle-down pull-right"></span></a>
 								<ul class="nav sub">
 								<?php if((dhl_qx(31) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
@@ -144,6 +151,9 @@
 									</li><?php endif; ?>
 								<?php if((dhl_qx(33) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Project/projectList_complete');?>"><i class="fa fa-columns"></i><span class="text">项目状态分类列表</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(34) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Project/projectList_address');?>"><i class="fa fa-columns"></i><span class="text">项目所在地</span></a>
 									</li><?php endif; ?>
 								</ul>
 							</li><?php endif; ?>
