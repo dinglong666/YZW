@@ -11,7 +11,7 @@
                 <div class="info">
                   <center><h5><span>{$_SESSION['user_info']['name']}</span>，欢迎你！</h5>
                     <p>{:substr_replace($_SESSION['user_info']['mobile'],'****',3,4)}</p>
-                    <h5>余额：<span>¥{$_SESSION['user_info']['id']|user_pr}</span></h5></center>
+                    <h5>余额：<span>¥{:user_pr()}</span></h5></center>
                 </div>               
                </li>
                <li <if condition="$str eq '/personal'"> class="active"  </if> ><a href="{:U('User/personal')}"><i class="fa fa-user"></i>个人资料</a></li>

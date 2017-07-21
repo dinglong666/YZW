@@ -41,6 +41,7 @@ class LoginController extends BaseController
 				'wx'=>$user['wx_user'],
 				'qrcode'=>$user['qrcode_id']);
 			$_SESSION['user_info']=$arr;
+            M('users')->where('mobile="'.$sjh.'" and password="'.$mm.'"')->save(array('last_login'=>time(),'last_ip'=>$_SERVER["REMOTE_ADDR"]));
 			if($i==1){  //前台登录选择记住密码时,存储会员信息到cookie
 				setcookie('user_id',$user['user_id'],time()+3600,'/');
 			}
@@ -93,17 +94,17 @@ class LoginController extends BaseController
 	        	echo '{"state":"手机号已注册","msg":"0"}';
 	        	die;        	
 	        }
-			// if(time()>$time1 && time()<$time2){
-			// 	if(reqx2(time1.$_SERVER["REMOTE_ADDR"])==3){
-			// 		echo '{"state":"一天只能发送验证码三次","msg":"0"}';
-			// 		die;
-			// 	}
-			// 	if(reqx2(time1.$_SERVER["REMOTE_ADDR"])==''){
-			// 		reqx(time1.$_SERVER["REMOTE_ADDR"],1);
-			// 	}else{
-			// 		reqx(time1.$_SERVER['REMOTE_ADDR'],reqx2(time1.$_SERVER['REMOTE_ADDR'])+1);
-			// 	}
-			// }
+			if(time()>$time1 && time()<$time2){
+				if(reqx2(time1.$_SERVER["REMOTE_ADDR"])==3){
+					echo '{"state":"一天只能发送验证码三次","msg":"0"}';
+					die;
+				}
+				if(reqx2(time1.$_SERVER["REMOTE_ADDR"])==''){
+					reqx(time1.$_SERVER["REMOTE_ADDR"],1);
+				}else{
+					reqx(time1.$_SERVER['REMOTE_ADDR'],reqx2(time1.$_SERVER['REMOTE_ADDR'])+1);
+				}
+			}
         }
         /*
             ***聚合数据（JUHE.CN 
@@ -172,12 +173,16 @@ class LoginController extends BaseController
         	}else{
         		$idd=$sel;
         	}
-        	$arr=array('password'=>md5($mi),'reg_time'=>time(),'mobile'=>$zcsj,'mobile_validated'=>1,'user_name'=>$yhm,'introduce'=>$idd);
+        	$arr=array('password'=>md5($mi),'reg_time'=>time(),
+                'mobile'=>$zcsj,
+                'mobile_validated'=>1,
+                'user_name'=>$yhm,
+                'introduce'=>$idd);
         	$use=M('users')->add($arr);
         	if($use){
 				$qr=qrcode($use);  //注册会员成功后，生成二维码到会员表中
 				$qr=M('qrcode')->add(array('qrcode_path'=>$qr));
-				M('users')->where('user_id='.$use)->save(array('qrcode_id'=>$qr));
+				M('users')->where('user_id='.$use)->save(array('qrcode_id'=>$qr,'last_login'=>time(),'last_ip'=>$_SERVER["REMOTE_ADDR"]));
 				$user=M('users')->where('user_id='.$use)->find();
 				if($user!=''){  //////储存会员信息到session
 					$arr=array('id'=>$user['user_id'],
@@ -220,7 +225,9 @@ class LoginController extends BaseController
         	$ar='密码必须为六位数字';
         	$tf=0;
         }else{
-        	$arr=array('password'=>md5($pwd),'reg_time'=>time(),'mobile'=>$phone,'mobile_validated'=>1,'user_name'=>$yhm);
+        	$arr=array('password'=>md5($pwd),'reg_time'=>time(),'mobile'=>$phone,
+                'mobile_validated'=>1,'user_name'=>'default',
+                'last_login'=>time(),'last_ip'=>$_SERVER["REMOTE_ADDR"]);
         	$use=M('users')->add($arr);
         	if($use){
 				$qr=qrcode($use);  //注册会员成功后，生成二维码到会员表中

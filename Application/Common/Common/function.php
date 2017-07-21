@@ -300,7 +300,7 @@ function reqx2($name){
 
 //获取账户余额
 function user_pr($id){
-    $find=M('user_wallet')->where('user_id='.$id)->order('timer desc')->find();
+    $find=M('user_wallet')->where('user_id='.$_SESSION['user_info']['id'])->order('wallet_id desc')->find();
     if($find==''){
         return 0;
         exit;

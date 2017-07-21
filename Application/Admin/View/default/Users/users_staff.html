@@ -61,7 +61,7 @@
 											<td>{$v['user_id']}</td>
 											<td>{$v['mobile']}</td>
 											<td>{$v['last_ip']}</td>
-											<td>{$v['last_login']}</td>
+											<td>{$v['last_login']==0?0:date('Y-m-d',$v['last_login'])}</td>
 											<td>{:date('Y-d-m',$v['reg_time'])}</td>
 											<td>
 												<a href="{:U('Users/users_detail?id='.$v['user_id'].'&users=staff')}">查看</a> &nbsp;

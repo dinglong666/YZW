@@ -144,27 +144,6 @@ class NewsController extends BaseController {
         $this->display();
     }
 
-    //首页最新消息
-    public function homepage(){
-        $sel=M('information')->where('information_type=3')->select();
-        $this->assign('sel',$sel);
-        $this->display();
-    }
-
-    //首页最新消息详细信息
-    public function homepage_sel(){
-        $id=I('get.id',0,'intval');
-        $find=M('information')->where('information_id='.$id)->find();
-        if($find==''){
-            $this->error('参数错误',U('News/homepage'));
-            die;            
-        }
-        $this->assign('find',$find);
-        $this->display();
-    }
-
-
-
 
 
 

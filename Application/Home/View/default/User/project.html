@@ -94,7 +94,7 @@
                             	<td>{$sta[$p['project_snum']]==''?'未派发':$sta[$p['project_snum']]}</td>
                                 <td><a href="{:U('User/shenhe?id='.$p['project_id'])}">{$p['project_name']}</a></td>
                                 <td>{$p['project_estimate']}</td>
-                                <td></td>
+                                <td>{:C('profit3')/100*$p['project_estimate']}</td>
                                 <td>{:date('Y-m-d',$p['project_time'])}</td>
                             </tr>
                         </volist>

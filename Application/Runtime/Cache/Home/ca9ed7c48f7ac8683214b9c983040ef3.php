@@ -2,7 +2,9 @@
 <html>
 <head lang="en">
 <meta charset="utf-8">
-<title>欢迎登录优赚网！</title>
+<title><?php echo C('STORE_TITLE');?></title>
+<meta name="keyword" content="<?php echo C('STORE_KEYWORDS');?>">
+<meta name="description" content="<?php echo C('STORE_DESC');?>">
 <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/Public/Home/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Public/Home/css/font-awesome.min.css">
@@ -398,6 +400,7 @@ $(function  () {
             result=false;          
         }        
       });
+      return result;
   }
   //获取短信验证码
   var validCode=true;

@@ -4,7 +4,9 @@
 <head lang="en">
 
     <meta charset="UTF-8">
-    <title>优赚网-首页</title>
+    <title><?php echo C('STORE_TITLE');?></title>
+    <meta name="keyword" content="<?php echo C('STORE_KEYWORDS');?>">
+    <meta name="description" content="<?php echo C('STORE_DESC');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Public/Home/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/Public/Home/css/style.css" rel="stylesheet" type="text/css">
@@ -34,8 +36,6 @@
             <div class="ptjs-header-img1"><img src="/Uploads/<?= C('STORE_LOGO')?>"></div>
             <select>
                 <option>哈尔滨</option>
-                <option>北京</option>
-                <option>上海</option>
             </select>
             <ul class="ptjs-header-nav">
                 <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>

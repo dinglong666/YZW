@@ -3,7 +3,9 @@
 <head lang="en">
 
     <meta charset="UTF-8">
-    <title>优赚网-首页</title>
+    <title><?php echo C('STORE_TITLE');?></title>
+    <meta name="keyword" content="<?php echo C('STORE_KEYWORDS');?>">
+    <meta name="description" content="<?php echo C('STORE_DESC');?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="/Public/Home/css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="/Public/Home/css/style.css" rel="stylesheet" type="text/css">
@@ -33,15 +35,13 @@
             <div class="ptjs-header-img1"><img src="/Uploads/<?= C('STORE_LOGO')?>"></div>
             <select>
                 <option>哈尔滨</option>
-                <option>北京</option>
-                <option>上海</option>
             </select>
             <ul class="ptjs-header-nav">
                 <li <?php echo ($index); ?>><a href="<?php echo U('index/index');?>">首页</a></li>
-                <li <?php echo ($introduce); ?>><a href="<?php echo U('introduce');?>">平台介绍</a></li>
-                <li <?php echo ($enterprise); ?>><a href="<?php echo U('enterprise');?>">合作企业</a></li>
-                <li <?php echo ($manager); ?>><a href="<?php echo U('manager');?>">自由经理人</a></li>
-                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('contact');?>">联系我们</a></li>
+                <li <?php echo ($introduce); ?>><a href="<?php echo U('index/introduce');?>">平台介绍</a></li>
+                <li <?php echo ($enterprise); ?>><a href="<?php echo U('index/enterprise');?>">合作企业</a></li>
+                <li <?php echo ($manager); ?>><a href="<?php echo U('index/manager');?>">自由经理人</a></li>
+                <li <?php echo ($contact); ?> style="color:red;"><a href="<?php echo U('index/contact');?>">联系我们</a></li>
             </ul>
         <?php if($_SESSION['user_info']['id'] != ''): ?><ul class="ptjs-header-nav2">
             <?php if($xs != xs): ?><li>欢迎来到优赚网！</li>
@@ -83,7 +83,7 @@
                 <div class="info">
                   <center><h5><span><?php echo ($_SESSION['user_info']['name']); ?></span>，欢迎你！</h5>
                     <p><?php echo substr_replace($_SESSION['user_info']['mobile'],'****',3,4);?></p>
-                    <h5>余额：<span>¥<?php echo (user_pr($_SESSION['user_info']['id'])); ?></span></h5></center>
+                    <h5>余额：<span>¥<?php echo user_pr();?></span></h5></center>
                 </div>               
                </li>
                <li <?php if($str == '/personal'): ?>class="active"<?php endif; ?> ><a href="<?php echo U('User/personal');?>"><i class="fa fa-user"></i>个人资料</a></li>

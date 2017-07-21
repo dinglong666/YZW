@@ -48,7 +48,7 @@ function user_in($id){
         return '';
         exit;
     }
-    return $find['user_name'];
+    return $find['mobile'];
 }
 
 //获取介绍人账号

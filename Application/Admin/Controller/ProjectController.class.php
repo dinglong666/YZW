@@ -144,9 +144,15 @@ class ProjectController extends BaseController {
     public function yongjin(){
         $p=D('Project');
         $w=D('UserWallet');
+        $sj=$p->where('project_id='.$_GET['id'])->find();
+        if($sj['project_actual']==''){
+            $this->error('请填写实际佣金');
+            die;
+        }
         $pro=$p->paifa($_GET['id']);
         if (!$pro) {
             $this->error('无效项目');
+            die;
         }
         $a=new FenxiaoLogic();
         $find=$a->fenxiao($pro['user_id']);   ///////////获取一级二级分销id
@@ -165,12 +171,14 @@ class ProjectController extends BaseController {
             $two=$a->fenxiao($find['two']['user_id'],$_GET['id'],2);
             $w->paifa($find['two']['user_id'],$two['price']);
         }
+        
         $arr=array('user_id'=>$pro['user_id'],
             'project_id'=>$pro['project_id'],
             'information_type'=>2,
             'information_content'=>'您的"'.$pro['project_name'].'"项目佣金已发放，请注意查收',
             'add_time'=>time());
-        M('information')->add($arr);        
+        M('information')->add($arr);
+                
         $this->success('派发成功');
     }
 

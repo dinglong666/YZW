@@ -4,7 +4,6 @@ use Think\Controller;
 use Think\Page;
 class UserController extends Controller
 {
-
 	public function _initialize(){
 		if($_COOKIE['user_id']!=''){
 			$u=M('users')->where('user_id='.$_COOKIE['user_id'])->find();
@@ -247,7 +246,6 @@ class UserController extends Controller
 		$num=$uw->find($user_id);///////////////////////余额
 		$select=$uw->wallet($user_id,$_GET['order_id']);///////////////钱包遍历
 										///////接收的订单号↑
-		// dump($select);
 		$this->assign('order_id',$_GET['order_id']);
 		$this->assign('num',$num['price']);
 		$this->assign('find',$find);
@@ -318,7 +316,6 @@ class UserController extends Controller
 		$arr=$inf->find($type,'select');
 		$this->assign('arr',$arr['find']);
 		$this->assign('page',$arr['page']);
-		// dump($arr);
 		$this->display();
 	}
 	//自由经理人

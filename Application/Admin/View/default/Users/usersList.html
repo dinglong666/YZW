@@ -61,12 +61,10 @@
 											<td>{$v['user_id']}</td>
 											<td>{$v['user_name']}</td>
 											<td>{$v['mobile']}</td>
-											<td>{$v['last_login']}</td>
+											<td>{$v['last_login']==0?0:date('Y-m-d',$v['last_login'])}</td>
 											<td>{$v['last_ip']}</td>
 											<td>
 												<a href="{:U('Users/users_detail?id='.$v['user_id'])}">查看</a> &nbsp;
-<!-- 												|&nbsp;&nbsp;
-												<a onclick="return confirm('确认删除？')" href="" target="blank">删除</a> &nbsp; -->
 											</td>
 										</tr>
 									</volist>

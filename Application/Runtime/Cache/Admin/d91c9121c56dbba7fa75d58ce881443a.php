@@ -147,12 +147,19 @@ window.onload=function()
 										<a href="<?php echo U('Article/shouye');?>"><i class="fa fa-align-left"></i><span class="text">首页图片</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(12) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
+										<a href="<?php echo U('Article/type_list');?>"><i class="fa fa-align-left"></i><span class="text">信息列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(13) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
-										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+										<a href="<?php echo U('Article/article_list');?>"><i class="fa fa-align-left"></i><span class="text">文章列表</span></a>
 									</li><?php endif; ?>
 								<?php if((dhl_qx(14) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/article_type');?>"><i class="fa fa-align-left"></i><span class="text">文章分类</span></a>
+									</li><?php endif; ?>
+
+								<?php if((dhl_qx(15) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
+										<a href="<?php echo U('Article/video');?>"><i class="fa fa-outdent"></i><span class="text">精彩视频</span></a>
+									</li><?php endif; ?>
+								<?php if((dhl_qx(16) == success) || ($_SESSION['admin_info']['id'] == 1)): ?><li>
 										<a href="<?php echo U('Article/cooperation_list');?>"><i class="fa fa-outdent"></i><span class="text">合作企业</span></a>
 									</li><?php endif; ?>
 								</ul>
@@ -264,7 +271,8 @@ window.onload=function()
 				                    <div class="col-md-9">
                                         <select name='padmin' id="xz" style='width:150px;height:30px;margin-top: 5px'>
                                             <option value="0">--请选择--</option>           
-                                          <?php if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$s): $mod = ($i % 2 );++$i;?><option <?php if($find['project_service'] == $s['id']): ?>selected<?php endif; ?> value="<?php echo ($s['id']); ?>"><?php echo ($s['username']); ?></option><?php endforeach; endif; else: echo "" ;endif; ?>
+                                          <?php if(is_array($sel)): $i = 0; $__LIST__ = $sel;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$s): $mod = ($i % 2 );++$i; if($s['id'] != 1): ?><option <?php if($find['project_service'] == $s['id']): ?>selected<?php endif; ?> value="<?php echo ($s['id']); ?>"><?php echo ($s['username']); ?></option><?php endif; ?>
+                                          ]<?php endforeach; endif; else: echo "" ;endif; ?>
                                         </select>
 				                    </div>
 				                </div>

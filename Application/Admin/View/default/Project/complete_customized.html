@@ -95,8 +95,10 @@ window.onload=function()
                                         <select name='padmin' id="xz" style='width:150px;height:30px;margin-top: 5px'>
                                             <option value="0">--请选择--</option>           
                                           <volist  name="sel" id='s' >
+                                          <if condition="$s['id'] neq 1" >
                                              <option <if condition="$find['project_service'] eq $s['id']" > selected </if> value="{$s['id']}">{$s['username']}</option>
-                                          </volist>
+                                          </if>
+                                          ]</volist>
                                         </select>
 				                    </div>
 				                </div>
