@@ -34,7 +34,6 @@ class IndexController extends BaseController {
 		$this->assign('zxxx',$zxxx);
 
 		$this->assign('index','class="current"');//////////////////头部class
-
 		$this->display();
 	}
 

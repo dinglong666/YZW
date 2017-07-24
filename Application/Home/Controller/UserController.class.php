@@ -187,7 +187,7 @@ class UserController extends Controller
 		$find=M('project')->where('user_id='.$_SESSION['user_info']['id'].'  and  project_id='.$id)->find();
 		if($find==''){
 			$this->error('信息错误');
-			die;			
+			die;				
 		}
 		$state=M('project_state')->find();
 		$sta=explode('|',$state['img_id']);
@@ -219,7 +219,6 @@ class UserController extends Controller
                 }
             }                
         }
-        // dump(unlink('Uploads/Home/2017-07-19/596eb0990c865.png'));
         $u=M('users')->where('user_id='.$_SESSION['user_info']['id'])->find();
         if($u['head_pic']!=''){
         	unlink(trim($u['head_pic'],'/'));
@@ -241,7 +240,6 @@ class UserController extends Controller
 		$user=D("users");
 		$uw=D("UserWallet");
 		$find=$user->find($user_id);///////////////////////查看会员是否有支付宝,微信账号
-		// dump($find);
 
 		$num=$uw->find($user_id);///////////////////////余额
 		$select=$uw->wallet($user_id,$_GET['order_id']);///////////////钱包遍历
